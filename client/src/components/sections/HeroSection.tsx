@@ -27,7 +27,8 @@ export default function HeroSection() {
     "EasyCon", "Dr. José Cabral Jr.", "Gastric", "Pensare", 
     "Luiza Mota", "Grupo Pemar", "Mais Vida", "Clinicor", 
     "Fernanda do Valle", "Manoela Cordeiro", "Refinatto", "Sculptlife", 
-    "Medinova", "Dr Tiago Cardoso", "Dr Miguel Moura", "Infinita Saúde"
+    "Medinova", "Dr. Tiago Cardoso", "Dr. Miguel Moura", "Infinita Saúde",
+    "KL Rent a Car", "Best Car"
   ];
   
   const midPoint = Math.ceil(trustedLogos.length / 2);
