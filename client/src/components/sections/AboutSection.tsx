@@ -100,110 +100,66 @@ export default function AboutSection() {
         </div>
       </section>
 
-      {/* Infrastructure Ecosystem */}
+      {/* Infrastructure Ecosystem (Simplified version) */}
       <section id="ecossistema" className="py-24 bg-[#141414] overflow-hidden">
         <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center max-w-4xl mx-auto mb-16">
-            <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-5 py-1.5 rounded-full mb-6">
-              <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Nossa Infraestrutura</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-bold leading-tight font-serif mb-6">
-              Controle total da origem à <span className="text-gradient-gold italic">conversão</span> do lead
-            </h2>
-            <p className="text-[#B8B8B8] text-lg max-w-3xl mx-auto">
-              Implantamos toda a infraestrutura que sua empresa precisa para rastrear, nutrir e converter cada lead. Sem achismo, com dados reais.
-            </p>
-          </motion.div>
-
-          {/* Visual Flow Diagram */}
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} 
-            variants={fadeUp}
-            className="mb-16 md:mb-24 relative max-w-5xl mx-auto"
-          >
-            {/* Desktop Horizontal Line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#222222] -translate-y-1/2 z-0 rounded-full overflow-hidden">
-              <motion.div 
-                initial={{ x: "-100%" }}
-                whileInView={{ x: "0%" }}
-                viewport={{ once: true }}
-                transition={{ duration: 2, ease: "easeOut" }}
-                className="w-full h-full bg-gradient-to-r from-transparent via-[#C9A84C] to-[#E2C873]"
-              ></motion.div>
-            </div>
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
             
-            {/* Mobile Vertical Line */}
-            <div className="md:hidden absolute left-1/2 top-0 bottom-0 w-1 bg-[#222222] -translate-x-1/2 z-0 rounded-full overflow-hidden">
-              <motion.div 
-                initial={{ y: "-100%" }}
-                whileInView={{ y: "0%" }}
-                viewport={{ once: true }}
-                transition={{ duration: 2, ease: "easeOut" }}
-                className="w-full h-full bg-gradient-to-b from-transparent via-[#C9A84C] to-[#E2C873]"
-              ></motion.div>
-            </div>
+            {/* Left Side: Title and Flow */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-5/12">
+              <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-5 py-1.5 rounded-full mb-6">
+                <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Nossa Infraestrutura</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight font-serif mb-6">
+                Controle da origem à <span className="text-gradient-gold italic">conversão</span> do lead
+              </h2>
+              <p className="text-[#B8B8B8] text-lg mb-10">
+                Implantamos o ecossistema tecnológico que sua empresa precisa para rastrear, nutrir e converter com previsibilidade.
+              </p>
 
-            <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4 relative z-10">
-              {flowNodes.map((node, idx) => (
+              {/* Compact Vertical Flow */}
+              <div className="relative pl-6 border-l-2 border-[#C9A84C]/20 space-y-6 mb-10">
+                {flowNodes.map((node, idx) => (
+                  <motion.div 
+                    key={idx}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 }}
+                    className="relative"
+                  >
+                    <div className="absolute -left-[31px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#1A1A1A] border-2 border-[#C9A84C] shadow-[0_0_10px_rgba(201,168,76,0.5)]"></div>
+                    <span className="text-white font-bold text-lg">{node.label}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB." target="_blank" rel="noreferrer" className="inline-block bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-4 rounded-full hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(201,168,76,0.3)]">
+                Quero essa estrutura →
+              </a>
+            </motion.div>
+
+            {/* Right Side: Compact Grid of Cards */}
+            <div className="lg:w-7/12 grid grid-cols-1 md:grid-cols-2 gap-4">
+              {infrastructureCards.map((card, idx) => (
                 <motion.div 
                   key={idx}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: idx * 0.2 }}
-                  className="bg-[#1A1A1A] border border-[#C9A84C]/30 px-6 md:px-4 lg:px-6 py-3 md:py-4 rounded-full shadow-[0_0_20px_rgba(201,168,76,0.1)] whitespace-nowrap min-w-[140px] text-center"
+                  initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: idx * 0.1 } } }}
+                  className="bg-[#1A1A1A] p-6 rounded-[12px] border border-white/5 hover:border-[#C9A84C]/30 transition-all duration-300 flex flex-col group"
                 >
-                  <span className="text-white font-bold text-sm lg:text-base tracking-wide">{node.label}</span>
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-[#C9A84C]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#C9A84C]/20 transition-colors">
+                      {card.icon}
+                    </div>
+                    <h3 className="text-lg font-serif font-bold text-white leading-tight">{card.title}</h3>
+                  </div>
+                  <p className="text-[#888888] text-sm leading-relaxed">{card.desc}</p>
                 </motion.div>
               ))}
             </div>
-          </motion.div>
-
-          {/* Impact Phrase */}
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-            className="text-center mb-16 md:mb-20 max-w-3xl mx-auto"
-          >
-            <p className="font-serif italic text-[#C9A84C] text-xl md:text-2xl leading-relaxed relative inline-block">
-              <span className="absolute -left-6 -top-4 text-4xl opacity-50">"</span>
-              Cada lead que entra na sua empresa tem nome, origem e destino. Nós garantimos isso.
-              <span className="absolute -right-6 -bottom-4 text-4xl opacity-50">"</span>
-            </p>
-          </motion.div>
-
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {infrastructureCards.map((card, idx) => (
-              <motion.div 
-                key={idx}
-                initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
-                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.1 } } }}
-                className="bg-[#1A1A1A] p-8 rounded-[16px] border border-white/5 border-t-transparent hover:border-t-[#C9A84C] hover:border-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] flex flex-col h-full group"
-              >
-                <div className="w-12 h-12 rounded-full bg-[#C9A84C]/10 flex items-center justify-center mb-6 group-hover:bg-[#C9A84C]/20 transition-colors">
-                  {card.icon}
-                </div>
-                <h3 className="text-xl font-serif font-bold mb-4 text-white">{card.title}</h3>
-                <p className="text-[#888888] leading-relaxed flex-grow mb-8 text-sm md:text-base">{card.desc}</p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {card.tags.map(tag => (
-                    <span key={tag} className="text-[10px] font-bold uppercase tracking-wider text-[#C9A84C] bg-[#C9A84C]/5 px-3 py-1 rounded-full border border-transparent group-hover:border-[#C9A84C]/20 transition-all">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+            
           </div>
-
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-            className="text-center mt-16 md:mt-20"
-          >
-            <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB." target="_blank" rel="noreferrer" className="inline-block bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 md:px-10 py-4 md:py-5 rounded-full hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)]">
-              Quero essa infraestrutura no meu negócio →
-            </a>
-          </motion.div>
         </div>
       </section>
 
