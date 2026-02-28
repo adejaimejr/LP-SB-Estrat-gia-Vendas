@@ -164,8 +164,8 @@ export default function ServicesSection() {
       <section id="resultados" className="pt-24 pb-16 bg-[#0A0A0A] relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,168,76,0.08)_0%,transparent_70%)] pointer-events-none"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-1/2">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
               <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-5 py-1.5 rounded-full mb-6">
                 <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Resultados Comprovados</span>
               </div>
@@ -175,15 +175,16 @@ export default function ServicesSection() {
               <p className="text-[#B8B8B8] text-lg mb-10">
                 Nossos clientes não apenas melhoram processos. Eles colhem resultados financeiros reais, mês após mês.
               </p>
-              <img src={resultsImg} alt="Samara Benevides Resultados" className="rounded-2xl shadow-[0_0_30px_rgba(201,168,76,0.1)] border border-[#C9A84C]/10 w-full max-w-md" />
             </motion.div>
-            
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
             <motion.div 
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{
                 hidden: { opacity: 0 },
                 visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
               }} 
-              className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12"
+              className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12 order-2 lg:order-1"
             >
               <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
                 <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
@@ -219,6 +220,10 @@ export default function ServicesSection() {
                 </div>
                 <div className="text-[#888888] font-medium leading-tight">Processos comerciais estruturados</div>
               </motion.div>
+            </motion.div>
+
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-1/2 order-1 lg:order-2 flex justify-center">
+              <img src={resultsImg} alt="Samara Benevides Resultados" className="rounded-2xl shadow-[0_0_30px_rgba(201,168,76,0.1)] border border-[#C9A84C]/10 w-full max-w-md lg:max-w-lg object-cover" />
             </motion.div>
           </div>
         </div>
