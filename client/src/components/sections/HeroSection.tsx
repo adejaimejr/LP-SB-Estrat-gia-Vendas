@@ -114,7 +114,7 @@ export default function HeroSection() {
                   <span className="text-[#C9A84C]">+50</span> empresas transformadas
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#C9A84C]">+50%</span> de aumento médio em faturamento
+                  <span className="text-[#C9A84C]">+45%</span> de aumento médio em faturamento
                 </div>
               </div>
             </motion.div>

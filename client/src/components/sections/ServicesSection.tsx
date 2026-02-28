@@ -188,25 +188,9 @@ export default function ServicesSection() {
             >
               <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
                 <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
-                  <AnimatedCounter value={50} prefix="+" suffix="%" />
+                  <AnimatedCounter value={45} prefix="+" suffix="%" />
                 </div>
-                <div className="text-[#888888] font-medium leading-tight">Aumento médio no faturamento online</div>
-              </motion.div>
-              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
-                  <AnimatedCounter value={40} prefix="+" suffix="%" />
-                </div>
-                <div className="text-[#888888] font-medium leading-tight">Aumento na taxa de retenção de clientes</div>
-              </motion.div>
-              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
-                  <AnimatedCounter value={50} prefix="+" />
-                </div>
-                <div className="text-[#888888] font-medium leading-tight">Empresas atendidas com sucesso no Brasil</div>
-              </motion.div>
-              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">24/7</div>
-                <div className="text-[#888888] font-medium leading-tight">Automações trabalhando para nossos clientes</div>
+                <div className="text-[#888888] font-medium leading-tight">Aumento médio na conversão de leads</div>
               </motion.div>
               <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
                 <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
@@ -216,9 +200,15 @@ export default function ServicesSection() {
               </motion.div>
               <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
                 <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
+                  <AnimatedCounter value={50} prefix="+" />
+                </div>
+                <div className="text-[#888888] font-medium leading-tight">Empresas operando com nossa metodologia</div>
+              </motion.div>
+              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
+                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
                   <AnimatedCounter value={100} suffix="%" />
                 </div>
-                <div className="text-[#888888] font-medium leading-tight">Processos comerciais estruturados</div>
+                <div className="text-[#888888] font-medium leading-tight">De processos comerciais mapeados e estruturados</div>
               </motion.div>
             </motion.div>
 

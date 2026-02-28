@@ -227,9 +227,12 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <div className="pt-8 border-t border-[#C9A84C]/10 text-center">
+          <div className="pt-8 border-t border-[#C9A84C]/10 flex flex-col items-center justify-center gap-2">
             <p className="text-[#666666] text-sm">
-              &copy; 2026 SB Vendas. Todos os direitos reservados.
+              &copy; 2026 SB Vendas.
+            </p>
+            <p className="text-[#666666] text-sm">
+              Criado com <span className="text-red-500">❤</span> por <span className="text-white font-semibold">i92Tech</span>
             </p>
           </div>
         </div>
