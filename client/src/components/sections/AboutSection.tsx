@@ -58,7 +58,7 @@ export default function AboutSection() {
                 Especialista que transforma <span className="text-gradient-gold italic">atendimento em resultado</span>
               </h2>
               <div className="space-y-6 text-[#B8B8B8] text-lg text-left">
-                <p>Samara Benevides fundou a SB Estratégia & Vendas com um objetivo claro mudar a forma como empresas vendem no digital. Com mais de 10 anos de experiência em vendas, CRM e atendimento comercial, já são mais de 50 empresas nos setores de saúde, estética, varejo, educação e tecnologia que passaram pelo seu método.</p>
+                <p>Samara Benevides fundou a SB Estratégia & Vendas com um objetivo claro: mudar a forma como empresas vendem no digital. Com mais de 10 anos de experiência em vendas, CRM e atendimento comercial, já são mais de 50 empresas nos setores de saúde, estética, varejo, educação e tecnologia que passaram pelo seu método.</p>
                 <p>Lado a lado com cada cliente, ela combina estratégia, humanização e tecnologia para criar processos que realmente funcionam. Do primeiro contato no WhatsApp até o fechamento, cada etapa é desenhada para converter mais e fidelizar melhor.</p>
               </div>
               <blockquote className="mt-8 border-l-4 border-[#C9A84C] pl-6 py-2 text-left">

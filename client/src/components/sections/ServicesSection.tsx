@@ -110,7 +110,7 @@ export default function ServicesSection() {
               <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Nossos Serviços</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-bold leading-tight mb-6 font-serif">
-              O Método SB da estratégia à <span className="text-gradient-gold italic">execução real</span>
+              O Método SB: da estratégia à <span className="text-gradient-gold italic">execução real</span>
             </h2>
             <p className="text-[#B8B8B8] text-lg">
               Diagnóstico, processos, ferramentas, treinamento e acompanhamento. Tudo que seu comercial precisa pra vender mais, melhor e com previsibilidade.

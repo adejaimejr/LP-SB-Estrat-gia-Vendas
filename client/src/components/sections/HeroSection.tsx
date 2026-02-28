@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, TrendingUp, Star } from "lucide-react";
-import heroImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.19_(2)_1772248771761.jpeg";
+import heroImg from "@assets/Samara_1772314502388.jpeg";
 
 export default function HeroSection() {
   const [scrolled, setScrolled] = useState(false);
@@ -182,7 +182,7 @@ export default function HeroSection() {
         <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-6">
           <div className="flex items-center justify-center md:justify-start [&_div]:mx-10 marquee-scroll">
             {logosRow1.concat(logosRow1).concat(logosRow1).map((logo, idx) => (
-              <div key={`r1-${idx}`} className="text-xl md:text-2xl font-sans font-bold tracking-widest text-white/30 whitespace-nowrap hover:text-white/80 transition-colors duration-300 cursor-default">
+              <div key={`r1-${idx}`} className="text-xl md:text-2xl font-sans font-bold tracking-widest text-white/30 whitespace-nowrap hover:text-[#C9A84C] transition-colors duration-300 cursor-default">
                 {logo}
               </div>
             ))}
@@ -193,7 +193,7 @@ export default function HeroSection() {
         <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
           <div className="flex items-center justify-center md:justify-start [&_div]:mx-10 marquee-scroll-reverse">
             {logosRow2.concat(logosRow2).concat(logosRow2).map((logo, idx) => (
-              <div key={`r2-${idx}`} className="text-xl md:text-2xl font-sans font-bold tracking-widest text-white/30 whitespace-nowrap hover:text-white/80 transition-colors duration-300 cursor-default">
+              <div key={`r2-${idx}`} className="text-xl md:text-2xl font-sans font-bold tracking-widest text-white/30 whitespace-nowrap hover:text-[#C9A84C] transition-colors duration-300 cursor-default">
                 {logo}
               </div>
             ))}
