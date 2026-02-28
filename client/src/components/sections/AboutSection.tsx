@@ -170,7 +170,7 @@ export default function AboutSection() {
                   Quero essa infraestrutura no meu negócio →
                 </a>
               </motion.div>
-            </motion.div>
+            </div>
 
             {/* Right Side: Compact Grid of Cards */}
             <div className="lg:w-[65%] grid grid-cols-1 md:grid-cols-2 gap-4">
