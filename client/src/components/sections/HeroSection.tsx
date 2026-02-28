@@ -23,9 +23,11 @@ export default function HeroSection() {
   ];
 
   const trustedLogos = [
-    "TransbyShop", "EasyCon", "Clínica Dr. José Cabral Jr.", "BotoClinic", 
-    "Débora Russo", "Minas de Ouro", "Instituto Acesso", "Gastric", 
-    "Pensare", "Marília Gabriela", "Luiza Mota", "Pemar"
+    "BotoClinic", "Débora Russo", "Minas de Ouro", "TransbyShop", 
+    "EasyCon", "Dr. José Cabral Jr.", "Gastric", "Pensare", 
+    "Luiza Mota", "Grupo Pemar", "Mais Vida", "Clinicor", 
+    "Fernanda do Valle", "Manoela Cordeiro", "Refinatto", "Sculptlife", 
+    "Medinova", "Dr Tiago Cardoso", "Dr Miguel Moura", "Infinita Saúde"
   ];
   
   const midPoint = Math.ceil(trustedLogos.length / 2);
@@ -100,7 +102,7 @@ export default function HeroSection() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-start relative z-20">
                 <a href="#contato" className="bg-[#C9A84C] text-[#0A0A0A] text-center font-bold px-8 py-4 rounded-full hover:bg-[#E2C873] transition-all duration-300 btn-primary-glow shadow-[0_4px_20px_rgba(201,168,76,0.2)]">
-                  Agende uma Consultoria Gratuita
+                  Agendar Reunião
                 </a>
                 <a href="#resultados" className="border border-[#C9A84C]/40 text-[#C9A84C] text-center font-bold px-8 py-4 rounded-full hover:bg-[#C9A84C]/10 hover:border-[#C9A84C] transition-all duration-300">
                   Veja os Resultados
@@ -112,9 +114,6 @@ export default function HeroSection() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-[#C9A84C]">+50%</span> de aumento médio em faturamento
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-[#C9A84C]">4</span> anos de experiência
                 </div>
               </div>
             </motion.div>
