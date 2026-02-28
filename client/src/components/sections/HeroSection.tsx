@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, TrendingUp, Star, UserCheck } from "lucide-react";
+import { Menu, X, TrendingUp, Star } from "lucide-react";
 import heroImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.19_(2)_1772248771761.jpeg";
 
 export default function HeroSection() {
@@ -151,24 +151,18 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <div className="text-white font-bold text-sm tracking-wide">Lead convertido</div>
-                  <div className="text-[#888888] text-xs mt-0.5">Venda realizada</div>
                 </div>
               </div>
 
-              <div className="relative">
-                <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#0A0A0A] to-transparent z-20 pointer-events-none"></div>
-                <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#0A0A0A] to-transparent z-20 pointer-events-none"></div>
-                
-                <img 
-                  src={heroImg} 
-                  alt="Samara Benevides" 
-                  className="relative z-10 w-full max-w-md object-cover aspect-[3/4] lg:aspect-auto drop-shadow-2xl pointer-events-none"
-                  style={{
-                    WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
-                    maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)"
-                  }}
-                />
-              </div>
+              <img 
+                src={heroImg} 
+                alt="Samara Benevides" 
+                className="relative z-10 w-full max-w-md object-cover aspect-[3/4] lg:aspect-auto drop-shadow-2xl pointer-events-none"
+                style={{
+                  WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
+                  maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)"
+                }}
+              />
             </motion.div>
           </div>
         </div>
