@@ -52,10 +52,10 @@ export default function ServicesSection() {
       tags: ["Diagnóstico", "Playbook", "Estratégia"],
       featured: true 
     },
-    { icon: <Workflow className="text-[#C9A84C]" size={24} />, title: "Automação & CRM", desc: "Implantamos CRM, automação de WhatsApp, chatbots inteligentes e agentes de IA que trabalham 24h vendendo pelo seu negócio.", tags: ["WhatsApp", "Chatbot", "Agente IA"] },
-    { icon: <GraduationCap className="text-[#C9A84C]" size={24} />, title: "Treinamento de Equipes", desc: "Capacitamos sua equipe com scripts de atendimento, técnicas de vendas online e uso eficiente das ferramentas que implantamos.", tags: ["Scripts", "Mentoria"] },
-    { icon: <MessagesSquare className="text-[#C9A84C]" size={24} />, title: "Fluxos Conversacionais", desc: "Criamos scripts e fluxos para WhatsApp que conduzem o lead do primeiro contato ao fechamento, com abordagem humanizada e personalizada.", tags: ["Follow-up", "Omnichannel", "Funil"] },
+    { icon: <Workflow className="text-[#C9A84C]" size={24} />, title: "Automação / CRM", desc: "Implantamos CRM, automação de WhatsApp, chatbots inteligentes e agentes de IA que trabalham 24h vendendo pelo seu negócio.", tags: ["WhatsApp", "Chatbot", "Agente IA"] },
     { icon: <Headphones className="text-[#C9A84C]" size={24} />, title: "SDR / Closer / Secretária Online", desc: "Serviço remoto de pré-venda, fechamento e atendimento. Verificamos o perfil da sua operação e indicamos a melhor solução.", tags: ["Remoto", "Terceirização", "Atendimento"] },
+    { icon: <MessagesSquare className="text-[#C9A84C]" size={24} />, title: "Fluxos Conversacionais", desc: "Criamos scripts e fluxos para WhatsApp que conduzem o lead do primeiro contato ao fechamento, com abordagem humanizada e personalizada.", tags: ["Follow-up", "Omnichannel", "Funil"] },
+    { icon: <GraduationCap className="text-[#C9A84C]" size={24} />, title: "Treinamento de Equipes", desc: "Capacitamos sua equipe com scripts de atendimento, técnicas de vendas online e uso eficiente das ferramentas que implantamos.", tags: ["Scripts", "Capacitação"] },
     { icon: <BarChart3 className="text-[#C9A84C]" size={24} />, title: "Acompanhamento de Resultados", desc: "Dashboards e relatórios com análise de dados, métricas de conversão e insights para otimização contínua das suas vendas.", tags: ["KPIs", "Relatórios", "BI"] },
   ];
 
@@ -153,8 +153,8 @@ export default function ServicesSection() {
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
             className="text-center mt-16"
           >
-            <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre os serviços da SB Vendas." target="_blank" rel="noreferrer" className="inline-block bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-4 rounded-full hover:bg-[#E2C873] transition-all duration-300 btn-primary-glow shadow-[0_4px_20px_rgba(201,168,76,0.2)]">
-              Fale com um especialista →
+            <a href="https://wa.me/5592981112101?text=Olá! Gostaria de agendar uma reunião." target="_blank" rel="noreferrer" className="inline-block bg-[#C9A84C] text-[#0A0A0A] font-bold px-10 py-5 rounded-full hover:scale-105 transition-all duration-300 btn-primary-glow shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)]">
+              Agendar Reunião de Diagnóstico
             </a>
           </motion.div>
         </div>
@@ -181,31 +181,43 @@ export default function ServicesSection() {
             <motion.div 
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{
                 hidden: { opacity: 0 },
-                visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+                visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
               }} 
-              className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-10"
+              className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12"
             >
               <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2">
+                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
                   <AnimatedCounter value={50} prefix="+" suffix="%" />
                 </div>
-                <div className="text-[#888888] font-medium">Aumento médio no faturamento online</div>
+                <div className="text-[#888888] font-medium leading-tight">Aumento médio no faturamento online</div>
               </motion.div>
               <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2">
-                  <AnimatedCounter value={40} suffix="%" />
+                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
+                  <AnimatedCounter value={40} prefix="+" suffix="%" />
                 </div>
-                <div className="text-[#888888] font-medium">Aumento na taxa de retenção de clientes</div>
+                <div className="text-[#888888] font-medium leading-tight">Aumento na taxa de retenção de clientes</div>
               </motion.div>
               <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2">
+                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
                   <AnimatedCounter value={50} prefix="+" />
                 </div>
-                <div className="text-[#888888] font-medium">Empresas atendidas com sucesso</div>
+                <div className="text-[#888888] font-medium leading-tight">Empresas atendidas com sucesso no Brasil</div>
               </motion.div>
               <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2">24/7</div>
-                <div className="text-[#888888] font-medium">Automações trabalhando para nossos clientes</div>
+                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">24/7</div>
+                <div className="text-[#888888] font-medium leading-tight">Automações trabalhando para nossos clientes</div>
+              </motion.div>
+              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
+                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
+                  <AnimatedCounter value={3} prefix="X" />
+                </div>
+                <div className="text-[#888888] font-medium leading-tight">Mais velocidade no tempo de resposta</div>
+              </motion.div>
+              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
+                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
+                  <AnimatedCounter value={100} suffix="%" />
+                </div>
+                <div className="text-[#888888] font-medium leading-tight">Processos comerciais estruturados</div>
               </motion.div>
             </motion.div>
           </div>
