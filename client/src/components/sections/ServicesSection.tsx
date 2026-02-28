@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { MessageCircleX, TrendingDown, UserX, Clock, Target, Workflow, GraduationCap, MessagesSquare, Headphones, BarChart3 } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { MessageCircleX, TrendingDown, UserX, Clock, Target, Workflow, GraduationCap, MessagesSquare, Headphones, BarChart3, ArrowRight } from "lucide-react";
 import resultsImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.19_(1)_1772248771761.jpeg";
 
 const fadeUp = {
@@ -7,12 +8,40 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
 
+function AnimatedCounter({ value, suffix = "", prefix = "" }: { value: number, suffix?: string, prefix?: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-50px" });
+
+  useEffect(() => {
+    if (inView) {
+      let start = 0;
+      const duration = 2000;
+      const fps = 30;
+      const increment = value / (duration / (1000 / fps));
+      
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= value) {
+          setCount(value);
+          clearInterval(timer);
+        } else {
+          setCount(Math.floor(start));
+        }
+      }, 1000 / fps);
+      return () => clearInterval(timer);
+    }
+  }, [inView, value]);
+
+  return <span ref={ref}>{prefix}{count}{suffix}</span>;
+}
+
 export default function ServicesSection() {
   const problems = [
-    { icon: <MessageCircleX className="text-[#C9A84C]" size={24} />, title: "Leads que não respondem", desc: "Seus potenciais clientes entram em contato mas a equipe não faz follow-up adequado, e as oportunidades morrem no WhatsApp." },
-    { icon: <TrendingDown className="text-[#C9A84C]" size={24} />, title: "Conversão baixa", desc: "Muitos leads chegam, mas poucos se tornam clientes. Falta um script estruturado e um fluxo que conduza o cliente até o fechamento." },
-    { icon: <UserX className="text-[#C9A84C]" size={24} />, title: "Equipe sem direcionamento", desc: "Seus vendedores não sabem como abordar, quando fazer follow-up ou como usar as ferramentas de atendimento com eficiência." },
-    { icon: <Clock className="text-[#C9A84C]" size={24} />, title: "Tempo perdido com manual", desc: "Tarefas repetitivas que poderiam ser automatizadas tomam horas da sua equipe, impedindo o foco em fechar negócios." },
+    { num: "01", icon: <MessageCircleX className="text-[#C9A84C] opacity-70" size={28} />, title: "Leads que não respondem", desc: "Seus potenciais clientes entram em contato mas a equipe não faz follow-up adequado, e as oportunidades morrem no WhatsApp." },
+    { num: "02", icon: <TrendingDown className="text-[#C9A84C] opacity-70" size={28} />, title: "Conversão baixa", desc: "Muitos leads chegam, mas poucos se tornam clientes. Falta um script estruturado e um fluxo que conduza o cliente até o fechamento." },
+    { num: "03", icon: <UserX className="text-[#C9A84C] opacity-70" size={28} />, title: "Equipe sem direcionamento", desc: "Seus vendedores não sabem como abordar, quando fazer follow-up ou como usar as ferramentas de atendimento com eficiência." },
+    { num: "04", icon: <Clock className="text-[#C9A84C] opacity-70" size={28} />, title: "Tempo perdido com manual", desc: "Tarefas repetitivas que poderiam ser automatizadas tomam horas da sua equipe, impedindo o foco em fechar negócios." },
   ];
 
   const services = [
@@ -51,13 +80,16 @@ export default function ServicesSection() {
                 key={idx}
                 initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
                 variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.1 } } }}
-                className="bg-[#1A1A1A] p-8 rounded-2xl card-hover-effect"
+                className="pain-card p-8 rounded-2xl"
               >
-                <div className="w-12 h-12 rounded-full bg-[#C9A84C]/15 flex items-center justify-center mb-6">
+                <div className="absolute top-4 right-6 text-[4rem] font-serif font-black text-[#C9A84C] opacity-[0.04] leading-none pointer-events-none select-none">
+                  {prob.num}
+                </div>
+                <div className="w-14 h-14 rounded-full bg-[#C9A84C]/15 flex items-center justify-center mb-6 icon-container relative z-10">
                   {prob.icon}
                 </div>
-                <h3 className="text-xl font-serif font-bold mb-3">{prob.title}</h3>
-                <p className="text-[#888888] leading-relaxed">{prob.desc}</p>
+                <h3 className="text-xl font-serif font-bold mb-3 relative z-10">{prob.title}</h3>
+                <p className="text-[#888888] leading-relaxed relative z-10">{prob.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -85,19 +117,22 @@ export default function ServicesSection() {
                 key={idx}
                 initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
                 variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.1 } } }}
-                className="bg-[#1A1A1A] p-8 rounded-2xl card-hover-effect flex flex-col h-full"
+                className="service-card p-8 rounded-2xl flex flex-col h-full group relative"
               >
                 <div className="w-12 h-12 rounded-full bg-[#C9A84C]/15 flex items-center justify-center mb-6">
                   {svc.icon}
                 </div>
-                <h3 className="text-xl font-serif font-bold mb-4">{svc.title}</h3>
+                <h3 className="text-xl font-serif font-bold mb-4 pr-6">{svc.title}</h3>
                 <p className="text-[#888888] leading-relaxed flex-grow mb-6">{svc.desc}</p>
-                <div className="flex flex-wrap gap-2 mt-auto">
+                <div className="flex flex-wrap gap-2 mt-auto relative z-10">
                   {svc.tags.map(tag => (
-                    <span key={tag} className="text-[11px] font-bold uppercase tracking-wider text-[#C9A84C] bg-[#C9A84C]/10 px-3 py-1 rounded-full">
+                    <span key={tag} className="service-tag text-[10px] font-bold uppercase tracking-wider text-[#C9A84C] bg-[#C9A84C]/5 px-3 py-1 rounded-full cursor-default">
                       {tag}
                     </span>
                   ))}
+                </div>
+                <div className="absolute bottom-8 right-8 text-[#C9A84C] service-arrow">
+                  <ArrowRight size={20} />
                 </div>
               </motion.div>
             ))}
@@ -107,7 +142,7 @@ export default function ServicesSection() {
 
       {/* Results / Stats */}
       <section id="resultados" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,168,76,0.08)_0%,transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,168,76,0.08)_0%,transparent_70%)] pointer-events-none"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-1/2">
@@ -120,33 +155,45 @@ export default function ServicesSection() {
               <p className="text-[#B8B8B8] text-lg mb-10">
                 Nossos clientes não apenas melhoram processos — eles transformam resultados financeiros reais.
               </p>
-              <img src={resultsImg} alt="Samara Benevides Resultados" className="rounded-2xl shadow-2xl w-full max-w-md" />
+              <img src={resultsImg} alt="Samara Benevides Resultados" className="rounded-2xl shadow-[0_0_30px_rgba(201,168,76,0.1)] border border-[#C9A84C]/10 w-full max-w-md" />
             </motion.div>
             
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-10">
-              <div className="border-l border-[#C9A84C]/30 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2">+50%</div>
-                <div className="text-[#888888] font-semibold">Aumento médio no faturamento online</div>
-              </div>
-              <div className="border-l border-[#C9A84C]/30 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2">40%</div>
-                <div className="text-[#888888] font-semibold">Aumento na taxa de retenção de clientes</div>
-              </div>
-              <div className="border-l border-[#C9A84C]/30 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2">+50</div>
-                <div className="text-[#888888] font-semibold">Empresas atendidas com sucesso</div>
-              </div>
-              <div className="border-l border-[#C9A84C]/30 pl-6">
+            <motion.div 
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+              }} 
+              className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-10"
+            >
+              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
+                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2">
+                  <AnimatedCounter value={50} prefix="+" suffix="%" />
+                </div>
+                <div className="text-[#888888] font-medium">Aumento médio no faturamento online</div>
+              </motion.div>
+              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
+                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2">
+                  <AnimatedCounter value={40} suffix="%" />
+                </div>
+                <div className="text-[#888888] font-medium">Aumento na taxa de retenção de clientes</div>
+              </motion.div>
+              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
+                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2">
+                  <AnimatedCounter value={50} prefix="+" />
+                </div>
+                <div className="text-[#888888] font-medium">Empresas atendidas com sucesso</div>
+              </motion.div>
+              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
                 <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2">24/7</div>
-                <div className="text-[#888888] font-semibold">Automações trabalhando para nossos clientes</div>
-              </div>
+                <div className="text-[#888888] font-medium">Automações trabalhando para nossos clientes</div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-[#141414]">
+      <section className="py-24 bg-[#141414] overflow-hidden">
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center max-w-3xl mx-auto mb-20">
             <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-5 py-1.5 rounded-full mb-6">
@@ -158,21 +205,30 @@ export default function ServicesSection() {
           </motion.div>
 
           <div className="relative">
-            <div className="hidden lg:block absolute top-[40px] left-0 right-0 h-[1px] bg-[#C9A84C]/20 z-0"></div>
+            {/* Animated connecting line */}
+            <motion.div 
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="hidden lg:block absolute top-[40px] left-0 right-0 timeline-line z-0 origin-left"
+            ></motion.div>
+            
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 relative z-10">
               {steps.map((step, idx) => (
                 <motion.div 
                   key={idx}
                   initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
-                  variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.2 } } }}
+                  variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: idx * 0.2 + 0.3 } } }}
                   className="relative"
                 >
-                  <div className="w-20 h-20 bg-[#0A0A0A] border border-[#C9A84C]/30 rounded-full flex items-center justify-center text-3xl font-serif font-bold text-[#C9A84C] mb-6 lg:mx-auto shadow-[0_0_20px_rgba(201,168,76,0.15)]">
+                  <div className="w-20 h-20 bg-[#1A1A1A] border-2 border-[#C9A84C]/40 rounded-full flex items-center justify-center text-3xl font-serif font-bold text-[#C9A84C] mb-6 lg:mx-auto shadow-[0_0_25px_rgba(201,168,76,0.15)] relative">
+                    <div className="absolute inset-0 rounded-full bg-[#C9A84C]/5"></div>
                     {step.num}
                   </div>
                   <div className="lg:text-center">
                     <h3 className="text-xl font-serif font-bold mb-3 text-white">{step.title}</h3>
-                    <p className="text-[#888888] leading-relaxed">{step.desc}</p>
+                    <p className="text-[#888888] leading-relaxed text-sm md:text-base">{step.desc}</p>
                   </div>
                 </motion.div>
               ))}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, TrendingUp, Star } from "lucide-react";
 import heroImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.18_-_cópia_1772248771760.jpeg";
 
 export default function HeroSection() {
@@ -8,7 +8,7 @@ export default function HeroSection() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -22,12 +22,20 @@ export default function HeroSection() {
     { name: "Contato", href: "#contato" },
   ];
 
-  const trustedLogos = ["TransbyShop", "EasyCon", "Clínica Dr. José Cabral Jr.", "BotoClinic", "Débora Russo", "Minas de Ouro", "Instituto Acesso", "Gastric", "Pensare", "Marília Gabriela"];
+  const trustedLogos = [
+    "TransbyShop", "EasyCon", "Clínica Dr. José Cabral Jr.", "BotoClinic", 
+    "Débora Russo", "Minas de Ouro", "Instituto Acesso", "Gastric", 
+    "Pensare", "Marília Gabriela", "Luiza Mota", "Pemar"
+  ];
+  
+  const midPoint = Math.ceil(trustedLogos.length / 2);
+  const logosRow1 = trustedLogos.slice(0, midPoint);
+  const logosRow2 = trustedLogos.slice(midPoint);
 
   return (
     <>
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "glass-nav h-20" : "bg-transparent h-24"}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav ${scrolled ? "nav-scrolled h-20" : "h-24"}`}>
         <div className="container mx-auto px-6 h-full flex items-center justify-between">
           <div className="text-[#C9A84C] font-serif font-bold text-3xl tracking-tighter">SB</div>
           
@@ -72,7 +80,7 @@ export default function HeroSection() {
       )}
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-hero-glow">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-hero-glow border-b border-[#C9A84C]/15">
         <div className="container mx-auto px-6">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-8">
             <motion.div 
@@ -91,7 +99,7 @@ export default function HeroSection() {
                 Sou Samara Benevides — especialista em estratégias comerciais, automação WhatsApp e fluxos conversacionais que aumentam seu faturamento com atendimento humanizado e inteligente.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-start">
-                <a href="#contato" className="bg-[#C9A84C] text-[#0A0A0A] text-center font-bold px-8 py-4 rounded-full hover:bg-[#E2C873] transition-all duration-300 btn-primary-glow">
+                <a href="#contato" className="bg-[#C9A84C] text-[#0A0A0A] text-center font-bold px-8 py-4 rounded-full hover:bg-[#E2C873] transition-all duration-300 btn-primary-glow shadow-[0_4px_20px_rgba(201,168,76,0.2)]">
                   Agende uma Consultoria Gratuita
                 </a>
                 <a href="#servicos" className="border border-[#C9A84C]/40 text-[#C9A84C] text-center font-bold px-8 py-4 rounded-full hover:bg-[#C9A84C]/10 hover:border-[#C9A84C] transition-all duration-300">
@@ -115,13 +123,39 @@ export default function HeroSection() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="lg:w-[45%] relative w-full"
+              className="lg:w-[45%] relative w-full flex justify-center"
             >
               <div className="absolute inset-0 bg-[#C9A84C]/10 blur-[100px] rounded-full"></div>
+              
+              {/* Floating Badges */}
+              <div className="hidden lg:flex absolute -right-6 top-10 animate-float bg-[#1A1A1A] border border-[#C9A84C]/20 rounded-xl p-3 items-center gap-3 shadow-xl z-20">
+                <div className="w-10 h-10 rounded-full bg-[#4ADE80]/10 flex items-center justify-center text-[#4ADE80]">
+                  <TrendingUp size={20} />
+                </div>
+                <div>
+                  <div className="text-white font-bold text-sm">+50%</div>
+                  <div className="text-[#888888] text-xs">Faturamento</div>
+                </div>
+              </div>
+
+              <div className="hidden lg:flex absolute -left-10 top-1/3 animate-float-delayed bg-[#1A1A1A] border border-[#C9A84C]/20 rounded-full p-2 pr-4 items-center gap-2 shadow-xl z-20">
+                <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center text-[#C9A84C]">
+                  <Star size={14} fill="currentColor" />
+                </div>
+                <div className="text-white font-bold text-sm">4.9/5 <span className="text-[#888888] font-normal">Rating</span></div>
+              </div>
+
+              <div className="hidden lg:flex absolute right-4 bottom-20 animate-float bg-[#1E3A2F] border border-[#25D366]/30 rounded-xl p-3 items-center gap-3 shadow-xl z-20">
+                <div className="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center text-white">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" fill="currentColor"></path></svg>
+                </div>
+                <div className="text-white font-medium text-sm">Lead convertido ✓</div>
+              </div>
+
               <img 
                 src={heroImg} 
                 alt="Samara Benevides" 
-                className="relative z-10 w-full max-w-md mx-auto object-cover aspect-[3/4] lg:aspect-auto"
+                className="relative z-10 w-full max-w-md object-cover aspect-[3/4] lg:aspect-auto drop-shadow-2xl"
                 style={{
                   WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
                   maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)"
@@ -133,14 +167,27 @@ export default function HeroSection() {
       </section>
 
       {/* Trusted By */}
-      <section className="py-10 border-b border-[#C9A84C]/20 overflow-hidden relative">
-        <div className="text-center mb-6">
-          <p className="text-[#666666] uppercase text-sm font-bold tracking-[0.15em]">Empresas que confiam na SB</p>
+      <section className="py-12 bg-[#0A0A0A] overflow-hidden relative border-b border-[#C9A84C]/10">
+        <div className="text-center mb-8">
+          <p className="text-[#666666] uppercase text-xs font-bold tracking-[0.2em]">Empresas que confiam na SB</p>
         </div>
+        
+        {/* Row 1 */}
+        <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-6">
+          <div className="flex items-center justify-center md:justify-start [&_div]:mx-10 marquee-scroll">
+            {logosRow1.concat(logosRow1).concat(logosRow1).map((logo, idx) => (
+              <div key={`r1-${idx}`} className="text-xl md:text-2xl font-sans font-bold tracking-widest text-white/30 whitespace-nowrap hover:text-white/80 transition-colors duration-300 cursor-default">
+                {logo}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Row 2 (Reverse) */}
         <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-          <div className="flex items-center justify-center md:justify-start [&_div]:mx-8 animate-[marquee_30s_linear_infinite]">
-            {trustedLogos.concat(trustedLogos).map((logo, idx) => (
-              <div key={idx} className="text-2xl font-serif text-[#888888]/50 whitespace-nowrap hover:text-[#888888] transition-colors cursor-default">
+          <div className="flex items-center justify-center md:justify-start [&_div]:mx-10 marquee-scroll-reverse">
+            {logosRow2.concat(logosRow2).concat(logosRow2).map((logo, idx) => (
+              <div key={`r2-${idx}`} className="text-xl md:text-2xl font-sans font-bold tracking-widest text-white/30 whitespace-nowrap hover:text-white/80 transition-colors duration-300 cursor-default">
                 {logo}
               </div>
             ))}

@@ -1,0 +1,383 @@
+# SB VENDAS — Prompt de Refinamento para Replit Design Mode
+
+A primeira versão da landing page ficou muito boa! Agora preciso de ajustes específicos para elevar o nível de qualidade e aproximar mais do template de referência (Custklen CRM Landing Page). Seguem as correções organizadas por seção:
+
+---
+
+## 🔧 CORREÇÃO 1: HERO — Adicionar elementos flutuantes para criar profundidade
+
+**Problema:** O hero está bonito mas muito "flat" comparado ao template de referência Custklen, que usa cards/badges flutuantes sobre e ao redor da foto principal para criar profundidade e dinamismo visual.
+
+**Solução:** Adicionar 2-3 elementos flutuantes ao redor da foto da Samara no hero:
+
+1. **Badge flutuante superior direito** (sobre/perto da foto):
+   - Card pequeno com fundo `#1A1A1A`, borda `rgba(201, 168, 76, 0.2)`, border-radius 12px
+   - Conteúdo: Ícone de gráfico crescente (TrendingUp) em verde `#4ADE80` + texto "+50% faturamento"
+   - Animação: Float suave (translateY -8px a 8px) com `animation: float 3s ease-in-out infinite`
+
+2. **Badge flutuante inferior** (abaixo/ao lado da foto):
+   - Card pequeno estilo WhatsApp: fundo `#1E3A2F`, border-radius 12px
+   - Conteúdo: Ícone WhatsApp verde + texto "Lead convertido ✓"
+   - Animação: Float com delay diferente: `animation: float 3s ease-in-out infinite 1.5s`
+
+3. **Badge flutuante esquerdo** (entre o texto e a foto):
+   - Circulo com avatar pequeno + estrelas ⭐⭐⭐⭐⭐ + "4.9/5"
+   - Fundo `#1A1A1A`
+   - Animação: Float com outro delay
+
+**CSS para animação float:**
+```css
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+```
+
+Esses badges devem ter `position: absolute` em relação ao container da imagem, com `z-index` adequado. No mobile, esconder ou reposicionar.
+
+---
+
+## 🔧 CORREÇÃO 2: LOGO MARQUEE — Usar logos reais dos clientes ao invés de texto
+
+**Problema:** Atualmente os nomes das empresas aparecem como texto simples em scroll. No template Custklen, são logos de clientes reais em grayscale, o que transmite muito mais credibilidade.
+
+**Solução:** 
+- Substituir os textos dos nomes por imagens SVG ou PNG dos logos dos clientes
+- Se não tiver acesso aos logos ainda, usar uma abordagem alternativa: estilizar cada nome como se fosse um logo usando tipografia diferenciada:
+  - Cada nome em `font-weight: 700`, `font-size: 1.25rem`, `letter-spacing: 0.05em`
+  - Cor: `rgba(255, 255, 255, 0.4)` (mais visível que está agora)
+  - Hover: `rgba(255, 255, 255, 0.8)` com transição suave
+- A velocidade do marquee pode ser um pouco mais lenta para dar tempo de ler
+- Adicionar uma SEGUNDA linha de logos scrollando na direção oposta (como no Custklen) para criar mais densidade visual
+- Garantir que o separador dourado (`1px solid rgba(201, 168, 76, 0.15)`) esteja visível entre o hero e o marquee
+
+---
+
+## 🔧 CORREÇÃO 3: PAIN POINTS CARDS — Melhorar hover effect e diferenciação visual
+
+**Problema:** Os 4 cards de "dores" estão visualmente uniformes demais. Precisam de mais interatividade e destaque no hover.
+
+**Solução:**
+- **Hover effect aprimorado:**
+  ```css
+  .pain-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201, 168, 76, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(201, 168, 76, 0.05);
+    background: linear-gradient(135deg, #1A1A1A 0%, #1F1F1F 100%);
+  }
+  ```
+- **Ícone no hover:** O círculo dourado do ícone deve expandir levemente e o ícone muda de `opacity: 0.7` para `opacity: 1`
+- **Número sutil** no canto superior direito de cada card: "01", "02", "03", "04" em `rgba(201, 168, 76, 0.08)`, font-size grande (4rem), para criar textura visual
+
+---
+
+## 🔧 CORREÇÃO 4: SEÇÃO DE SERVIÇOS — Adicionar hover diferenciado nos cards
+
+**Problema:** Os cards de serviço estão bons, mas o hover pode ser mais expressivo. As tags são um diferencial excelente que merece destaque.
+
+**Solução:**
+- No hover, adicionar uma borda superior dourada:
+  ```css
+  .service-card:hover {
+    border-top: 2px solid #C9A84C;
+    transform: translateY(-4px);
+  }
+  ```
+- As tags (DIAGNÓSTICO, PLAYBOOK, etc.) devem ter um hover individual também — quando o usuário passa o mouse sobre o card, as tags ficam com `background: rgba(201, 168, 76, 0.15)` e `border-color: rgba(201, 168, 76, 0.4)`
+- Considerar adicionar um ícone de seta "→" discreto no canto inferior direito de cada card, que aparece com fade-in no hover (indicando que pode clicar para saber mais)
+
+---
+
+## 🔧 CORREÇÃO 5: SEÇÃO RESULTADOS — Adicionar animação count-up nos números
+
+**Problema:** Os números (+50%, 40%, +50, 24/7) estão estáticos. Uma animação de contagem ao entrar na viewport aumenta drasticamente o impacto.
+
+**Solução:**
+- Implementar IntersectionObserver que dispara count-up animation quando a seção entra na viewport
+- Cada número conta de 0 até o valor final em ~2 segundos com easing
+- Exemplo de implementação:
+```javascript
+// Count-up animation
+const animateCounter = (element, target, suffix = '', prefix = '') => {
+  let current = 0;
+  const increment = target / 60; // ~60 frames in 2s at 30fps
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    element.textContent = prefix + Math.floor(current) + suffix;
+  }, 33);
+};
+
+// Use IntersectionObserver to trigger when visible
+```
+- Para "24/7", não animar — simplesmente fazer fade-in
+- Os separadores dourados entre os stats (linhas verticais e horizontais) devem ser um pouco mais visíveis: `border-color: rgba(201, 168, 76, 0.25)`
+
+---
+
+## 🔧 CORREÇÃO 6: TIMELINE "COMO FUNCIONA" — Fortalecer linha conectora
+
+**Problema:** A linha horizontal que conecta os 4 passos está quase invisível. No Custklen, as conexões visuais entre elementos são fortes e claras.
+
+**Solução:**
+- A linha conectora horizontal deve ser:
+  ```css
+  .timeline-line {
+    height: 2px;
+    background: linear-gradient(to right, rgba(201, 168, 76, 0.1), rgba(201, 168, 76, 0.4), rgba(201, 168, 76, 0.4), rgba(201, 168, 76, 0.1));
+  }
+  ```
+- Os círculos dos números devem ter um `box-shadow: 0 0 20px rgba(201, 168, 76, 0.15)` para criar um glow sutil
+- Adicionar animação de scroll: quando entra na viewport, a linha "desenha" da esquerda para a direita (usando `width` transition), e cada círculo aparece com scale-up sequencial (0.1s de delay entre cada)
+- Os números dentro dos círculos (01, 02, 03, 04) devem ser dourados, não brancos: `color: #C9A84C`
+
+---
+
+## 🔧 CORREÇÃO 7: DEPOIMENTOS — Corrigir overflow e melhorar layout
+
+**Problema:** O segundo depoimento está cortado ("Pra...") — o texto não cabe no card. Além disso, faltam fotos dos clientes e o terceiro depoimento pode não estar visível.
+
+**Solução:**
+- **Corrigir overflow:** Cada card de depoimento deve ter `min-height` suficiente para acomodar o texto completo. Para textos longos, usar `line-clamp` com botão "ler mais", OU expandir a altura do card automaticamente
+- **Mostrar todos os 3 depoimentos** em um layout horizontal scrollável ou como carousel com navegação (dots/setas)
+- **Melhorar os bubbles do WhatsApp:**
+  - Aumentar o padding interno: `padding: 24px 28px`
+  - Adicionar o "tail" do balão WhatsApp mais definido (o triângulo no canto inferior esquerdo)
+  - Adicionar timestamp sutil no canto inferior direito (ex: "21:43" em `rgba(255,255,255,0.4)`)
+- **Adicionar foto circular** do autor abaixo de cada bubble (se disponível), ou ao menos iniciais em um avatar circular com fundo dourado
+- **O texto completo do depoimento 2 deve ser:** "Parabéns pelo relatório @Samara Benevides, fundamental os 2 últimos slides. Pra entender como estamos na relação com o ano passado e quanto precisamos pro restante dos meses."
+
+---
+
+## 🔧 CORREÇÃO 8: SEÇÃO DIFERENCIAIS — Adicionar separadores visuais entre itens
+
+**Problema:** A lista de diferenciais está funcional mas visualmente um pouco monótona — parece uma lista simples.
+
+**Solução:**
+- Adicionar uma **linha divisória sutil** entre cada item:
+  ```css
+  .differential-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 28px 0;
+  }
+  .differential-item:last-child {
+    border-bottom: none;
+  }
+  ```
+- No **hover de cada item**, o ícone gira levemente (rotate 10deg) e a linha inferior muda para dourado:
+  ```css
+  .differential-item:hover {
+    border-bottom-color: rgba(201, 168, 76, 0.2);
+  }
+  .differential-item:hover .icon {
+    transform: rotate(10deg) scale(1.1);
+  }
+  ```
+- Adicionar um **número dourado** grande e sutil atrás de cada item (01, 02, 03, 04, 05) como marca d'água:
+  - `font-size: 5rem`, `color: rgba(201, 168, 76, 0.04)`, `position: absolute`, `right: 0`, `top: 50%`
+
+---
+
+## 🔧 CORREÇÃO 9: CTA FINAL — Aumentar impacto visual
+
+**Problema:** A seção de CTA final (imagem 11) está fraca visualmente. A foto circular da Samara está muito pequena e o fundo não tem destaque suficiente. Essa seção é CRUCIAL para conversão.
+
+**Solução:**
+- **Background mais impactante:**
+  ```css
+  .cta-section {
+    background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.12) 0%, rgba(10, 10, 10, 0.98) 70%);
+    position: relative;
+    overflow: hidden;
+  }
+  /* Adicionar glow dourado animado */
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+  ```
+- **Foto da Samara maior:** Aumentar de ~80px para ~140px de diâmetro, com borda dourada `2px solid rgba(201, 168, 76, 0.4)` e `box-shadow: 0 0 40px rgba(201, 168, 76, 0.15)`
+- **Título maior:** Aumentar o font-size do h2 nesta seção para `clamp(2.5rem, 4vw, 3.5rem)`
+- **Botões lado a lado com mais destaque:**
+  - "Agendar Consultoria Gratuita" — botão dourado com `box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3)`
+  - "Falar pelo WhatsApp" — botão verde com ícone WhatsApp à esquerda e `box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3)`
+  - Ambos com hover scale(1.05) + shadow expansion
+- **Trust line** mais visível: aumentar font-size para 0.9rem e `color: rgba(255, 255, 255, 0.6)`
+
+---
+
+## 🔧 CORREÇÃO 10: NAVEGAÇÃO — Adicionar efeito glassmorphism no scroll
+
+**Problema:** A navegação fixa parece não ter o efeito de transição entre transparente (no hero) e sólido escuro com blur (ao scrollar).
+
+**Solução:**
+- Implementar transição de navbar:
+```javascript
+// On scroll, add class to nav
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (window.scrollY > 80) {
+    nav.classList.add('nav-scrolled');
+  } else {
+    nav.classList.remove('nav-scrolled');
+  }
+});
+```
+```css
+nav {
+  background: transparent;
+  transition: all 0.3s ease;
+}
+nav.nav-scrolled {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+```
+
+---
+
+## 🔧 CORREÇÃO 11: ANIMAÇÕES DE SCROLL — Adicionar reveal animations em todas as seções
+
+**Problema:** As seções parecem aparecer estaticamente sem animações de entrada.
+
+**Solução:**
+- Implementar IntersectionObserver global para animar elementos ao entrarem na viewport:
+```css
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger children */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+```
+```javascript
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => observer.observe(el));
+```
+- Aplicar `.reveal` em: section labels, títulos, subtítulos, fotos
+- Aplicar `.reveal-stagger` em: grids de cards (pain points, serviços), diferenciais, stats
+
+---
+
+## 🔧 CORREÇÃO 12: BOTÃO WHATSAPP FLUTUANTE — Melhorar visual e animação
+
+**Problema:** O botão flutuante está presente mas pode ter melhor destaque visual.
+
+**Solução:**
+- Garantir que o botão tem o ícone SVG do WhatsApp (não apenas um ícone genérico de chat)
+- Adicionar pulse animation para chamar atenção:
+```css
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+.whatsapp-float::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #25D366;
+  animation: whatsapp-pulse 2s ease-out infinite;
+  z-index: -1;
+}
+@keyframes whatsapp-pulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+```
+- O link deve apontar para: `https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre os serviços da SB Vendas.`
+
+---
+
+## 🔧 CORREÇÃO 13: NOISE TEXTURE + GOLD GRAIN — Adicionar textura global
+
+**Problema:** A página está muito "limpa" digitalmente. Falta a textura sutil que dá profundidade premium.
+
+**Solução:**
+- Adicionar uma noise texture overlay CSS global sobre toda a página:
+```css
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+```
+
+---
+
+## RESUMO DE PRIORIDADE (do mais impactante para o menos):
+
+1. **CORREÇÃO 7** — Depoimentos (overflow cortado = bug visível)
+2. **CORREÇÃO 9** — CTA Final (seção mais importante para conversão)
+3. **CORREÇÃO 1** — Hero floating badges (eleva muito o nível visual)
+4. **CORREÇÃO 11** — Scroll animations (toda a página ganha vida)
+5. **CORREÇÃO 5** — Count-up numbers (impacto visual nos resultados)
+6. **CORREÇÃO 6** — Timeline connector (melhora fluxo visual)
+7. **CORREÇÃO 10** — Nav glassmorphism (detalhe premium)
+8. **CORREÇÃO 12** — WhatsApp button pulse (chama atenção para conversão)
+9. **CORREÇÃO 2** — Logo marquee (credibilidade)
+10. **CORREÇÃO 13** — Noise texture (refinamento premium)
+11. **CORREÇÃO 3** — Pain point cards hover (interatividade)
+12. **CORREÇÃO 4** — Service cards hover (interatividade)
+13. **CORREÇÃO 8** — Diferenciais separadores (organização visual)
+
+Manter tudo que já está bom: tipografia, paleta de cores, estrutura de seções, fotos da Samara, conteúdo textual, footer.
