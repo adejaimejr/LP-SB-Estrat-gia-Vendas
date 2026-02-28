@@ -18,7 +18,7 @@ export default function HeroSection() {
     { name: "Serviços", href: "#servicos" },
     { name: "Resultados", href: "#resultados" },
     { name: "Sobre", href: "#sobre" },
-    { name: "Depoimentos", href: "#depoimentos" },
+    { name: "Ecossistema", href: "#ecossistema" },
     { name: "Contato", href: "#contato" },
   ];
 

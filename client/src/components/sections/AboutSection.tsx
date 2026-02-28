@@ -49,12 +49,12 @@ export default function AboutSection() {
   ];
 
   const flowNodes = [
-    { label: "Origem" },
-    { label: "Captura" },
-    { label: "Automação" },
-    { label: "Atendimento" },
-    { label: "Conversão" },
-    { label: "Análise" }
+    { label: "Origem", num: "01", desc: "De onde vem o lead" },
+    { label: "Captura", num: "02", desc: "Landing page + formulário" },
+    { label: "Automação", num: "03", desc: "n8n + webhooks + API" },
+    { label: "Atendimento", num: "04", desc: "WhatsApp + CRM" },
+    { label: "Conversão", num: "05", desc: "Script + follow-up" },
+    { label: "Análise", num: "06", desc: "Dashboard + relatórios" }
   ];
 
   const differentials = [
@@ -103,50 +103,83 @@ export default function AboutSection() {
       {/* Infrastructure Ecosystem (Simplified version) */}
       <section id="ecossistema" className="py-24 bg-[#141414] overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center max-w-4xl mx-auto mb-10">
+            <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-5 py-1.5 rounded-full mb-6">
+              <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Ecossistema de Vendas</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight font-serif mb-6">
+              Da origem à <span className="text-gradient-gold italic">conversão</span>: controle total sobre cada lead
+            </h2>
+            <p className="text-[#B8B8B8] text-lg mb-8">
+              Implantamos toda a tecnologia que sua empresa precisa para rastrear, nutrir e converter leads com previsibilidade. Sem achismo, sem improviso.
+            </p>
+            <p className="font-serif italic text-[#C9A84C] text-[1.15rem] text-center max-w-[700px] mx-auto opacity-85">
+              "Cada lead que entra na sua empresa tem nome, origem e destino. Nós garantimos isso."
+            </p>
+          </motion.div>
+
+          <div className="flex flex-col lg:flex-row gap-12 mt-16 items-start max-w-6xl mx-auto">
             
-            {/* Left Side: Title and Flow */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-5/12">
-              <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-5 py-1.5 rounded-full mb-6">
-                <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Nossa Infraestrutura</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight font-serif mb-6">
-                Controle da origem à <span className="text-gradient-gold italic">conversão</span> do lead
-              </h2>
-              <p className="text-[#B8B8B8] text-lg mb-10">
-                Implantamos o ecossistema tecnológico que sua empresa precisa para rastrear, nutrir e converter com previsibilidade.
-              </p>
-
+            {/* Left Side: Flow */}
+            <div className="lg:w-[35%] w-full">
               {/* Compact Vertical Flow */}
-              <div className="relative pl-6 border-l-2 border-[#C9A84C]/20 space-y-6 mb-10">
-                {flowNodes.map((node, idx) => (
-                  <motion.div 
-                    key={idx}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: idx * 0.1 }}
-                    className="relative"
-                  >
-                    <div className="absolute -left-[31px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#1A1A1A] border-2 border-[#C9A84C] shadow-[0_0_10px_rgba(201,168,76,0.5)]"></div>
-                    <span className="text-white font-bold text-lg">{node.label}</span>
-                  </motion.div>
-                ))}
+              <div className="relative pl-8 mb-10 h-full">
+                {/* Vertical Line */}
+                <div className="absolute left-[5px] top-4 bottom-4 w-[2px] rounded-full overflow-hidden">
+                   <div className="w-full h-full bg-[#333333]"></div>
+                   <motion.div 
+                    initial={{ height: "0%" }}
+                    whileInView={{ height: "100%" }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                    className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#C9A84C] to-[rgba(201,168,76,0.2)]"
+                  ></motion.div>
+                </div>
+
+                <div className="space-y-8 relative">
+                  {flowNodes.map((node, idx) => (
+                    <motion.div 
+                      key={idx}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: idx * 0.15 }}
+                      className="relative"
+                    >
+                      <div className="absolute -left-[35px] top-1.5 w-3 h-3 rounded-full bg-[#C9A84C] shadow-[0_0_10px_rgba(201,168,76,0.3)] z-10"></div>
+                      <div>
+                        <div className="flex items-center gap-2 mb-0.5">
+                          <span className="text-[#C9A84C] font-bold text-[0.85rem]">{node.num}</span>
+                          <span className="text-white font-bold text-lg leading-none">{node.label}</span>
+                        </div>
+                        <p className="text-[#888888] text-[0.8rem] ml-6">{node.desc}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
-              <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB." target="_blank" rel="noreferrer" className="inline-block bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-4 rounded-full hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(201,168,76,0.3)]">
-                Quero essa estrutura →
-              </a>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.8 }}
+                className="pl-8"
+              >
+                <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB." target="_blank" rel="noreferrer" className="inline-block bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-4 rounded-full hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)] text-center w-full sm:w-auto">
+                  Quero essa infraestrutura no meu negócio →
+                </a>
+              </motion.div>
             </motion.div>
 
             {/* Right Side: Compact Grid of Cards */}
-            <div className="lg:w-7/12 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="lg:w-[65%] grid grid-cols-1 md:grid-cols-2 gap-4">
               {infrastructureCards.map((card, idx) => (
                 <motion.div 
                   key={idx}
                   initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
                   variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: idx * 0.1 } } }}
-                  className="bg-[#1A1A1A] p-6 rounded-[12px] border border-white/5 hover:border-[#C9A84C]/30 transition-all duration-300 flex flex-col group"
+                  className="bg-[#1A1A1A] p-6 rounded-[12px] border border-white/5 border-t-transparent hover:border-t-[#C9A84C] hover:border-t-2 hover:border-[#C9A84C]/30 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] transition-all duration-300 flex flex-col group h-full"
                 >
                   <div className="flex items-center gap-4 mb-3">
                     <div className="w-10 h-10 rounded-full bg-[#C9A84C]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#C9A84C]/20 transition-colors">
@@ -154,7 +187,14 @@ export default function AboutSection() {
                     </div>
                     <h3 className="text-lg font-serif font-bold text-white leading-tight">{card.title}</h3>
                   </div>
-                  <p className="text-[#888888] text-sm leading-relaxed">{card.desc}</p>
+                  <p className="text-[#888888] text-sm leading-relaxed mb-6 flex-grow">{card.desc}</p>
+                  <div className="flex flex-wrap gap-1.5 mt-auto pt-2 border-t border-white/5">
+                    {card.tags.map(tag => (
+                      <span key={tag} className="text-[9px] font-bold uppercase tracking-wider text-[#C9A84C] bg-[#C9A84C]/5 px-2.5 py-0.5 rounded-full border border-transparent group-hover:border-[#C9A84C]/20 transition-all">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </motion.div>
               ))}
             </div>

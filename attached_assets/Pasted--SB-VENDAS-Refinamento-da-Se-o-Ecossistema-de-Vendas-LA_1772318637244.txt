@@ -1,0 +1,179 @@
+# SB VENDAS — Refinamento da Seção Ecossistema de Vendas
+
+---
+
+## ✍️ LABEL — Trocar "NOSSA INFRAESTRUTURA"
+
+O label "NOSSA INFRAESTRUTURA" soa técnico demais e frio. Trocar para:
+
+**Novo label:** "ECOSSISTEMA DE VENDAS"
+
+Alternativas caso prefira: "TECNOLOGIA QUE VENDE" ou "MÁQUINA DE VENDAS"
+
+---
+
+## ✍️ HEADING — Pequeno ajuste
+
+Atual: "Controle da origem à *conversão* do lead"
+Novo: "Da origem à *conversão*: controle total sobre cada lead"
+
+Motivo: a inversão coloca "Da origem à conversão" como gancho visual primeiro (é a jornada), e "controle total" como promessa forte no final.
+
+---
+
+## ✍️ SUBTÍTULO — Mais direto
+
+Atual: "Implantamos o ecossistema tecnológico que sua empresa precisa para rastrear, nutrir e converter com previsibilidade."
+Novo: "Implantamos toda a tecnologia que sua empresa precisa para rastrear, nutrir e converter leads com previsibilidade. Sem achismo, sem improviso."
+
+Motivo: "ecossistema tecnológico" é jargão. "Toda a tecnologia" é mais claro. "Sem achismo, sem improviso" reforça a dor do público-alvo.
+
+---
+
+## 🎨 FLUXO VERTICAL (lado esquerdo) — Melhorar visualmente
+
+O fluxo com os círculos vazios e texto está muito simples. Precisa de mais presença visual:
+
+### Melhorias:
+
+1. **Círculos preenchidos** ao invés de vazios:
+```css
+.flow-circle {
+  width: 12px;
+  height: 12px;
+  background: #C9A84C;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(201, 168, 76, 0.3);
+}
+```
+
+2. **Linha conectora visível** entre os círculos:
+```css
+.flow-line {
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #C9A84C, rgba(201, 168, 76, 0.2));
+  position: absolute;
+  left: 5px; /* center of circle */
+}
+```
+
+3. **Numeração dourada** antes de cada item:
+```
+① Origem
+② Captura
+③ Automação
+④ Atendimento
+⑤ Conversão
+⑥ Análise
+```
+Usar números dourados `color: #C9A84C`, `font-weight: 700`, `font-size: 0.85rem` antes de cada label.
+
+4. **Descrição curta** em cinza abaixo de cada etapa:
+```
+① Origem → "De onde vem o lead"
+② Captura → "Landing page + formulário"
+③ Automação → "n8n + webhooks + API"
+④ Atendimento → "WhatsApp + CRM"
+⑤ Conversão → "Script + follow-up"
+⑥ Análise → "Dashboard + relatórios"
+```
+Essas descrições curtas ficam em `color: #888888`, `font-size: 0.8rem`, logo abaixo do nome da etapa.
+
+5. **Animação de entrada:** Quando a seção entra na viewport, os itens do fluxo aparecem de cima pra baixo com stagger de 0.15s entre cada, e a linha dourada "desenha" de cima pra baixo simultaneamente.
+
+---
+
+## 🎨 CARDS (lado direito) — Adicionar tags e melhorar hover
+
+Os cards estão bons mas faltam as tags/pills que existem nos cards de Serviços. Adicionar:
+
+**Card 1 — Rastreamento de Leads:**
+Tags: `UTM` · `PIXEL` · `ANALYTICS`
+
+**Card 2 — Landing Pages de Conversão:**
+Tags: `DESIGN` · `SEO` · `RESPONSIVO`
+
+**Card 3 — Automações com n8n:**
+Tags: `N8N` · `WEBHOOKS` · `API`
+
+**Card 4 — Integrações entre Plataformas:**
+Tags: `WHATSAPP` · `META ADS` · `CRM`
+
+**Card 5 — CRM e Funil Estruturado:**
+Tags: `PIPELINE` · `KANBAN` · `FOLLOW-UP`
+
+**Card 6 — Dashboards em Tempo Real:**
+Tags: `KPIs` · `ROI` · `DATA-DRIVEN`
+
+Usar o mesmo estilo de tags que já existe nos cards de serviço (pill badges douradas com borda).
+
+### Hover dos cards:
+```css
+.eco-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 168, 76, 0.3);
+  border-top: 2px solid #C9A84C;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+```
+
+---
+
+## ✍️ CTA — Ajustar texto
+
+Atual: "Quero essa estrutura →"
+Novo: "Quero essa infraestrutura no meu negócio →"
+
+Motivo: "estrutura" é vago. "Infraestrutura no meu negócio" é mais concreto e pessoal, gera identificação.
+
+Link: https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB.
+
+---
+
+## 🎨 FRASE DE IMPACTO — Adicionar entre o heading e o conteúdo
+
+Adicionar uma frase centralizada abaixo do subtítulo, em toda a largura da seção (antes de dividir em 2 colunas):
+
+*"Cada lead que entra na sua empresa tem nome, origem e destino. Nós garantimos isso."*
+
+Estilo:
+```css
+.impact-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #C9A84C;
+  font-size: 1.15rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 40px auto;
+  opacity: 0.85;
+}
+```
+
+Essa frase atua como um divisor emocional antes de entrar nos detalhes técnicos.
+
+---
+
+## 📐 LAYOUT — Alinhamento refinado
+
+O layout 2 colunas está bom (fluxo esquerda, cards direita). Ajustar proporções:
+
+- Coluna esquerda (fluxo): **35%** da largura
+- Coluna direita (cards): **65%** da largura
+- Gap entre colunas: `48px`
+
+No mobile: a frase de impacto, o fluxo e os cards ficam empilhados verticalmente. O fluxo pode virar horizontal com scroll ou simplesmente ficar vertical e compacto.
+
+---
+
+## RESUMO DE PRIORIDADE
+
+1. Trocar label para "ECOSSISTEMA DE VENDAS"
+2. Ajustar heading para "Da origem à conversão: controle total sobre cada lead"
+3. Melhorar o fluxo visual (círculos preenchidos, linha dourada, descrições curtas, numeração)
+4. Adicionar tags nos cards
+5. Adicionar frase de impacto dourada
+6. Ajustar CTA para "Quero essa infraestrutura no meu negócio →"
+7. Hover nos cards com borda dourada superior
+8. Animação de entrada no fluxo
