@@ -53,10 +53,10 @@ export default function ServicesSection() {
       featured: true 
     },
     { icon: <Workflow className="text-[#C9A84C]" size={24} />, title: "Automação & CRM", desc: "Implantamos CRM, automação de WhatsApp, chatbots inteligentes e agentes de IA que trabalham 24h vendendo pelo seu negócio.", tags: ["WhatsApp", "Chatbot", "Agente IA"] },
-    { icon: <GraduationCap className="text-[#C9A84C]" size={24} />, title: "Treinamento de Equipes", desc: "Capacitamos sua equipe com scripts de atendimento, técnicas de vendas online e uso eficiente das ferramentas que implantamos.", tags: ["Scripts", "Role-play", "Mentoria"] },
+    { icon: <GraduationCap className="text-[#C9A84C]" size={24} />, title: "Treinamento de Equipes", desc: "Capacitamos sua equipe com scripts de atendimento, técnicas de vendas online e uso eficiente das ferramentas que implantamos.", tags: ["Scripts", "Mentoria"] },
     { icon: <MessagesSquare className="text-[#C9A84C]" size={24} />, title: "Fluxos Conversacionais", desc: "Criamos scripts e fluxos para WhatsApp que conduzem o lead do primeiro contato ao fechamento, com abordagem humanizada e personalizada.", tags: ["Follow-up", "Omnichannel", "Funil"] },
     { icon: <Headphones className="text-[#C9A84C]" size={24} />, title: "SDR / Closer / Secretária Online", desc: "Serviço remoto de pré-venda, fechamento e atendimento. Verificamos o perfil da sua operação e indicamos a melhor solução.", tags: ["Remoto", "Terceirização", "Atendimento"] },
-    { icon: <BarChart3 className="text-[#C9A84C]" size={24} />, title: "Acompanhamento de Resultados", desc: "Dashboards e relatórios com análise de dados, métricas de conversão e insights para otimização contínua das suas vendas.", tags: ["KPIs", "Relatórios", "Data-driven"] },
+    { icon: <BarChart3 className="text-[#C9A84C]" size={24} />, title: "Acompanhamento de Resultados", desc: "Dashboards e relatórios com análise de dados, métricas de conversão e insights para otimização contínua das suas vendas.", tags: ["KPIs", "Relatórios", "BI"] },
   ];
 
   const steps = [

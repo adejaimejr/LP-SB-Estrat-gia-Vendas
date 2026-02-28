@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Fingerprint, Award, Heart, TrendingUp, BookOpen, Star, Linkedin, Instagram, MessageCircle } from "lucide-react";
 import aboutImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.18_(1)_1772248771760.jpeg";
-import ctaImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.18_-_cópia_1772248771760.jpeg";
+import ctaImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.19_1772310789154.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -34,11 +34,10 @@ export default function AboutSection() {
   ];
 
   const differentials = [
-    { num: "01", icon: <Fingerprint size={28} />, title: "Abordagem Personalizada", desc: "Nada de template. Analisamos seu mercado, seu público e suas métricas para criar uma estratégia exclusiva pro seu negócio." },
-    { num: "02", icon: <Award size={28} />, title: "Experiência e Autoridade", desc: "Mais de 4 anos de experiência prática em vendas online e CRM, com mais de 50 empresas transformadas." },
+    { num: "01", icon: <Fingerprint size={28} />, title: "Abordagem Personalizada", desc: "Analisamos seu mercado, seu público e suas métricas para criar uma estratégia exclusiva pro seu negócio." },
+    { num: "02", icon: <Award size={28} />, title: "Experiência e Autoridade", desc: "Mais de 10 anos de experiência em vendas online e off, com mais de 50 empresas transformadas." },
     { num: "03", icon: <Heart size={28} />, title: "Humanização do Atendimento", desc: "Tecnologia sem perder o toque humano. Seus clientes se sentem acolhidos em cada etapa, do primeiro contato ao pós-venda." },
-    { num: "04", icon: <TrendingUp size={28} />, title: "Foco em Resultados", desc: "Cada ação tem métrica, cada decisão tem dado por trás. Se não está gerando resultado, ajustamos até gerar." },
-    { num: "05", icon: <BookOpen size={28} />, title: "Capacitação Contínua", desc: "Seu time não fica dependente da gente. Treinamos pra que sua equipe opere com autonomia e alta performance." }
+    { num: "04", icon: <TrendingUp size={28} />, title: "Foco em Resultados", desc: "Cada ação tem métrica, cada decisão tem dado por trás. Se não está gerando resultado, ajustamos até gerar." }
   ];
 
   return (
@@ -174,13 +173,13 @@ export default function AboutSection() {
               Sua próxima venda começa com uma <span className="text-gradient-gold italic">conversa</span>
             </h2>
             <p className="text-[#B8B8B8] text-xl mb-12 max-w-2xl mx-auto">
-              Agende sua reunião e descubra como potencializar os resultados do seu negócio. Sem compromisso, sem enrolação.
+              Agende uma reunião e descubra como potencializar os resultados do seu negócio. Sem compromisso, sem enrolação.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-              <a href="https://wa.me/5592981112101?text=Olá! Gostaria de agendar uma reunião." target="_blank" rel="noreferrer" className="bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-5 rounded-full hover:scale-105 transition-all duration-300 w-full sm:w-auto shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)]">
+              <a href="https://wa.me/5592981112101?text=Olá! Gostaria de agendar uma reunião." target="_blank" rel="noreferrer" className="bg-[#C9A84C] text-[#0A0A0A] font-bold px-10 py-5 rounded-full hover:scale-105 transition-all duration-300 w-full sm:w-auto shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)] flex items-center justify-center gap-2">
                 Agendar Reunião
               </a>
-              <a href="https://wa.me/5592981112101" target="_blank" rel="noreferrer" className="bg-[#25D366] text-white font-bold px-8 py-5 rounded-full hover:scale-105 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 shadow-[0_4px_20px_rgba(37,211,102,0.3)] hover:shadow-[0_8px_30px_rgba(37,211,102,0.4)]">
+              <a href="https://wa.me/5592981112101" target="_blank" rel="noreferrer" className="bg-transparent border-2 border-[#25D366] text-[#25D366] font-bold px-10 py-5 rounded-full hover:bg-[#25D366]/10 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3">
                 <MessageCircle size={20} />
                 Falar pelo WhatsApp
               </a>

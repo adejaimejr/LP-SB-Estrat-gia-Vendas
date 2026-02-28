@@ -136,6 +136,16 @@
     animation: marquee-reverse 45s linear infinite;
   }
 
+  .marquee-scroll:hover,
+  .marquee-scroll > *:hover {
+    animation-play-state: paused;
+  }
+  
+  .marquee-scroll-reverse:hover,
+  .marquee-scroll-reverse > *:hover {
+    animation-play-state: paused;
+  }
+
   @keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
