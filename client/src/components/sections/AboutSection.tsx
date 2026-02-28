@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Fingerprint, Award, Heart, TrendingUp, BookOpen, Star, Linkedin, Instagram, MessageCircle } from "lucide-react";
+import { Crosshair, LayoutTemplate, Workflow, Puzzle, KanbanSquare, BarChart3, Fingerprint, Award, Heart, TrendingUp, Instagram, MessageCircle } from "lucide-react";
 import aboutImg from "@assets/WhatsApp_Image_2026-02-28_at_17.19.01_1772314657032.jpeg";
 import ctaImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.19_1772310789154.jpeg";
 
@@ -9,28 +9,52 @@ const fadeUp = {
 };
 
 export default function AboutSection() {
-  const testimonials = [
+  const infrastructureCards = [
     { 
-      author: "Dr. José Cabral", 
-      role: "Clínica Dr. José Cabral Jr.", 
-      text: "Samara deu show! Que profissional incrível. Ps.: indico",
-      time: "21:43",
-      initials: "JC"
+      icon: <Crosshair className="text-[#C9A84C]" size={24} />, 
+      title: "Rastreamento de Leads", 
+      desc: "UTMs, pixel de conversão e dashboards para saber exatamente de onde vem cada lead. Google, Instagram, indicação, tráfego orgânico. Tudo rastreado.",
+      tags: ["UTM", "PIXEL", "ANALYTICS"]
     },
     { 
-      author: "Cliente", 
-      role: "Setor de Saúde", 
-      text: "Parabéns pelo relatório @Samara Benevides, fundamental os 2 últimos slides. Pra entender como estamos na relação com o ano passado e quanto precisamos pro restante dos meses.",
-      time: "14:20",
-      initials: "CS"
+      icon: <LayoutTemplate className="text-[#C9A84C]" size={24} />, 
+      title: "Landing Pages de Conversão", 
+      desc: "Páginas de captura profissionais, otimizadas para conversão e integradas com seu CRM. Design premium que transmite confiança e gera leads qualificados.",
+      tags: ["DESIGN", "SEO", "RESPONSIVO"]
     },
     { 
-      author: "Empresário", 
-      role: "Setor de Varejo", 
-      text: "A Samara reestruturou toda nossa operação de vendas pelo WhatsApp. Em menos de 3 meses, nosso time já estava batendo meta com folga. Recomendo de olhos fechados.",
-      time: "10:15",
-      initials: "EV"
+      icon: <Workflow className="text-[#C9A84C]" size={24} />, 
+      title: "Automações com n8n", 
+      desc: "Fluxos automatizados que distribuem leads, disparam mensagens, atualizam CRM e notificam sua equipe em tempo real. Tudo rodando 24 horas no piloto automático.",
+      tags: ["N8N", "WEBHOOKS", "API"]
+    },
+    { 
+      icon: <Puzzle className="text-[#C9A84C]" size={24} />, 
+      title: "Integrações entre Plataformas", 
+      desc: "WhatsApp, Instagram, Facebook Ads, Google Ads, CRM, planilhas, e-mail marketing. Todas as suas ferramentas conversando entre si sem retrabalho manual.",
+      tags: ["WHATSAPP", "META ADS", "CRM"]
+    },
+    { 
+      icon: <KanbanSquare className="text-[#C9A84C]" size={24} />, 
+      title: "CRM e Funil Estruturado", 
+      desc: "Pipeline visual com cada lead no estágio certo. Sua equipe sabe exatamente quem abordar, quando e como. Nenhuma oportunidade passa despercebida.",
+      tags: ["PIPELINE", "KANBAN", "FOLLOW-UP"]
+    },
+    { 
+      icon: <BarChart3 className="text-[#C9A84C]" size={24} />, 
+      title: "Dashboards em Tempo Real", 
+      desc: "Painéis visuais com taxa de conversão, custo por lead, ROI por canal e desempenho da equipe. Decisões baseadas em dados, não em achismo.",
+      tags: ["KPIs", "ROI", "DATA-DRIVEN"]
     }
+  ];
+
+  const flowNodes = [
+    { label: "Origem" },
+    { label: "Captura" },
+    { label: "Automação" },
+    { label: "Atendimento" },
+    { label: "Conversão" },
+    { label: "Análise" }
   ];
 
   const differentials = [
@@ -76,51 +100,110 @@ export default function AboutSection() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section id="depoimentos" className="py-24 bg-[#141414] overflow-hidden">
+      {/* Infrastructure Ecosystem */}
+      <section id="ecossistema" className="py-24 bg-[#141414] overflow-hidden">
         <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center max-w-3xl mx-auto mb-16">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center max-w-4xl mx-auto mb-16">
             <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-5 py-1.5 rounded-full mb-6">
-              <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">O que dizem nossos clientes</span>
+              <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Nossa Infraestrutura</span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-bold leading-tight font-serif">
-              Quem trabalha com a SB Vendas, <span className="text-gradient-gold italic">recomenda</span>
+            <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-bold leading-tight font-serif mb-6">
+              Controle total da origem à <span className="text-gradient-gold italic">conversão</span> do lead
             </h2>
+            <p className="text-[#B8B8B8] text-lg max-w-3xl mx-auto">
+              Implantamos toda a infraestrutura que sua empresa precisa para rastrear, nutrir e converter cada lead. Sem achismo, com dados reais.
+            </p>
           </motion.div>
 
-          <div className="flex gap-6 overflow-x-auto pb-12 pt-4 px-4 -mx-4 snap-x snap-mandatory hide-scroll">
-            {testimonials.map((test, idx) => (
+          {/* Visual Flow Diagram */}
+          <motion.div 
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} 
+            variants={fadeUp}
+            className="mb-16 md:mb-24 relative max-w-5xl mx-auto"
+          >
+            {/* Desktop Horizontal Line */}
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#222222] -translate-y-1/2 z-0 rounded-full overflow-hidden">
               <motion.div 
-                key={idx} 
+                initial={{ x: "-100%" }}
+                whileInView={{ x: "0%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 2, ease: "easeOut" }}
+                className="w-full h-full bg-gradient-to-r from-transparent via-[#C9A84C] to-[#E2C873]"
+              ></motion.div>
+            </div>
+            
+            {/* Mobile Vertical Line */}
+            <div className="md:hidden absolute left-1/2 top-0 bottom-0 w-1 bg-[#222222] -translate-x-1/2 z-0 rounded-full overflow-hidden">
+              <motion.div 
+                initial={{ y: "-100%" }}
+                whileInView={{ y: "0%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 2, ease: "easeOut" }}
+                className="w-full h-full bg-gradient-to-b from-transparent via-[#C9A84C] to-[#E2C873]"
+              ></motion.div>
+            </div>
+
+            <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4 relative z-10">
+              {flowNodes.map((node, idx) => (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: idx * 0.2 }}
+                  className="bg-[#1A1A1A] border border-[#C9A84C]/30 px-6 md:px-4 lg:px-6 py-3 md:py-4 rounded-full shadow-[0_0_20px_rgba(201,168,76,0.1)] whitespace-nowrap min-w-[140px] text-center"
+                >
+                  <span className="text-white font-bold text-sm lg:text-base tracking-wide">{node.label}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Impact Phrase */}
+          <motion.div 
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="text-center mb-16 md:mb-20 max-w-3xl mx-auto"
+          >
+            <p className="font-serif italic text-[#C9A84C] text-xl md:text-2xl leading-relaxed relative inline-block">
+              <span className="absolute -left-6 -top-4 text-4xl opacity-50">"</span>
+              Cada lead que entra na sua empresa tem nome, origem e destino. Nós garantimos isso.
+              <span className="absolute -right-6 -bottom-4 text-4xl opacity-50">"</span>
+            </p>
+          </motion.div>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {infrastructureCards.map((card, idx) => (
+              <motion.div 
+                key={idx}
                 initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
-                variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: idx * 0.15 } } }}
-                className="min-w-[340px] md:min-w-[420px] max-w-[420px] flex-none snap-center flex flex-col"
+                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.1 } } }}
+                className="bg-[#1A1A1A] p-8 rounded-[16px] border border-white/5 border-t-transparent hover:border-t-[#C9A84C] hover:border-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] flex flex-col h-full group"
               >
-                <div className="bg-[#1E3A2F] p-7 md:p-8 rounded-[16px_16px_16px_4px] shadow-lg relative mb-6 flex-grow flex flex-col border border-[#25D366]/10">
-                  <p className="text-white text-lg leading-relaxed flex-grow">{test.text}</p>
-                  <div className="text-right mt-3 text-[#B8B8B8] text-xs font-mono opacity-60">{test.time}</div>
-                  
-                  {/* WhatsApp tail */}
-                  <svg className="absolute -bottom-4 -left-[1px] w-6 h-6 text-[#1E3A2F]" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M0,0 L24,0 L24,24 L0,0 Z" />
-                  </svg>
+                <div className="w-12 h-12 rounded-full bg-[#C9A84C]/10 flex items-center justify-center mb-6 group-hover:bg-[#C9A84C]/20 transition-colors">
+                  {card.icon}
                 </div>
-                
-                <div className="pl-4 flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#C9A84C] flex items-center justify-center text-[#0A0A0A] font-bold text-lg border-2 border-[#141414] shadow-md shrink-0">
-                    {test.initials}
-                  </div>
-                  <div>
-                    <div className="flex text-[#C9A84C] mb-1">
-                      {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
-                    </div>
-                    <p className="font-bold text-white text-sm md:text-base">{test.author}</p>
-                    <p className="text-xs text-[#888888]">{test.role}</p>
-                  </div>
+                <h3 className="text-xl font-serif font-bold mb-4 text-white">{card.title}</h3>
+                <p className="text-[#888888] leading-relaxed flex-grow mb-8 text-sm md:text-base">{card.desc}</p>
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {card.tags.map(tag => (
+                    <span key={tag} className="text-[10px] font-bold uppercase tracking-wider text-[#C9A84C] bg-[#C9A84C]/5 px-3 py-1 rounded-full border border-transparent group-hover:border-[#C9A84C]/20 transition-all">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </motion.div>
             ))}
           </div>
+
+          <motion.div 
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="text-center mt-16 md:mt-20"
+          >
+            <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB." target="_blank" rel="noreferrer" className="inline-block bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 md:px-10 py-4 md:py-5 rounded-full hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)]">
+              Quero essa infraestrutura no meu negócio →
+            </a>
+          </motion.div>
         </div>
       </section>
 

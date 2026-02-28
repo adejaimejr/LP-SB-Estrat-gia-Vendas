@@ -1,0 +1,154 @@
+# SB VENDAS — Substituir Seção de Depoimentos por Ecossistema de Vendas
+
+## INSTRUÇÃO
+
+Substituir COMPLETAMENTE a seção de depoimentos ("O QUE DIZEM NOSSOS CLIENTES" / "Quem trabalha com a SB Vendas, recomenda" com os balões verdes de WhatsApp) por uma nova seção que mostra o ecossistema tecnológico que a SB Vendas implanta nos clientes.
+
+O objetivo é mostrar que a SB não é apenas consultoria de vendas. É implantação de infraestrutura completa de rastreamento, automação e conversão de leads. Isso posiciona a SB como autoridade técnica e justifica o investimento.
+
+---
+
+## NOVA SEÇÃO: "Ecossistema Completo de Vendas"
+
+### Estrutura Visual
+
+**Label:** "NOSSA INFRAESTRUTURA"
+
+**Heading:** "Controle total da origem à *conversão* do lead"
+
+**Subtítulo:** "Implantamos toda a infraestrutura que sua empresa precisa para rastrear, nutrir e converter cada lead. Sem achismo, com dados reais."
+
+### Layout: Diagrama de Fluxo Visual + Cards
+
+A seção deve ter 2 partes:
+
+**PARTE 1 — Fluxo Visual (topo)**
+Um diagrama horizontal simplificado mostrando o caminho do lead:
+
+```
+[Origem] → [Captura] → [Automação] → [Atendimento] → [Conversão] → [Análise]
+```
+
+Cada etapa é um nó/círculo conectado por uma linha dourada animada (como a timeline do "Como Funciona", mas horizontal e mais visual). A linha pulsa/brilha da esquerda para a direita quando entra na viewport, simulando o fluxo do lead.
+
+Cores: Linha dourada `#C9A84C`, nós com fundo `#1A1A1A`, borda dourada sutil. Texto branco dentro de cada nó.
+
+No mobile, este fluxo pode ficar vertical.
+
+**PARTE 2 — Grid de Cards (abaixo do fluxo)**
+6 cards em grid 3x2 (ou 2x3 no mobile), cada um representando uma capacidade:
+
+---
+
+### Card 1: Rastreamento de Leads
+**Ícone:** Crosshair/Target (Lucide: `Crosshair`)
+**Título:** "Rastreamento de Leads"
+**Descrição:** "UTMs, pixel de conversão e dashboards para saber exatamente de onde vem cada lead. Google, Instagram, indicação, tráfego orgânico. Tudo rastreado."
+**Tags:** `UTM` · `PIXEL` · `ANALYTICS`
+**Cor do ícone:** Dourado (#C9A84C)
+
+### Card 2: Landing Pages de Alta Conversão
+**Ícone:** Layout (Lucide: `LayoutTemplate`)
+**Título:** "Landing Pages de Conversão"
+**Descrição:** "Páginas de captura profissionais, otimizadas para conversão e integradas com seu CRM. Design premium que transmite confiança e gera leads qualificados."
+**Tags:** `DESIGN` · `SEO` · `RESPONSIVO`
+**Cor do ícone:** Dourado (#C9A84C)
+
+### Card 3: Automações Inteligentes
+**Ícone:** Workflow (Lucide: `Workflow`)
+**Título:** "Automações com n8n"
+**Descrição:** "Fluxos automatizados que distribuem leads, disparam mensagens, atualizam CRM e notificam sua equipe em tempo real. Tudo rodando 24 horas no piloto automático."
+**Tags:** `N8N` · `WEBHOOKS` · `API`
+**Cor do ícone:** Dourado (#C9A84C)
+
+### Card 4: Integrações Completas
+**Ícone:** Puzzle (Lucide: `Puzzle`)
+**Título:** "Integrações entre Plataformas"
+**Descrição:** "WhatsApp, Instagram, Facebook Ads, Google Ads, CRM, planilhas, e-mail marketing. Todas as suas ferramentas conversando entre si sem retrabalho manual."
+**Tags:** `WHATSAPP` · `META ADS` · `CRM`
+**Cor do ícone:** Dourado (#C9A84C)
+
+### Card 5: CRM e Funil de Vendas
+**Ícone:** Kanban (Lucide: `KanbanSquare`)
+**Título:** "CRM e Funil Estruturado"
+**Descrição:** "Pipeline visual com cada lead no estágio certo. Sua equipe sabe exatamente quem abordar, quando e como. Nenhuma oportunidade passa despercebida."
+**Tags:** `PIPELINE` · `KANBAN` · `FOLLOW-UP`
+**Cor do ícone:** Dourado (#C9A84C)
+
+### Card 6: Dashboards e Relatórios
+**Ícone:** BarChart (Lucide: `BarChart3`)
+**Título:** "Dashboards em Tempo Real"
+**Descrição:** "Painéis visuais com taxa de conversão, custo por lead, ROI por canal e desempenho da equipe. Decisões baseadas em dados, não em achismo."
+**Tags:** `KPIs` · `ROI` · `DATA-DRIVEN`
+**Cor do ícone:** Dourado (#C9A84C)
+
+---
+
+### Estilo dos Cards
+
+Mesma estética dos cards de Serviços que já existem na página:
+- Background: `#1A1A1A`
+- Border: `1px solid rgba(255, 255, 255, 0.08)`
+- Border-radius: `16px`
+- Padding: `32px`
+- Hover: `translateY(-4px)`, `border-top: 2px solid #C9A84C`, sombra sutil
+- Ícone dentro de círculo: `48px`, fundo `rgba(201, 168, 76, 0.1)`, ícone dourado
+- Tags no rodapé: mesmo estilo das tags dos cards de serviço (pill badges douradas)
+
+---
+
+### CTA abaixo dos cards
+
+Centralizado, mesmo estilo do CTA da seção de serviços:
+
+**Texto do botão:** "Quero essa infraestrutura no meu negócio →"
+**Link:** https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB.
+**Estilo:** Botão dourado (pill), mesma classe do "Fale com um especialista →"
+
+---
+
+### Elemento Visual Extra (opcional mas recomendado)
+
+Entre o fluxo e os cards, adicionar uma frase de impacto centralizada em itálico dourado:
+
+*"Cada lead que entra na sua empresa tem nome, origem e destino. Nós garantimos isso."*
+
+Font: Playfair Display italic, cor `#C9A84C`, font-size `1.25rem`, com aspas estilizadas.
+
+---
+
+### Animações
+
+- Fluxo horizontal: linha dourada "desenha" da esquerda para direita quando entra na viewport (usar `stroke-dasharray` + `stroke-dashoffset` animation se for SVG, ou width transition se for CSS)
+- Cards: aparecem com stagger fade-up (mesma animação dos cards de serviço)
+- Tags: fade-in com delay após o card aparecer
+
+---
+
+### Posição na Página
+
+Esta seção deve ficar ENTRE a seção "Sobre Samara" e a seção "Nossos Diferenciais".
+
+A ordem final das seções fica:
+1. Hero
+2. Marquee de logos
+3. Pain Points ("Quantas vendas...")
+4. Serviços ("O Método SB")
+5. Resultados ("O que acontece quando a SB entra...")
+6. Timeline ("Como Funciona")
+7. Sobre Samara
+8. **NOVA: Ecossistema de Vendas ("Controle total da origem à conversão")**
+9. Diferenciais ("Por que escolher a SB Vendas?")
+10. CTA Final ("Sua próxima venda começa com uma conversa")
+11. Footer
+
+---
+
+### IMPORTANTE
+
+- Manter TODA a paleta de cores existente (dark theme, dourado #C9A84C, backgrounds #0A0A0A e #1A1A1A)
+- Manter a tipografia (Playfair Display para títulos, Plus Jakarta Sans para corpo)
+- Os cards devem ser visualmente consistentes com os cards de Serviços
+- Não usar travessões (—) em nenhum texto
+- O fluxo visual horizontal deve ser responsivo (horizontal no desktop, vertical no mobile)
+- Todos os textos em português brasileiro
