@@ -1,0 +1,282 @@
+# SB VENDAS — Landing Page Prompt for Replit Design Mode
+
+I am building a premium landing page for **SB Vendas — Estratégias & Vendas**, the personal brand of **Samara Benevides**, a Brazilian expert in sales strategy, commercial consulting, WhatsApp automation, CRM implementation, conversational flows, AI agents, and team training. 
+
+The page should position Samara as a premium authority in sales optimization — she's not selling software, she's selling her expertise and hands-on consulting. The design must feel like a **luxury consulting brand** that happens to use cutting-edge technology.
+
+**Design Reference:** Custklen — CRM Services Landing Page by Plainthing Studio (Dribbble) — dark theme, clean sections, modern SaaS aesthetic, but adapted for a personal brand expert. See the attached `design.json` for complete style guidelines.
+
+**Language:** All content must be in **Brazilian Portuguese (pt-BR)**.
+
+**Important:** The hero section features a real photo of Samara — use the provided image (woman in professional attire against a dark background). Throughout the page, use her photos in relevant sections.
+
+---
+
+## Section 1: Navigation (Fixed)
+* **Layout:** Fixed top bar
+  * **Background:** Transparent on hero, becomes `rgba(10, 10, 10, 0.85)` with `backdrop-blur(20px)` on scroll
+  * **Left:** SB monogram/logo in gold (`#C9A84C`)
+  * **Center:** Navigation links — Início, Serviços, Resultados, Sobre, Depoimentos, Contato
+  * **Right:** CTA button "Fale Comigo" (gold pill button)
+  * **Mobile:** Hamburger menu icon, full-screen dark overlay menu
+
+---
+
+## Section 2: Hero
+* **Layout:** 2 columns (55% / 45%) — asymmetric
+  * **Background:** `#0A0A0A` with subtle radial gold glow behind the photo area
+  * **Column 1 (Left — Text):**
+    * **Section label pill:** "ESTRATÉGIAS QUE VENDEM"
+    * **Title h1:** "Transforme seu atendimento em uma **máquina de vendas**"
+      * "máquina de vendas" in gold color or gold gradient text
+    * **Subtitle:** "Sou Samara Benevides — especialista em estratégias comerciais, automação WhatsApp e fluxos conversacionais que aumentam seu faturamento com atendimento humanizado e inteligente."
+    * **CTA buttons row:**
+      * Primary button (gold): "Agende uma Consultoria Gratuita"
+      * Secondary button (outline gold): "Conheça os Serviços"
+    * **Trust indicators row below CTAs:**
+      * "+50 empresas atendidas" 
+      * "+50% aumento médio em faturamento"
+      * "4 anos de experiência"
+  * **Column 2 (Right — Photo):**
+    * Large cutout photo of Samara (use the image with dark background — `WhatsApp_Image_2026-02-08_at_09_58_18_-_co_pia.jpeg`)
+    * Subtle gold radial glow/halo effect behind the photo
+    * Photo should blend naturally into the dark background
+  * **Animation:** Staggered fade-up: label → title → subtitle → CTAs → trust indicators (0.2s delay between each). Photo scales from 0.95 with fade-in.
+
+---
+
+## Section 3: Trusted By (Logo Marquee)
+* **Layout:** Full width, 1 column
+  * **Background:** `#0A0A0A` (same as hero, seamless transition)
+  * **Label text:** "EMPRESAS QUE CONFIAM NA SB" — centered, muted text, uppercase
+  * **Logo strip:** Horizontal scrolling marquee of client logos in grayscale:
+    * TransbyShop, EasyCon, Clínica Dr. José Cabral Jr., BotoClinic, Débora Russo, Minas de Ouro, Instituto Acesso, Gastric, Pensare, Marília Gabriela, Luiza Mota, Pemar, Dr. Tiago Cardoso, Infinita, Clinicor, Oxygène, Refinatto, SculptLife, MediNova
+  * **Effect:** Logos at 50% opacity, grayscale. Continuous horizontal scroll animation.
+  * **Separator:** Thin horizontal gold line (`1px, rgba(201, 168, 76, 0.2)`) at the bottom of this section
+
+---
+
+## Section 4: The Problem / Pain Points
+* **Layout:** 1 column centered
+  * **Background:** `#0A0A0A`
+  * **Section label pill:** "VOCÊ SE IDENTIFICA?"
+  * **Title h2:** "Sua empresa perde vendas todos os dias por falta de **processo e estratégia**"
+  * **Grid: 2x2 cards** (2 columns desktop, 1 column mobile)
+    * **Card 1:**
+      * Icon: MessageCircleX (Lucide) in gold
+      * Title h3: "Leads que não respondem"
+      * Description: "Seus potenciais clientes entram em contato mas a equipe não faz follow-up adequado, e as oportunidades morrem no WhatsApp."
+    * **Card 2:**
+      * Icon: TrendingDown (Lucide) in gold
+      * Title h3: "Conversão baixa"
+      * Description: "Muitos leads chegam, mas poucos se tornam clientes. Falta um script estruturado e um fluxo que conduza o cliente até o fechamento."
+    * **Card 3:**
+      * Icon: UserX (Lucide) in gold
+      * Title h3: "Equipe sem direcionamento"
+      * Description: "Seus vendedores não sabem como abordar, quando fazer follow-up ou como usar as ferramentas de atendimento com eficiência."
+    * **Card 4:**
+      * Icon: Clock (Lucide) in gold
+      * Title h3: "Tempo perdido com manual"
+      * Description: "Tarefas repetitivas que poderiam ser automatizadas tomam horas da sua equipe, impedindo o foco em fechar negócios."
+  * **Cards:** Dark elevated style (`#1A1A1A`), `border-radius: 16px`, gold icon circles, hover lifts card up 4px with gold border glow
+  * **Animation:** Cards stagger-reveal on scroll
+
+---
+
+## Section 5: Services
+* **Layout:** Mixed
+  * **Background:** `#141414` (slightly elevated dark)
+  * **Section label pill:** "NOSSOS SERVIÇOS"
+  * **Title h2:** "Soluções completas para **escalar suas vendas**"
+  * **Subtitle:** "Do diagnóstico à execução — implantamos processos, ferramentas e treinamentos que transformam seu comercial."
+
+  * **Service cards — 3 columns grid:**
+    * **Card 1:**
+      * Icon: Target (Lucide) in gold
+      * Title: "Consultoria Comercial Estratégica"
+      * Description: "Diagnóstico completo das operações de vendas, estruturação de processos e criação de estratégias personalizadas para crescimento."
+      * Tags/pills: "Diagnóstico", "Playbook", "Estratégia"
+    * **Card 2:**
+      * Icon: Workflow (Lucide) in gold
+      * Title: "Automação & CRM"
+      * Description: "Implantação de CRM, automação de WhatsApp, chatbots inteligentes e agentes de IA que trabalham 24h para sua empresa."
+      * Tags/pills: "WhatsApp", "Chatbot", "Agente IA"
+    * **Card 3:**
+      * Icon: GraduationCap (Lucide) in gold
+      * Title: "Treinamento de Equipes"
+      * Description: "Capacitação de equipes comerciais em vendas online, scripts de atendimento e uso eficiente de ferramentas tecnológicas."
+      * Tags/pills: "Scripts", "Role-play", "Mentoria"
+    * **Card 4:**
+      * Icon: MessagesSquare (Lucide) in gold
+      * Title: "Fluxos Conversacionais"
+      * Description: "Criação de scripts e fluxos para WhatsApp que conduzem o lead do primeiro contato ao fechamento com abordagem humanizada."
+      * Tags/pills: "Follow-up", "Omnichannel", "Funil"
+    * **Card 5:**
+      * Icon: Headphones (Lucide) in gold
+      * Title: "SDR / Closer / Secretária Online"
+      * Description: "Serviço remoto de pré-venda, fechamento e atendimento. Verificamos o perfil da sua operação e indicamos a melhor solução."
+      * Tags/pills: "Remoto", "Terceirização", "Atendimento"
+    * **Card 6:**
+      * Icon: BarChart3 (Lucide) in gold
+      * Title: "Acompanhamento de Resultados"
+      * Description: "Dashboards e relatórios com análise de dados, métricas de conversão e insights para otimização contínua das vendas."
+      * Tags/pills: "KPIs", "Relatórios", "Data-driven"
+
+  * **Cards:** Same dark elevated style as Section 4. Tags are small gold pills inside each card.
+  * **Animation:** Stagger reveal from bottom, 0.1s delay between cards.
+
+---
+
+## Section 6: Results / Stats
+* **Layout:** 2 columns
+  * **Background:** `#0A0A0A` with subtle radial gold gradient from center
+  * **Column 1 (Left):**
+    * **Section label pill:** "RESULTADOS COMPROVADOS"
+    * **Title h2:** "Números que falam por **nós**"
+    * **Description:** "Nossos clientes não apenas melhoram processos — eles transformam resultados financeiros reais."
+    * **Photo of Samara** (use `WhatsApp_Image_2026-02-08_at_09_58_19__1_.jpeg` — the one with beige suit) — medium size, with subtle warm treatment
+  * **Column 2 (Right):**
+    * **Stats grid (2x2):**
+      * Stat 1: **"+50%"** — "Aumento médio no faturamento online"
+      * Stat 2: **"40%"** — "Aumento na taxa de retenção de clientes"
+      * Stat 3: **"+50"** — "Empresas atendidas com sucesso"
+      * Stat 4: **"24/7"** — "Automações trabalhando para nossos clientes"
+    * Numbers in Playfair Display 800, gold color, large (3.5rem)
+    * Labels in Plus Jakarta Sans, muted gray
+    * Thin gold line separators between stats
+  * **Animation:** Numbers count up from 0 when section enters viewport
+
+---
+
+## Section 7: How It Works (Process)
+* **Layout:** 1 column centered
+  * **Background:** `#141414`
+  * **Section label pill:** "COMO FUNCIONA"
+  * **Title h2:** "Do diagnóstico aos **resultados** em 4 passos"
+  * **Horizontal timeline/steps (desktop) — vertical on mobile:**
+    * **Step 1:**
+      * Number: "01" in large gold
+      * Title: "Diagnóstico"
+      * Description: "Analisamos sua operação comercial, identificamos gargalos e mapeamos oportunidades de melhoria."
+    * **Step 2:**
+      * Number: "02" in large gold
+      * Title: "Estratégia"
+      * Description: "Criamos um plano personalizado com scripts, fluxos e ferramentas ideais para o seu negócio."
+    * **Step 3:**
+      * Number: "03" in large gold
+      * Title: "Implantação"
+      * Description: "Implementamos CRM, automações, chatbots e treinamos sua equipe para operar tudo com excelência."
+    * **Step 4:**
+      * Number: "04" in large gold
+      * Title: "Acompanhamento"
+      * Description: "Monitoramos resultados, ajustamos estratégias e garantimos crescimento contínuo."
+  * **Visual:** Connected by a thin gold line between steps. Each step has a gold circle with the number.
+  * **Animation:** Steps reveal sequentially on scroll with the connecting line drawing in.
+
+---
+
+## Section 8: About Samara
+* **Layout:** 2 columns (reversed — photo left, text right)
+  * **Background:** `#0A0A0A`
+  * **Column 1 (Left — Photo):**
+    * Large photo of Samara (use `WhatsApp_Image_2026-02-08_at_09_58_18__1_.jpeg` — smiling, professional)
+    * Rounded corners (16px), subtle gold border accent
+  * **Column 2 (Right — Text):**
+    * **Section label pill:** "SOBRE SAMARA BENEVIDES"
+    * **Title h2:** "Especialista que transforma **atendimento em resultado**"
+    * **Body text:** "Com anos de experiência em vendas online, CRM e atendimento comercial, Samara Benevides fundou a SB Vendas com uma missão clara: transformar empresas, potencializando suas operações comerciais e otimizando a experiência de seus clientes."
+    * **Second paragraph:** "Atuando lado a lado com cada cliente, Samara combina estratégia, humanização e tecnologia para criar processos que realmente funcionam — do primeiro contato no WhatsApp até o fechamento da venda."
+    * **Highlight quote** (large italic gold text): "Vendas não são apenas números — são conexões que geram confiança e fidelidade."
+    * **CTA button:** "Conheça minha trajetória" (secondary outline gold)
+
+---
+
+## Section 9: Testimonials
+* **Layout:** 1 column
+  * **Background:** `#141414`
+  * **Section label pill:** "O QUE DIZEM NOSSOS CLIENTES"
+  * **Title h2:** "Quem trabalha com a SB, **recomenda**"
+  * **Testimonial cards carousel (3 visible on desktop, 1 on mobile):**
+    * **Testimonial 1:**
+      * Message style (WhatsApp bubble): "Samara deu show! Que profissional incrível. Ps.: indico"
+      * Author: "Dr. José Cabral"
+      * Role: "Clínica Dr. José Cabral Jr."
+      * Rating: 5 gold stars
+    * **Testimonial 2:**
+      * Message: "Parabéns pelo relatório @Samara Benevides, fundamental os 2 últimos slides. Pra entender como estamos na relação com o ano passado e quanto precisamos pro restante dos meses."
+      * Author: "Cliente — Setor de Saúde"
+      * Rating: 5 gold stars
+    * **Testimonial 3:**
+      * Message: "Foi positivo sim, fechamos acima do esperado! Mês passado tinha sido difícil. Estamos crescendo!"
+      * Author: "Cliente — Setor Estética"
+      * Rating: 5 gold stars
+  * **Cards:** WhatsApp-style dark green-tinted bubbles (`#1E3A2F`) with white text. Each card has the author info below the bubble.
+  * **Navigation:** Subtle left/right arrows or dots in gold.
+  * **Animation:** Cards slide horizontally with smooth transition.
+
+---
+
+## Section 10: Differentials (Why SB)
+* **Layout:** 1 column
+  * **Background:** `#0A0A0A` with subtle gold dot pattern overlay
+  * **Section label pill:** "NOSSOS DIFERENCIAIS"
+  * **Title h2:** "Por que escolher a **SB Vendas**?"
+  * **5 horizontal feature rows** (icon left, text right):
+    * **1.** Icon: Fingerprint — "**Abordagem Personalizada** — Cada empresa é única. Adaptamos nossas estratégias para atender suas especificidades."
+    * **2.** Icon: Award — "**Experiência e Autoridade** — Vasta experiência em vendas online e CRM com visão estratégica e técnica."
+    * **3.** Icon: Heart — "**Humanização do Atendimento** — Transformamos processos de vendas em experiências que fidelizam clientes."
+    * **4.** Icon: TrendingUp — "**Foco em Resultados** — Abordagem 100% orientada a resultados mensuráveis e crescimento."
+    * **5.** Icon: BookOpen — "**Capacitação Contínua** — Treinamos equipes para serem autossuficientes e altamente eficientes."
+  * **Style:** Each row has a left gold icon in a circle, bold title, description. Rows separated by thin lines.
+  * **Animation:** Rows slide in from left with stagger.
+
+---
+
+## Section 11: CTA Final
+* **Layout:** 1 column centered
+  * **Background:** Rich gold gradient overlay on dark — `linear-gradient(135deg, rgba(201, 168, 76, 0.12) 0%, rgba(10, 10, 10, 0.95) 100%)` — with subtle animated gold particles or glow
+  * **Photo:** Small circular photo of Samara (use `WhatsApp_Image_2026-02-08_at_09_58_19__2_.jpeg` — close-up with dark blazer)
+  * **Title h2:** "Pronta para transformar suas **vendas**?"
+  * **Description:** "Agende uma consultoria gratuita e descubra como a SB pode potencializar os resultados do seu negócio."
+  * **CTA buttons:**
+    * Primary (gold): "Agendar Consultoria Gratuita"
+    * WhatsApp button (green): "Falar pelo WhatsApp" — links to `https://wa.me/5592981112101`
+  * **Trust line:** "✓ Sem compromisso · ✓ 100% gratuita · ✓ Resposta em até 24h"
+  * **Animation:** Elements fade up on scroll. Gold glow subtly pulses.
+
+---
+
+## Section 12: Footer
+* **Layout:** 4 columns on desktop, stacked on mobile
+  * **Background:** `#0A0A0A` with gold line separator at top
+  * **Column 1:** SB logo + short tagline "Estratégias que transformam vendas."
+  * **Column 2:** Quick links — Início, Serviços, Resultados, Sobre, Contato
+  * **Column 3:** Contact info:
+    * Phone: (92) 98111-2101
+    * Email: samarabenevides@gmail.com
+    * Website: www.samarabenevides.com.br
+  * **Column 4:** Social media icons (Instagram, LinkedIn, WhatsApp)
+  * **Bottom bar:** "© 2026 SB Vendas — Estratégias & Vendas. Todos os direitos reservados." — centered, muted text
+  * **Separator:** Thin gold line between footer content and copyright
+
+---
+
+## Global Elements:
+
+* **Floating WhatsApp Button:** Fixed bottom-right on all pages, green circle with WhatsApp icon, subtle bounce animation every 5s. Links to `https://wa.me/5592981112101`
+* **Noise Overlay:** Subtle film grain texture at 3% opacity across entire page for depth
+* **Smooth Scrolling:** `scroll-behavior: smooth` enabled
+* **All section transitions:** Seamless dark-to-dark flow, sections differentiated by subtle background shade changes (`#0A0A0A` → `#141414` alternating)
+
+---
+
+## Design System Reference:
+Please follow the attached `design.json` file for all style specifications including:
+- Color palette (dark theme with gold accents)
+- Typography (Playfair Display for headings + Plus Jakarta Sans for body)
+- Component styles (cards, buttons, navigation, badges)
+- Spacing system (8px base grid, generous section padding)
+- Animation guidelines (smooth, elegant, staggered reveals)
+- Effects (noise overlay, gold glow, glassmorphism nav)
+
+The overall aesthetic should feel like a premium consulting brand — sophisticated, authoritative, and results-driven. Think high-end business editorial meets modern CRM SaaS interface.

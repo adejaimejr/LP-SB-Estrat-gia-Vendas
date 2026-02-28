@@ -1,0 +1,248 @@
+{
+  "project": {
+    "name": "SB Vendas - Estratégias & Vendas",
+    "description": "Landing page for Samara Benevides, a Brazilian sales strategy expert specializing in commercial consulting, WhatsApp automation, CRM implementation, AI agents, conversational flows, and team training. The page positions Samara as a premium expert and authority figure in the sales optimization space.",
+    "target_audience": "Brazilian business owners, clinic managers, e-commerce operators, and service professionals looking to optimize their commercial operations, improve WhatsApp-based customer service, and increase revenue through structured sales processes.",
+    "language": "pt-BR",
+    "design_reference": "Custklen - CRM Services Landing Page by Plainthing Studio (Dribbble)"
+  },
+
+  "design_system": {
+    "philosophy": "Premium dark luxury meets modern SaaS clarity. The design should feel like a high-end consulting brand — authoritative, sophisticated, and results-driven — while maintaining the approachability of a personal brand. Think 'luxury tech agency' meets 'trusted business mentor'. Every element should communicate expertise and measurable results.",
+
+    "design_principles": [
+      "Expert-first: Samara's image and personal brand take center stage — she IS the product",
+      "Dark elegance: Deep dark backgrounds create authority and premium feel, inspired by her portfolio identity",
+      "Gold as power: Gold/amber accents signal premium value, success, and results — used strategically, never excessively",
+      "Clean hierarchy: Each section has ONE clear message with generous whitespace for breathing room",
+      "Results-driven: Every visual element points toward outcomes — numbers, testimonials, proof",
+      "Mobile-first mindset: Most Brazilian users will arrive via WhatsApp link on mobile devices"
+    ],
+
+    "aesthetic_direction": "Dark luxury editorial — inspired by high-end business magazines and premium SaaS landing pages. The overall feel should be sophisticated and authoritative like a Wall Street Journal profile crossed with a modern CRM platform interface. Asymmetric hero layouts with dramatic photo placement, clean card-based service sections, and bold typographic hierarchy."
+  },
+
+  "colors": {
+    "palette_philosophy": "A dominant dark foundation with gold accents that echo the existing SB brand identity. White and light gray for readable text. The palette should feel rich without being heavy.",
+
+    "primary": {
+      "background_deep": "#0A0A0A",
+      "background_elevated": "#141414",
+      "background_card": "#1A1A1A",
+      "background_subtle": "#222222"
+    },
+    "accent": {
+      "gold_primary": "#C9A84C",
+      "gold_light": "#E2C873",
+      "gold_dark": "#A68A3E",
+      "gold_glow": "rgba(201, 168, 76, 0.15)"
+    },
+    "text": {
+      "heading_white": "#FFFFFF",
+      "body_light": "#B8B8B8",
+      "body_muted": "#888888",
+      "caption": "#666666"
+    },
+    "semantic": {
+      "success": "#4ADE80",
+      "whatsapp_green": "#25D366",
+      "highlight_gradient_start": "#C9A84C",
+      "highlight_gradient_end": "#E2C873"
+    },
+    "gradients": {
+      "gold_subtle": "linear-gradient(135deg, rgba(201, 168, 76, 0.08) 0%, rgba(10, 10, 10, 0) 60%)",
+      "card_border": "linear-gradient(135deg, rgba(201, 168, 76, 0.3) 0%, rgba(201, 168, 76, 0.05) 100%)",
+      "hero_overlay": "linear-gradient(to right, #0A0A0A 40%, transparent 100%)",
+      "section_divider": "radial-gradient(ellipse at center, rgba(201, 168, 76, 0.12) 0%, transparent 70%)"
+    }
+  },
+
+  "typography": {
+    "philosophy": "Bold and editorial for headings — commanding presence. Clean and highly readable for body text. The font pairing should feel premium and professional, not generic or techy.",
+
+    "heading_font": {
+      "family": "Playfair Display",
+      "source": "Google Fonts",
+      "weight_hero": "800",
+      "weight_section": "700",
+      "style": "italic for emphasis phrases, normal for primary headings",
+      "letter_spacing": "-0.02em",
+      "rationale": "Playfair Display adds editorial sophistication and authority — perfect for a personal brand expert. Its contrast and elegance echo premium consulting firms."
+    },
+    "body_font": {
+      "family": "Plus Jakarta Sans",
+      "source": "Google Fonts",
+      "weights": ["400", "500", "600", "700"],
+      "letter_spacing": "0.01em",
+      "line_height": "1.7",
+      "rationale": "Plus Jakarta Sans is modern, geometric, and highly readable at all sizes. It complements Playfair's editorial feel with contemporary clarity."
+    },
+    "accent_font": {
+      "family": "Plus Jakarta Sans",
+      "weight": "700",
+      "text_transform": "uppercase",
+      "letter_spacing": "0.15em",
+      "use": "Section labels, badges, tags, navigation items"
+    },
+
+    "scale": {
+      "hero_title": { "desktop": "clamp(3rem, 5vw, 4.5rem)", "mobile": "2.25rem" },
+      "section_title": { "desktop": "clamp(2rem, 3.5vw, 3rem)", "mobile": "1.75rem" },
+      "card_title": { "desktop": "1.5rem", "mobile": "1.25rem" },
+      "body": { "desktop": "1.125rem", "mobile": "1rem" },
+      "small": { "desktop": "0.875rem", "mobile": "0.8125rem" },
+      "section_label": { "desktop": "0.75rem", "mobile": "0.6875rem" }
+    }
+  },
+
+  "spacing": {
+    "philosophy": "Generous and breathable. Sections need dramatic separation. Cards need internal padding that feels luxurious, not cramped. Following an 8px base grid.",
+
+    "base_unit": "8px",
+    "section_vertical_padding": { "desktop": "120px", "mobile": "80px" },
+    "section_gap": { "desktop": "0px", "mobile": "0px" },
+    "container_max_width": "1280px",
+    "container_padding": { "desktop": "64px", "mobile": "24px" },
+    "card_padding": { "desktop": "40px", "mobile": "24px" },
+    "card_gap": { "desktop": "24px", "mobile": "16px" },
+    "element_gap_small": "8px",
+    "element_gap_medium": "16px",
+    "element_gap_large": "32px"
+  },
+
+  "components": {
+    "navigation": {
+      "style": "Fixed top, transparent on hero becoming solid dark on scroll",
+      "background": "rgba(10, 10, 10, 0.85) with backdrop-blur(20px)",
+      "height": "80px",
+      "logo": "SB monogram in gold on the left",
+      "links": "Plus Jakarta Sans 600, uppercase, 0.15em letter-spacing, #B8B8B8 default, #FFFFFF on hover",
+      "cta_button": "Gold background pill button with dark text",
+      "mobile": "Hamburger menu with full-screen dark overlay"
+    },
+
+    "buttons": {
+      "primary": {
+        "background": "#C9A84C",
+        "text_color": "#0A0A0A",
+        "font": "Plus Jakarta Sans 700",
+        "padding": "16px 40px",
+        "border_radius": "50px",
+        "text_transform": "none",
+        "hover": "background lightens to #E2C873, subtle scale(1.02) transform, box-shadow: 0 8px 32px rgba(201, 168, 76, 0.3)",
+        "transition": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      "secondary": {
+        "background": "transparent",
+        "border": "1px solid rgba(201, 168, 76, 0.4)",
+        "text_color": "#C9A84C",
+        "hover": "border-color: #C9A84C, background: rgba(201, 168, 76, 0.08)"
+      },
+      "whatsapp": {
+        "background": "#25D366",
+        "text_color": "#FFFFFF",
+        "icon": "WhatsApp icon on the left",
+        "hover": "brightness(1.1), scale(1.02)",
+        "special": "Fixed floating button on bottom-right of mobile view"
+      }
+    },
+
+    "cards": {
+      "style": "Dark elevated cards with subtle gold border gradient on hover",
+      "background": "#1A1A1A",
+      "border": "1px solid rgba(255, 255, 255, 0.06)",
+      "border_radius": "16px",
+      "hover_border": "1px solid rgba(201, 168, 76, 0.25)",
+      "hover_shadow": "0 8px 40px rgba(0, 0, 0, 0.4)",
+      "transition": "all 0.4s ease",
+      "icon_area": "48px circle with gold_glow background, gold icon inside"
+    },
+
+    "section_labels": {
+      "style": "Pill-shaped tag above section titles",
+      "background": "rgba(201, 168, 76, 0.1)",
+      "border": "1px solid rgba(201, 168, 76, 0.2)",
+      "text": "Gold color, uppercase, 0.75rem, 700 weight, 0.15em letter-spacing",
+      "padding": "6px 20px",
+      "border_radius": "50px"
+    },
+
+    "stats_counter": {
+      "number_font": "Playfair Display 800",
+      "number_size": "3.5rem",
+      "number_color": "#C9A84C",
+      "suffix": "Plus Jakarta Sans 600, same gold color",
+      "label_color": "#888888",
+      "separator": "Thin vertical gold line between counters"
+    },
+
+    "testimonials": {
+      "style": "WhatsApp-style message bubbles on dark background — authentic feel",
+      "bubble_background": "#1E3A2F",
+      "text_color": "#FFFFFF",
+      "timestamp_color": "#888888",
+      "author_font": "Plus Jakarta Sans 600",
+      "border_radius": "16px 16px 16px 4px"
+    },
+
+    "client_logos": {
+      "style": "Grayscale logos on dark background, subtle opacity 0.5 becoming 0.9 on hover",
+      "filter": "grayscale(100%) brightness(0.8)",
+      "hover_filter": "grayscale(0%) brightness(1)",
+      "arrangement": "Horizontal scrolling marquee or grid"
+    },
+
+    "images": {
+      "hero_photo": "Large cutout photo of Samara with subtle gold glow behind, positioned right side of hero on desktop, above text on mobile",
+      "treatment": "Subtle warm color grade, slight vignette on edges blending into dark background",
+      "decorative": "Abstract gold geometric shapes, thin gold lines as dividers, subtle dot grid patterns"
+    }
+  },
+
+  "animations": {
+    "philosophy": "Elegant and purposeful — animations should feel premium, never flashy or gimmicky. Smooth reveals that guide the eye.",
+
+    "page_load": {
+      "hero_title": "Fade up with 0.8s duration, 0.2s delay, cubic-bezier(0.4, 0, 0.2, 1)",
+      "hero_subtitle": "Fade up with 0.8s duration, 0.4s delay",
+      "hero_cta": "Fade up with 0.8s duration, 0.6s delay",
+      "hero_image": "Scale from 0.95 to 1 with fade in, 1s duration, 0.3s delay",
+      "nav": "Fade down from top, 0.6s duration"
+    },
+    "scroll_reveal": {
+      "trigger": "Elements animate when entering viewport (IntersectionObserver)",
+      "default": "Fade up 30px with 0.6s duration",
+      "stagger": "Cards in a row stagger with 0.1s delay between each",
+      "stats": "Number counters animate from 0 to final value over 2s"
+    },
+    "hover": {
+      "cards": "translateY(-4px) with border-color change, 0.3s ease",
+      "buttons": "Scale 1.02 with shadow expansion, 0.3s ease",
+      "links": "Gold underline slides in from left, 0.3s ease"
+    },
+    "special": {
+      "gold_glow_pulse": "Subtle pulsing glow behind Samara's hero image, 4s infinite ease-in-out",
+      "floating_whatsapp": "Gentle bounce animation every 5s to draw attention",
+      "logo_marquee": "Continuous horizontal scroll, 30s linear infinite"
+    }
+  },
+
+  "layout": {
+    "grid": "CSS Grid with 12-column system on desktop, single column on mobile",
+    "breakpoints": {
+      "mobile": "0 - 767px",
+      "tablet": "768px - 1023px",
+      "desktop": "1024px+"
+    },
+    "max_content_width": "1280px",
+    "asymmetric_hero": "Text takes 55% left, image takes 45% right on desktop — creates dynamic tension"
+  },
+
+  "effects": {
+    "noise_overlay": "Subtle film grain texture at 3% opacity over the entire page for depth",
+    "gold_line_accents": "Thin 1px gold horizontal lines used as section decorators",
+    "dot_pattern": "Subtle dot grid pattern (gold at 5% opacity) as background texture in specific sections",
+    "glassmorphism": "Used sparingly on nav and floating elements: backdrop-blur(20px) with semi-transparent dark background",
+    "image_glow": "Radial gold gradient glow behind Samara's photo, creates a halo/spotlight effect"
+  }
+}
