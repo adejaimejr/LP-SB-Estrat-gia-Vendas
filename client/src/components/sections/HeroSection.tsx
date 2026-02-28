@@ -35,7 +35,7 @@ export default function HeroSection() {
   return (
     <>
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav ${scrolled ? "nav-scrolled h-20" : "h-24"}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 glass-nav ${scrolled ? "nav-scrolled h-20" : "h-24"}`}>
         <div className="container mx-auto px-6 h-full flex items-center justify-between">
           <div className="text-[#C9A84C] font-serif font-bold text-3xl tracking-tighter">SB</div>
           
@@ -62,7 +62,7 @@ export default function HeroSection() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-xl flex flex-col justify-center items-center">
+        <div className="fixed inset-0 z-[10000] bg-[#0A0A0A]/95 backdrop-blur-xl flex flex-col justify-center items-center">
           <button className="absolute top-8 right-6 text-white" onClick={() => setMobileMenuOpen(false)}>
             <X size={32} />
           </button>
@@ -96,14 +96,14 @@ export default function HeroSection() {
                 Transforme seu atendimento em uma <span className="text-gradient-gold italic font-serif">máquina de vendas</span>
               </h1>
               <p className="text-[#B8B8B8] text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0">
-                Sou Samara Benevides — especialista em estratégias comerciais, automação WhatsApp e fluxos conversacionais que aumentam seu faturamento com atendimento humanizado e inteligente.
+                Sou Samara Benevides, especialista em estratégias comerciais e automação inteligente. Já transformei os resultados de mais de 50 empresas com processos que unem tecnologia e atendimento humanizado.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-start relative z-20">
                 <a href="#contato" className="bg-[#C9A84C] text-[#0A0A0A] text-center font-bold px-8 py-4 rounded-full hover:bg-[#E2C873] transition-all duration-300 btn-primary-glow shadow-[0_4px_20px_rgba(201,168,76,0.2)]">
                   Agende uma Consultoria Gratuita
                 </a>
-                <a href="#servicos" className="border border-[#C9A84C]/40 text-[#C9A84C] text-center font-bold px-8 py-4 rounded-full hover:bg-[#C9A84C]/10 hover:border-[#C9A84C] transition-all duration-300">
-                  Conheça os Serviços
+                <a href="#resultados" className="border border-[#C9A84C]/40 text-[#C9A84C] text-center font-bold px-8 py-4 rounded-full hover:bg-[#C9A84C]/10 hover:border-[#C9A84C] transition-all duration-300">
+                  Veja os Resultados
                 </a>
               </div>
               <div className="flex flex-wrap gap-6 text-sm md:text-base font-semibold text-[#888888] justify-center lg:justify-start">
@@ -138,7 +138,7 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <div className="hidden lg:flex absolute -left-10 top-1/3 animate-float-delayed bg-[#1A1A1A] border border-[#C9A84C]/20 rounded-full p-2 pr-4 items-center gap-2 shadow-xl z-20">
+              <div className="hidden lg:flex absolute -left-6 top-[15%] animate-float-delayed bg-[#1A1A1A] border border-[#C9A84C]/20 rounded-full p-2 pr-4 items-center gap-2 shadow-xl z-20">
                 <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center text-[#C9A84C]">
                   <Star size={14} fill="currentColor" />
                 </div>
@@ -155,7 +155,7 @@ export default function HeroSection() {
               <img 
                 src={heroImg} 
                 alt="Samara Benevides" 
-                className="relative z-10 w-full max-w-md object-cover aspect-[3/4] lg:aspect-auto drop-shadow-2xl"
+                className="relative z-10 w-full max-w-md object-cover aspect-[3/4] lg:aspect-auto drop-shadow-2xl pointer-events-none"
                 style={{
                   WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
                   maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)"
@@ -169,7 +169,7 @@ export default function HeroSection() {
       {/* Trusted By */}
       <section className="py-12 bg-[#0A0A0A] overflow-hidden relative border-b border-[#C9A84C]/10">
         <div className="text-center mb-8">
-          <p className="text-[#666666] uppercase text-xs font-bold tracking-[0.2em]">Empresas que confiam na SB</p>
+          <p className="text-[#666666] uppercase text-xs font-bold tracking-[0.2em]">Quem já confiou na nossa estratégia</p>
         </div>
         
         {/* Row 1 */}

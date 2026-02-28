@@ -1,0 +1,371 @@
+# SB VENDAS — Refinamento V2: Copy Persuasivo + Ajustes Visuais + Posicionamento Premium
+
+A versão atual está muito boa visualmente. Agora o foco é elevar o nível dos TEXTOS para transmitir máxima autoridade, profissionalismo e posicionamento premium. Além disso, há ajustes visuais pontuais e um bug a corrigir.
+
+---
+
+## ⚠️ REGRA GERAL DE ESCRITA — ELIMINAR TRAVESSÕES (—)
+
+**CRÍTICO:** Remover TODOS os travessões (—) de toda a página. Substituir por vírgulas, pontos finais ou reformulação da frase. O uso excessivo de travessão é um padrão de texto gerado por IA e transmite falta de autenticidade. Revisar cada frase da página e reescrever sem travessões.
+
+Exemplos de como corrigir:
+
+❌ "Sou Samara Benevides — especialista em estratégias comerciais"
+✅ "Sou Samara Benevides, especialista em estratégias comerciais"
+
+❌ "Do diagnóstico à execução — implantamos processos"
+✅ "Do diagnóstico à execução. Implantamos processos"
+
+❌ "Vendas não são apenas números — são conexões"
+✅ "Vendas não são apenas números. São conexões"
+
+❌ "Nossos clientes não apenas melhoram processos — eles transformam"
+✅ "Nossos clientes não apenas melhoram processos. Eles transformam"
+
+Aplicar essa regra em TODOS os textos da página sem exceção.
+
+---
+
+## 🐛 BUG — NAVBAR Z-INDEX
+
+**Problema:** Quando o usuário rola a página, os botões do hero ("Agende uma Consultoria Gratuita" e "Conheça os Serviços") aparecem SOBRE a navbar fixa no topo. Estão se sobrepondo ao menu.
+
+**Correção:**
+```css
+nav, .navbar, header {
+  z-index: 9999 !important;
+  position: fixed;
+}
+```
+Garantir que NENHUM elemento de seção tenha z-index superior ao da navbar.
+
+---
+
+## ✍️ DOBRA 1 — HERO: Reescrever textos para impacto máximo
+
+**Label:** Manter "ESTRATÉGIAS QUE VENDEM" ✅
+
+**Título H1:** Manter "Transforme seu atendimento em uma *máquina de vendas*" ✅
+
+**Subtítulo — REESCREVER:**
+
+De:
+> "Sou Samara Benevides — especialista em estratégias comerciais, automação WhatsApp e fluxos conversacionais que aumentam seu faturamento com atendimento humanizado e inteligente."
+
+Para:
+> "Sou Samara Benevides, especialista em estratégias comerciais e automação inteligente. Já transformei os resultados de mais de 50 empresas com processos que unem tecnologia e atendimento humanizado."
+
+**Por que é melhor:** Mais curto, com prova social embutida (+50 empresas), sem travessão, frases diretas.
+
+**CTA secundário — REESCREVER:**
+
+De: "Conheça os Serviços"
+Para: "Veja os Resultados"
+
+**Por que é melhor:** Direciona o visitante para a seção de prova social (números), que é mais persuasiva do que uma lista de serviços. O link deve apontar para a seção #resultados.
+
+**Badge flutuante "4.9/5 Rating":** Reposicionar para ficar mais visível. Atualmente está parcialmente escondido atrás da foto. Mover para o canto superior esquerdo da área da imagem, acima do ombro da Samara.
+
+---
+
+## ✍️ DOBRA 2 — MARQUEE: Ajustar label
+
+**Label — REESCREVER:**
+
+De: "EMPRESAS QUE CONFIAM NA SB"
+Para: "QUEM JÁ CONFIOU NA NOSSA ESTRATÉGIA"
+
+**Por que é melhor:** "SB" sozinha é uma sigla fria. A nova versão é mais humana e usa "estratégia" que reforça o posicionamento.
+
+---
+
+## ✍️ DOBRA 3 — PAIN POINTS: Texto mais provocativo
+
+**Título — REESCREVER:**
+
+De: "Sua empresa perde vendas todos os dias por falta de *processo e estratégia*"
+Para: "Quantas vendas sua empresa perdeu só *esta semana*?"
+
+**Por que é melhor:** Pergunta direta cria urgência imediata. O visitante se identifica e para pra pensar. O itálico dourado em "esta semana" puxa o olho.
+
+**Cards — Reescrever descrições para linguagem mais direta e coloquial:**
+
+**Card 1 — Leads que não respondem:**
+De: "Seus potenciais clientes entram em contato mas a equipe não faz follow-up adequado, e as oportunidades morrem no WhatsApp."
+Para: "O lead chega quente, mas ninguém responde a tempo. Sem follow-up estruturado, as oportunidades esfriam e viram venda pro concorrente."
+
+**Card 2 — Conversão baixa:**
+De: "Muitos leads chegam, mas poucos se tornam clientes. Falta um script estruturado e um fluxo que conduza o cliente até o fechamento."
+Para: "Muito lead entrando, pouco cliente saindo. Sem um script e um funil claro, sua equipe atende no improviso e perde venda todo dia."
+
+**Card 3 — Equipe sem direcionamento:**
+De (provavelmente genérico): texto atual
+Para: "Sua equipe vende no feeling, sem processo definido. Cada vendedor faz do seu jeito e você não sabe onde está o gargalo."
+
+**Card 4 — Tempo perdido:**
+De (provavelmente genérico): texto atual
+Para: "Você gasta horas respondendo mensagem por mensagem, sem automação. O tempo que deveria ir pra estratégia vai todo pro operacional."
+
+---
+
+## ✍️ DOBRA 4 — SERVIÇOS: Reposicionar como método
+
+**Título — REESCREVER:**
+
+De: "Soluções completas para *escalar suas vendas*"
+Para: "O Método SB: da estratégia à *execução real*"
+
+**Por que é melhor:** "Método" posiciona como framework proprietário. Transmite que não é improviso, é um processo testado. "Execução real" diferencia de consultorias que só entregam PDF.
+
+**Subtítulo — REESCREVER:**
+
+De: "Do diagnóstico à execução — implantamos processos, ferramentas e treinamentos que transformam seu comercial."
+Para: "Diagnóstico, processos, ferramentas e treinamentos. Tudo o que seu time comercial precisa pra vender mais e melhor."
+
+**ADICIONAR CTA abaixo dos 6 cards:**
+Botão dourado centralizado: "Fale com um especialista →"
+Link: https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre os serviços da SB Vendas.
+
+**Card principal (Consultoria Comercial Estratégica):**
+Adicionar um badge no topo deste card: "⭐ MAIS PROCURADO" com fundo `rgba(201, 168, 76, 0.15)`, borda `rgba(201, 168, 76, 0.3)`, font-size 0.7rem, uppercase. Isso cria hierarquia visual e efeito de âncora psicológica.
+
+**Reescrever descrições dos cards de serviço (sem travessão, mais diretas):**
+
+**Consultoria Comercial Estratégica:**
+"Analisamos sua operação de vendas do zero, identificamos gargalos e criamos uma estratégia personalizada focada em crescimento real."
+
+**Automação & CRM:**
+"Implantamos CRM, automação de WhatsApp, chatbots inteligentes e agentes de IA que trabalham 24h vendendo pelo seu negócio."
+
+**Treinamento de Equipes:**
+"Capacitamos sua equipe com scripts de atendimento, técnicas de vendas online e uso eficiente das ferramentas que implantamos."
+
+**Fluxos Conversacionais:**
+"Criamos scripts e fluxos para WhatsApp que conduzem o lead do primeiro contato ao fechamento, com abordagem humanizada e personalizada."
+
+**SDR / Closer / Secretária Online:**
+"Serviço remoto de pré-venda, fechamento e atendimento. Verificamos o perfil da sua operação e indicamos a melhor solução."
+
+**Acompanhamento de Resultados:**
+"Dashboards e relatórios com análise de dados, métricas de conversão e insights para otimização contínua das suas vendas."
+
+---
+
+## ✍️ DOBRA 5 — RESULTADOS: Reescrever heading
+
+**Título — REESCREVER:**
+
+De: "Números que falam por *nós*"
+Para: "O que acontece quando a SB entra na *sua operação*"
+
+**Por que é melhor:** Foco no resultado do CLIENTE, não no ego da empresa. "Sua operação" fala diretamente com o visitante.
+
+**Subtítulo — REESCREVER:**
+
+De: "Nossos clientes não apenas melhoram processos — eles transformam resultados financeiros reais."
+Para: "Nossos clientes não apenas melhoram processos. Eles transformam resultados financeiros reais."
+
+(Apenas remover o travessão e substituir por ponto final)
+
+---
+
+## ✍️ DOBRA 6 — TIMELINE "COMO FUNCIONA": Adicionar prazos
+
+**Título:** Manter "Do diagnóstico aos *resultados* em 4 passos" ✅
+
+**Adicionar prazo estimado abaixo de cada título de passo:**
+
+- 01 Diagnóstico → adicionar texto pequeno: "Semana 1"
+- 02 Estratégia → "Semana 2-3"
+- 03 Implantação → "Semana 3-4"
+- 04 Acompanhamento → "Contínuo"
+
+Esses prazos devem aparecer em `font-size: 0.75rem`, `color: #C9A84C`, `font-weight: 600`, `text-transform: uppercase`, logo abaixo do nome do passo e acima da descrição.
+
+**Reescrever descrições (sem travessão, mais diretas):**
+
+**01 Diagnóstico:**
+"Analisamos toda a sua operação comercial, identificamos gargalos e mapeamos as melhores oportunidades de crescimento."
+
+**02 Estratégia:**
+"Criamos um plano personalizado com scripts, fluxos e ferramentas ideais pro seu modelo de negócio."
+
+**03 Implantação:**
+"Implementamos CRM, automações, chatbots e treinamos sua equipe para operar tudo com excelência."
+
+**04 Acompanhamento:**
+"Monitoramos os resultados, ajustamos estratégias em tempo real e garantimos crescimento contínuo."
+
+---
+
+## ✍️ DOBRA 7 — SOBRE SAMARA: Reescrever bio com mais autoridade
+
+**Título:** Manter "Especialista que transforma *atendimento em resultado*" ✅
+
+**Bio — REESCREVER parágrafo 1:**
+
+De: "Com anos de experiência em vendas online, CRM e atendimento comercial, Samara Benevides fundou a SB Vendas com uma missão clara: transformar empresas, potencializando suas operações comerciais e otimizando a experiência de seus clientes."
+
+Para: "Com mais de 4 anos de experiência em vendas online, CRM e atendimento comercial, Samara Benevides fundou a SB Vendas com um objetivo claro: transformar a forma como empresas vendem. Já foram mais de 50 empresas atendidas nos setores de saúde, estética, varejo, educação e tecnologia."
+
+**Por que é melhor:** Número específico de anos, quantidade de empresas, e lista de nichos de atuação geram credibilidade concreta.
+
+**Bio — REESCREVER parágrafo 2:**
+
+De: "Atuando lado a lado com cada cliente, Samara combina estratégia, humanização e tecnologia para criar processos que realmente funcionam — do primeiro contato no WhatsApp até o fechamento da venda."
+
+Para: "Atuando lado a lado com cada cliente, Samara combina estratégia, humanização e tecnologia para criar processos que realmente funcionam. Do primeiro contato no WhatsApp até o fechamento da venda, cada etapa é pensada para converter mais e fidelizar melhor."
+
+**Citação — REESCREVER:**
+
+De: "Vendas não são apenas números — são conexões que geram confiança e fidelidade."
+Para: "Vendas não são apenas números. São conexões que geram confiança e fidelidade."
+
+---
+
+## ✍️ DOBRA 8 — DEPOIMENTOS: Melhorar textos e verificar bug
+
+**Título — REESCREVER:**
+
+De: "Quem trabalha com a SB, *recomenda*"
+Para: "Quem trabalha com a SB Vendas, *recomenda*"
+
+**Verificar:** O depoimento 2 (que estava cortado com "Pra...") está aparecendo completo agora? Se não, garantir que o texto completo seja:
+"Parabéns pelo relatório @Samara Benevides, fundamental os 2 últimos slides. Pra entender como estamos na relação com o ano passado e quanto precisamos pro restante dos meses."
+
+**Adicionar terceiro depoimento visível (se não estiver aparecendo):**
+Texto: "Depois que a Samara estruturou nosso processo comercial, nosso time começou a converter o dobro. Em 3 meses, o faturamento subiu 40%."
+Autor: "Empresário"
+Empresa: "Setor de Varejo"
+
+**Considerar:** Se possível, incluir métricas nos depoimentos existentes. Depoimentos com números específicos convertem 2x mais que depoimentos genéricos.
+
+---
+
+## ✍️ DOBRA 9 — DIFERENCIAIS: Reescrever com linguagem mais direta
+
+**Título:** Manter "Por que escolher a *SB Vendas*?" ✅
+
+**Reescrever cada diferencial com linguagem mais direta e menos corporativa:**
+
+**Abordagem Personalizada:**
+De: "Cada empresa é única. Adaptamos nossas estratégias para atender suas especificidades."
+Para: "Nada de template. Analisamos seu mercado, seu público e suas métricas para criar uma estratégia exclusiva pro seu negócio."
+
+**Experiência e Autoridade:**
+De: "Vasta experiência em vendas online e CRM com visão estratégica e técnica."
+Para: "Mais de 4 anos de experiência prática em vendas online e CRM, com mais de 50 empresas transformadas."
+
+**Humanização do Atendimento:**
+De: "Transformamos processos de vendas em experiências que fidelizam clientes."
+Para: "Tecnologia sem perder o toque humano. Seus clientes se sentem acolhidos em cada etapa, do primeiro contato ao pós-venda."
+
+**Foco em Resultados:**
+De: "Abordagem 100% orientada a resultados mensuráveis e crescimento."
+Para: "Cada ação tem métrica, cada decisão tem dado por trás. Se não gera resultado, a gente ajusta até gerar."
+
+**Capacitação Contínua:**
+De: "Treinamos equipes para serem autossuficientes e altamente eficientes."
+Para: "Seu time não fica dependente da gente. Treinamos pra que sua equipe opere com autonomia e alta performance."
+
+---
+
+## ✍️ DOBRA 10 — CTA FINAL: Texto mais urgente
+
+**Título — REESCREVER:**
+
+De: "Pronta para transformar suas *vendas*?"
+Para: "Sua próxima venda começa com uma *conversa*"
+
+**Por que é melhor:** Conecta diretamente com o WhatsApp (que é o CTA principal), cria sensação de proximidade e baixo comprometimento.
+
+**Subtítulo — REESCREVER:**
+
+De: "Agende uma consultoria gratuita e descubra como a SB pode potencializar os resultados do seu negócio."
+Para: "Agende uma consultoria gratuita e descubra como podemos potencializar os resultados do seu negócio. Sem compromisso, sem enrolação."
+
+**Trust line — manter:** "✓ Sem compromisso · ✓ 100% gratuita · ✓ Resposta em até 24h" ✅
+
+---
+
+## ✍️ FOOTER: Ajuste no tagline
+
+De: "Estratégias que transformam vendas."
+Para: "Estratégias que transformam vendas em resultados."
+
+---
+
+## 🎨 AJUSTES VISUAIS RESTANTES
+
+### 1. Seção de Serviços: Hierarquia visual no card principal
+Adicionar badge "⭐ MAIS PROCURADO" no card "Consultoria Comercial Estratégica":
+```css
+.featured-badge {
+  display: inline-block;
+  background: rgba(201, 168, 76, 0.15);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: #C9A84C;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+```
+
+### 2. Seção de Serviços: CTA centralizado
+Adicionar botão dourado centralizado abaixo dos 6 cards:
+```html
+<div style="text-align: center; margin-top: 48px;">
+  <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre os serviços da SB Vendas." 
+     class="btn-gold">
+    Fale com um especialista →
+  </a>
+</div>
+```
+
+### 3. Pain Points: Cor dos ícones para urgência
+Alterar a cor de fundo dos ícones dos pain point cards de dourado para um tom de vermelho/laranja sutil:
+```css
+.pain-icon-circle {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+.pain-icon {
+  color: #EF4444;
+}
+```
+Isso diferencia visualmente "problemas" (vermelho) de "soluções" (dourado), criando uma jornada emocional na página.
+
+### 4. Badge "4.9/5 Rating" no Hero
+Reposicionar para ficar mais visível (canto superior esquerdo da foto, não atrás):
+```css
+.rating-badge {
+  position: absolute;
+  top: 10%;
+  left: -20px;
+  /* ao invés de estar no meio/atrás */
+}
+```
+
+---
+
+## RESUMO DE PRIORIDADE
+
+1. **Eliminar TODOS os travessões (—)** da página inteira
+2. **Corrigir bug de z-index** da navbar
+3. **Reescrever subtítulo do hero** com prova social
+4. **Reescrever heading dos pain points** para pergunta provocativa
+5. **Reescrever heading dos serviços** para "Método SB"
+6. **Adicionar CTA** na seção de serviços
+7. **Reescrever heading de resultados** focando no cliente
+8. **Reescrever bio da Samara** com credenciais específicas
+9. **Reescrever diferenciais** com linguagem direta
+10. **Reescrever CTA final** conectando com WhatsApp
+11. **Adicionar badge "MAIS PROCURADO"** no card de Consultoria
+12. **Mudar ícones dos pain points** para vermelho
+13. **Reposicionar badge Rating** no hero
+14. **Adicionar prazos** na timeline
+15. **Verificar depoimento cortado** e adicionar terceiro

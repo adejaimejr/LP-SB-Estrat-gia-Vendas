@@ -25,20 +25,20 @@ export default function AboutSection() {
       initials: "CS"
     },
     { 
-      author: "Cliente", 
-      role: "Setor Estética", 
-      text: "Foi positivo sim, fechamos acima do esperado! Mês passado tinha sido difícil. Estamos crescendo!",
+      author: "Empresário", 
+      role: "Setor de Varejo", 
+      text: "Depois que a Samara estruturou nosso processo comercial, nosso time começou a converter o dobro. Em 3 meses, o faturamento subiu 40%.",
       time: "10:15",
-      initials: "CE"
+      initials: "EV"
     }
   ];
 
   const differentials = [
-    { num: "01", icon: <Fingerprint size={28} />, title: "Abordagem Personalizada", desc: "Cada empresa é única. Adaptamos nossas estratégias para atender suas especificidades." },
-    { num: "02", icon: <Award size={28} />, title: "Experiência e Autoridade", desc: "Vasta experiência em vendas online e CRM com visão estratégica e técnica." },
-    { num: "03", icon: <Heart size={28} />, title: "Humanização do Atendimento", desc: "Transformamos processos de vendas em experiências que fidelizam clientes." },
-    { num: "04", icon: <TrendingUp size={28} />, title: "Foco em Resultados", desc: "Abordagem 100% orientada a resultados mensuráveis e crescimento." },
-    { num: "05", icon: <BookOpen size={28} />, title: "Capacitação Contínua", desc: "Treinamos equipes para serem autossuficientes e altamente eficientes." }
+    { num: "01", icon: <Fingerprint size={28} />, title: "Abordagem Personalizada", desc: "Nada de template. Analisamos seu mercado, seu público e suas métricas para criar uma estratégia exclusiva pro seu negócio." },
+    { num: "02", icon: <Award size={28} />, title: "Experiência e Autoridade", desc: "Mais de 4 anos de experiência prática em vendas online e CRM, com mais de 50 empresas transformadas." },
+    { num: "03", icon: <Heart size={28} />, title: "Humanização do Atendimento", desc: "Tecnologia sem perder o toque humano. Seus clientes se sentem acolhidos em cada etapa, do primeiro contato ao pós-venda." },
+    { num: "04", icon: <TrendingUp size={28} />, title: "Foco em Resultados", desc: "Cada ação tem métrica, cada decisão tem dado por trás. Se não gera resultado, a gente ajusta até gerar." },
+    { num: "05", icon: <BookOpen size={28} />, title: "Capacitação Contínua", desc: "Seu time não fica dependente da gente. Treinamos pra que sua equipe opere com autonomia e alta performance." }
   ];
 
   return (
@@ -59,12 +59,12 @@ export default function AboutSection() {
                 Especialista que transforma <span className="text-gradient-gold italic">atendimento em resultado</span>
               </h2>
               <div className="space-y-6 text-[#B8B8B8] text-lg text-left">
-                <p>Com anos de experiência em vendas online, CRM e atendimento comercial, Samara Benevides fundou a SB Vendas com uma missão clara: transformar empresas, potencializando suas operações comerciais e otimizando a experiência de seus clientes.</p>
-                <p>Atuando lado a lado com cada cliente, Samara combina estratégia, humanização e tecnologia para criar processos que realmente funcionam — do primeiro contato no WhatsApp até o fechamento da venda.</p>
+                <p>Com mais de 4 anos de experiência em vendas online, CRM e atendimento comercial, Samara Benevides fundou a SB Vendas com um objetivo claro: transformar a forma como empresas vendem. Já foram mais de 50 empresas atendidas nos setores de saúde, estética, varejo, educação e tecnologia.</p>
+                <p>Atuando lado a lado com cada cliente, Samara combina estratégia, humanização e tecnologia para criar processos que realmente funcionam. Do primeiro contato no WhatsApp até o fechamento da venda, cada etapa é pensada para converter mais e fidelizar melhor.</p>
               </div>
               <blockquote className="mt-8 border-l-4 border-[#C9A84C] pl-6 py-2 text-left">
                 <p className="text-2xl font-serif italic text-[#C9A84C] leading-relaxed">
-                  "Vendas não são apenas números — são conexões que geram confiança e fidelidade."
+                  "Vendas não são apenas números. São conexões que geram confiança e fidelidade."
                 </p>
               </blockquote>
               <div className="mt-10 lg:text-left">
@@ -85,7 +85,7 @@ export default function AboutSection() {
               <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">O que dizem nossos clientes</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-bold leading-tight font-serif">
-              Quem trabalha com a SB, <span className="text-gradient-gold italic">recomenda</span>
+              Quem trabalha com a SB Vendas, <span className="text-gradient-gold italic">recomenda</span>
             </h2>
           </motion.div>
 
@@ -171,10 +171,10 @@ export default function AboutSection() {
               <img src={ctaImg} alt="Samara" className="relative w-[140px] h-[140px] rounded-full mx-auto object-cover border-[3px] border-[#C9A84C]/60 shadow-[0_0_40px_rgba(201,168,76,0.25)]" />
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-[clamp(2.5rem,4vw,3.5rem)] font-bold leading-tight mb-6 font-serif">
-              Pronta para transformar suas <span className="text-gradient-gold italic">vendas</span>?
+              Sua próxima venda começa com uma <span className="text-gradient-gold italic">conversa</span>
             </h2>
             <p className="text-[#B8B8B8] text-xl mb-12 max-w-2xl mx-auto">
-              Agende uma consultoria gratuita e descubra como a SB pode potencializar os resultados do seu negócio.
+              Agende uma consultoria gratuita e descubra como podemos potencializar os resultados do seu negócio. Sem compromisso, sem enrolação.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
               <a href="https://wa.me/5592981112101?text=Olá! Gostaria de agendar uma consultoria gratuita." target="_blank" rel="noreferrer" className="bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-5 rounded-full hover:scale-105 transition-all duration-300 w-full sm:w-auto shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)]">
@@ -198,7 +198,7 @@ export default function AboutSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             <div>
               <div className="text-[#C9A84C] font-serif font-bold text-3xl mb-4 tracking-tighter">SB</div>
-              <p className="text-[#888888]">Estratégias que transformam vendas.</p>
+              <p className="text-[#888888]">Estratégias que transformam vendas em resultados.</p>
             </div>
             <div>
               <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Links Rápidos</h4>

@@ -38,26 +38,32 @@ function AnimatedCounter({ value, suffix = "", prefix = "" }: { value: number, s
 
 export default function ServicesSection() {
   const problems = [
-    { num: "01", icon: <MessageCircleX className="text-[#C9A84C] opacity-70" size={28} />, title: "Leads que não respondem", desc: "Seus potenciais clientes entram em contato mas a equipe não faz follow-up adequado, e as oportunidades morrem no WhatsApp." },
-    { num: "02", icon: <TrendingDown className="text-[#C9A84C] opacity-70" size={28} />, title: "Conversão baixa", desc: "Muitos leads chegam, mas poucos se tornam clientes. Falta um script estruturado e um fluxo que conduza o cliente até o fechamento." },
-    { num: "03", icon: <UserX className="text-[#C9A84C] opacity-70" size={28} />, title: "Equipe sem direcionamento", desc: "Seus vendedores não sabem como abordar, quando fazer follow-up ou como usar as ferramentas de atendimento com eficiência." },
-    { num: "04", icon: <Clock className="text-[#C9A84C] opacity-70" size={28} />, title: "Tempo perdido com manual", desc: "Tarefas repetitivas que poderiam ser automatizadas tomam horas da sua equipe, impedindo o foco em fechar negócios." },
+    { num: "01", icon: <MessageCircleX className="text-[#EF4444]" size={28} />, title: "Leads que não respondem", desc: "O lead chega quente, mas ninguém responde a tempo. Sem follow-up estruturado, as oportunidades esfriam e viram venda pro concorrente." },
+    { num: "02", icon: <TrendingDown className="text-[#EF4444]" size={28} />, title: "Conversão baixa", desc: "Muito lead entrando, pouco cliente saindo. Sem um script e um funil claro, sua equipe atende no improviso e perde venda todo dia." },
+    { num: "03", icon: <UserX className="text-[#EF4444]" size={28} />, title: "Equipe sem direcionamento", desc: "Sua equipe vende no feeling, sem processo definido. Cada vendedor faz do seu jeito e você não sabe onde está o gargalo." },
+    { num: "04", icon: <Clock className="text-[#EF4444]" size={28} />, title: "Tempo perdido", desc: "Você gasta horas respondendo mensagem por mensagem, sem automação. O tempo que deveria ir pra estratégia vai todo pro operacional." },
   ];
 
   const services = [
-    { icon: <Target className="text-[#C9A84C]" size={24} />, title: "Consultoria Comercial Estratégica", desc: "Diagnóstico completo das operações de vendas, estruturação de processos e criação de estratégias personalizadas para crescimento.", tags: ["Diagnóstico", "Playbook", "Estratégia"] },
-    { icon: <Workflow className="text-[#C9A84C]" size={24} />, title: "Automação & CRM", desc: "Implantação de CRM, automação de WhatsApp, chatbots inteligentes e agentes de IA que trabalham 24h para sua empresa.", tags: ["WhatsApp", "Chatbot", "Agente IA"] },
-    { icon: <GraduationCap className="text-[#C9A84C]" size={24} />, title: "Treinamento de Equipes", desc: "Capacitação de equipes comerciais em vendas online, scripts de atendimento e uso eficiente de ferramentas tecnológicas.", tags: ["Scripts", "Role-play", "Mentoria"] },
-    { icon: <MessagesSquare className="text-[#C9A84C]" size={24} />, title: "Fluxos Conversacionais", desc: "Criação de scripts e fluxos para WhatsApp que conduzem o lead do primeiro contato ao fechamento com abordagem humanizada.", tags: ["Follow-up", "Omnichannel", "Funil"] },
+    { 
+      icon: <Target className="text-[#C9A84C]" size={24} />, 
+      title: "Consultoria Comercial Estratégica", 
+      desc: "Analisamos sua operação de vendas do zero, identificamos gargalos e criamos uma estratégia personalizada focada em crescimento real.", 
+      tags: ["Diagnóstico", "Playbook", "Estratégia"],
+      featured: true 
+    },
+    { icon: <Workflow className="text-[#C9A84C]" size={24} />, title: "Automação & CRM", desc: "Implantamos CRM, automação de WhatsApp, chatbots inteligentes e agentes de IA que trabalham 24h vendendo pelo seu negócio.", tags: ["WhatsApp", "Chatbot", "Agente IA"] },
+    { icon: <GraduationCap className="text-[#C9A84C]" size={24} />, title: "Treinamento de Equipes", desc: "Capacitamos sua equipe com scripts de atendimento, técnicas de vendas online e uso eficiente das ferramentas que implantamos.", tags: ["Scripts", "Role-play", "Mentoria"] },
+    { icon: <MessagesSquare className="text-[#C9A84C]" size={24} />, title: "Fluxos Conversacionais", desc: "Criamos scripts e fluxos para WhatsApp que conduzem o lead do primeiro contato ao fechamento, com abordagem humanizada e personalizada.", tags: ["Follow-up", "Omnichannel", "Funil"] },
     { icon: <Headphones className="text-[#C9A84C]" size={24} />, title: "SDR / Closer / Secretária Online", desc: "Serviço remoto de pré-venda, fechamento e atendimento. Verificamos o perfil da sua operação e indicamos a melhor solução.", tags: ["Remoto", "Terceirização", "Atendimento"] },
-    { icon: <BarChart3 className="text-[#C9A84C]" size={24} />, title: "Acompanhamento de Resultados", desc: "Dashboards e relatórios com análise de dados, métricas de conversão e insights para otimização contínua das vendas.", tags: ["KPIs", "Relatórios", "Data-driven"] },
+    { icon: <BarChart3 className="text-[#C9A84C]" size={24} />, title: "Acompanhamento de Resultados", desc: "Dashboards e relatórios com análise de dados, métricas de conversão e insights para otimização contínua das suas vendas.", tags: ["KPIs", "Relatórios", "Data-driven"] },
   ];
 
   const steps = [
-    { num: "01", title: "Diagnóstico", desc: "Analisamos sua operação comercial, identificamos gargalos e mapeamos oportunidades de melhoria." },
-    { num: "02", title: "Estratégia", desc: "Criamos um plano personalizado com scripts, fluxos e ferramentas ideais para o seu negócio." },
-    { num: "03", title: "Implantação", desc: "Implementamos CRM, automações, chatbots e treinamos sua equipe para operar tudo com excelência." },
-    { num: "04", title: "Acompanhamento", desc: "Monitoramos resultados, ajustamos estratégias e garantimos crescimento contínuo." },
+    { num: "01", period: "Semana 1", title: "Diagnóstico", desc: "Analisamos toda a sua operação comercial, identificamos gargalos e mapeamos as melhores oportunidades de crescimento." },
+    { num: "02", period: "Semana 2-3", title: "Estratégia", desc: "Criamos um plano personalizado com scripts, fluxos e ferramentas ideais pro seu modelo de negócio." },
+    { num: "03", period: "Semana 3-4", title: "Implantação", desc: "Implementamos CRM, automações, chatbots e treinamos sua equipe para operar tudo com excelência." },
+    { num: "04", period: "Contínuo", title: "Acompanhamento", desc: "Monitoramos os resultados, ajustamos estratégias em tempo real e garantimos crescimento contínuo." },
   ];
 
   return (
@@ -70,7 +76,7 @@ export default function ServicesSection() {
               <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Você se identifica?</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-bold leading-tight font-serif">
-              Sua empresa perde vendas todos os dias por falta de <span className="text-gradient-gold italic">processo e estratégia</span>
+              Quantas vendas sua empresa perdeu só <span className="text-gradient-gold italic">esta semana</span>?
             </h2>
           </motion.div>
 
@@ -85,7 +91,7 @@ export default function ServicesSection() {
                 <div className="absolute top-4 right-6 text-[4rem] font-serif font-black text-[#C9A84C] opacity-[0.04] leading-none pointer-events-none select-none">
                   {prob.num}
                 </div>
-                <div className="w-14 h-14 rounded-full bg-[#C9A84C]/15 flex items-center justify-center mb-6 icon-container relative z-10">
+                <div className="w-14 h-14 rounded-full bg-[#EF4444]/10 border border-[#EF4444]/20 flex items-center justify-center mb-6 icon-container relative z-10">
                   {prob.icon}
                 </div>
                 <h3 className="text-xl font-serif font-bold mb-3 relative z-10">{prob.title}</h3>
@@ -104,10 +110,10 @@ export default function ServicesSection() {
               <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Nossos Serviços</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-bold leading-tight mb-6 font-serif">
-              Soluções completas para <span className="text-gradient-gold italic">escalar suas vendas</span>
+              O Método SB: da estratégia à <span className="text-gradient-gold italic">execução real</span>
             </h2>
             <p className="text-[#B8B8B8] text-lg">
-              Do diagnóstico à execução — implantamos processos, ferramentas e treinamentos que transformam seu comercial.
+              Diagnóstico, processos, ferramentas e treinamentos. Tudo o que seu time comercial precisa pra vender mais e melhor.
             </p>
           </motion.div>
 
@@ -119,10 +125,15 @@ export default function ServicesSection() {
                 variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.1 } } }}
                 className="service-card p-8 rounded-2xl flex flex-col h-full group relative"
               >
-                <div className="w-12 h-12 rounded-full bg-[#C9A84C]/15 flex items-center justify-center mb-6">
+                {svc.featured && (
+                  <div className="inline-block bg-[#C9A84C]/15 border border-[#C9A84C]/30 text-[#C9A84C] text-[0.7rem] font-bold tracking-[0.1em] uppercase px-3 py-1 rounded-full mb-6 self-start">
+                    ⭐ Mais Procurado
+                  </div>
+                )}
+                <div className={`w-12 h-12 rounded-full bg-[#C9A84C]/15 flex items-center justify-center ${!svc.featured && 'mb-6'}`}>
                   {svc.icon}
                 </div>
-                <h3 className="text-xl font-serif font-bold mb-4 pr-6">{svc.title}</h3>
+                <h3 className="text-xl font-serif font-bold mb-4 pr-6 mt-4">{svc.title}</h3>
                 <p className="text-[#888888] leading-relaxed flex-grow mb-6">{svc.desc}</p>
                 <div className="flex flex-wrap gap-2 mt-auto relative z-10">
                   {svc.tags.map(tag => (
@@ -137,6 +148,15 @@ export default function ServicesSection() {
               </motion.div>
             ))}
           </div>
+
+          <motion.div 
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="text-center mt-16"
+          >
+            <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre os serviços da SB Vendas." target="_blank" rel="noreferrer" className="inline-block bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-4 rounded-full hover:bg-[#E2C873] transition-all duration-300 btn-primary-glow shadow-[0_4px_20px_rgba(201,168,76,0.2)]">
+              Fale com um especialista →
+            </a>
+          </motion.div>
         </div>
       </section>
 
@@ -150,10 +170,10 @@ export default function ServicesSection() {
                 <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Resultados Comprovados</span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-bold leading-tight mb-6 font-serif">
-                Números que falam por <span className="text-gradient-gold italic">nós</span>
+                O que acontece quando a SB entra na <span className="text-gradient-gold italic">sua operação</span>
               </h2>
               <p className="text-[#B8B8B8] text-lg mb-10">
-                Nossos clientes não apenas melhoram processos — eles transformam resultados financeiros reais.
+                Nossos clientes não apenas melhoram processos. Eles transformam resultados financeiros reais.
               </p>
               <img src={resultsImg} alt="Samara Benevides Resultados" className="rounded-2xl shadow-[0_0_30px_rgba(201,168,76,0.1)] border border-[#C9A84C]/10 w-full max-w-md" />
             </motion.div>
@@ -222,11 +242,12 @@ export default function ServicesSection() {
                   variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: idx * 0.2 + 0.3 } } }}
                   className="relative"
                 >
-                  <div className="w-20 h-20 bg-[#1A1A1A] border-2 border-[#C9A84C]/40 rounded-full flex items-center justify-center text-3xl font-serif font-bold text-[#C9A84C] mb-6 lg:mx-auto shadow-[0_0_25px_rgba(201,168,76,0.15)] relative">
+                  <div className="w-20 h-20 bg-[#1A1A1A] border-2 border-[#C9A84C]/40 rounded-full flex items-center justify-center text-3xl font-serif font-bold text-[#C9A84C] mb-4 lg:mx-auto shadow-[0_0_25px_rgba(201,168,76,0.15)] relative">
                     <div className="absolute inset-0 rounded-full bg-[#C9A84C]/5"></div>
                     {step.num}
                   </div>
                   <div className="lg:text-center">
+                    <div className="text-[#C9A84C] text-[0.75rem] font-semibold uppercase tracking-wider mb-1">{step.period}</div>
                     <h3 className="text-xl font-serif font-bold mb-3 text-white">{step.title}</h3>
                     <p className="text-[#888888] leading-relaxed text-sm md:text-base">{step.desc}</p>
                   </div>
