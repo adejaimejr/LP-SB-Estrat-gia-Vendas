@@ -11,40 +11,34 @@ const fadeUp = {
 export default function AboutSection() {
   const infrastructureCards = [
     { 
-      icon: <Crosshair className="text-[#C9A84C]" size={24} />, 
+      icon: <Crosshair className="text-[#C9A84C]" size={20} />, 
       title: "Rastreamento de Leads", 
-      desc: "UTMs, pixel de conversão e dashboards para saber exatamente de onde vem cada lead. Google, Instagram, indicação, tráfego orgânico. Tudo rastreado.",
-      tags: ["UTM", "PIXEL", "ANALYTICS"]
+      desc: "UTMs, pixel de conversão e dashboards para saber exatamente de onde vem cada lead. Google, Instagram, indicação, tráfego orgânico. Tudo rastreado."
     },
     { 
-      icon: <LayoutTemplate className="text-[#C9A84C]" size={24} />, 
+      icon: <LayoutTemplate className="text-[#C9A84C]" size={20} />, 
       title: "Landing Pages de Conversão", 
-      desc: "Páginas de captura profissionais, otimizadas para conversão e integradas com seu CRM. Design premium que transmite confiança e gera leads qualificados.",
-      tags: ["DESIGN", "SEO", "RESPONSIVO"]
+      desc: "Páginas de captura profissionais, otimizadas para conversão e integradas com seu CRM. Design premium que transmite confiança e gera leads qualificados."
     },
     { 
-      icon: <Workflow className="text-[#C9A84C]" size={24} />, 
+      icon: <Workflow className="text-[#C9A84C]" size={20} />, 
       title: "Automações com n8n", 
-      desc: "Fluxos automatizados que distribuem leads, disparam mensagens, atualizam CRM e notificam sua equipe em tempo real. Tudo rodando 24 horas no piloto automático.",
-      tags: ["N8N", "WEBHOOKS", "API"]
+      desc: "Fluxos automatizados que distribuem leads, disparam mensagens, atualizam CRM e notificam sua equipe em tempo real. Tudo rodando 24 horas no piloto automático."
     },
     { 
-      icon: <Puzzle className="text-[#C9A84C]" size={24} />, 
+      icon: <Puzzle className="text-[#C9A84C]" size={20} />, 
       title: "Integrações entre Plataformas", 
-      desc: "WhatsApp, Instagram, Facebook Ads, Google Ads, CRM, planilhas, e-mail marketing. Todas as suas ferramentas conversando entre si sem retrabalho manual.",
-      tags: ["WHATSAPP", "META ADS", "CRM"]
+      desc: "WhatsApp, Instagram, Facebook Ads, Google Ads, CRM, planilhas, e-mail marketing. Todas as suas ferramentas conversando entre si sem retrabalho manual."
     },
     { 
-      icon: <KanbanSquare className="text-[#C9A84C]" size={24} />, 
+      icon: <KanbanSquare className="text-[#C9A84C]" size={20} />, 
       title: "CRM e Funil Estruturado", 
-      desc: "Pipeline visual com cada lead no estágio certo. Sua equipe sabe exatamente quem abordar, quando e como. Nenhuma oportunidade passa despercebida.",
-      tags: ["PIPELINE", "KANBAN", "FOLLOW-UP"]
+      desc: "Pipeline visual com cada lead no estágio certo. Sua equipe sabe exatamente quem abordar, quando e como. Nenhuma oportunidade passa despercebida."
     },
     { 
-      icon: <BarChart3 className="text-[#C9A84C]" size={24} />, 
+      icon: <BarChart3 className="text-[#C9A84C]" size={20} />, 
       title: "Dashboards em Tempo Real", 
-      desc: "Painéis visuais com taxa de conversão, custo por lead, ROI por canal e desempenho da equipe. Decisões baseadas em dados, não em achismo.",
-      tags: ["KPIs", "ROI", "DATA-DRIVEN"]
+      desc: "Painéis visuais com taxa de conversão, custo por lead, ROI por canal e desempenho da equipe. Decisões baseadas em dados, não em achismo."
     }
   ];
 
@@ -100,101 +94,73 @@ export default function AboutSection() {
         </div>
       </section>
 
-      {/* Infrastructure Ecosystem (Simplified version) */}
+      {/* Infrastructure Ecosystem (Simplified side-by-side layout) */}
       <section id="ecossistema" className="py-24 bg-[#141414] overflow-hidden">
-        <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center max-w-4xl mx-auto mb-10">
-            <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-5 py-1.5 rounded-full mb-6">
-              <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Ecossistema de Vendas</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight font-serif mb-6">
-              Da origem à <span className="text-gradient-gold italic">conversão</span>: controle total sobre cada lead
-            </h2>
-            <p className="text-[#B8B8B8] text-lg mb-8">
-              Implantamos toda a tecnologia que sua empresa precisa para rastrear, nutrir e converter leads com previsibilidade. Sem achismo, sem improviso.
-            </p>
-            <p className="font-serif italic text-[#C9A84C] text-[1.15rem] text-center max-w-[700px] mx-auto opacity-85">
-              "Cada lead que entra na sua empresa tem nome, origem e destino. Nós garantimos isso."
-            </p>
-          </motion.div>
-
-          <div className="flex flex-col lg:flex-row gap-12 mt-16 items-start max-w-6xl mx-auto">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
             
-            {/* Left Side: Flow */}
-            <div className="lg:w-[35%] w-full">
-              {/* Compact Vertical Flow */}
-              <div className="relative pl-8 mb-10 h-full">
-                {/* Vertical Line */}
-                <div className="absolute left-[5px] top-4 bottom-4 w-[2px] rounded-full overflow-hidden">
-                   <div className="w-full h-full bg-[#333333]"></div>
-                   <motion.div 
-                    initial={{ height: "0%" }}
-                    whileInView={{ height: "100%" }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 1.5, ease: "easeInOut" }}
-                    className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#C9A84C] to-[rgba(201,168,76,0.2)]"
-                  ></motion.div>
-                </div>
+            {/* Left Side: Text and Simple Flow */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-[40%] flex flex-col">
+              <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-4 py-1 rounded-full mb-6 self-start">
+                <span className="text-[#C9A84C] uppercase text-[0.65rem] font-bold tracking-[0.15em]">Nossa Infraestrutura</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight font-serif mb-6 text-white tracking-tight">
+                Controle da origem à <span className="text-[#C9A84C] italic font-normal">conversão</span> do lead
+              </h2>
+              <p className="text-[#888888] text-base mb-10 leading-relaxed max-w-md">
+                Implantamos o ecossistema tecnológico que sua empresa precisa para rastrear, nutrir e converter com previsibilidade.
+              </p>
 
-                <div className="space-y-8 relative">
-                  {flowNodes.map((node, idx) => (
+              {/* Simple Vertical Flow */}
+              <div className="relative pl-3 mb-12">
+                {/* Thin vertical line connecting circles */}
+                <div className="absolute left-[15px] top-2 bottom-2 w-[1px] bg-[#C9A84C]/30"></div>
+
+                <div className="space-y-6 relative">
+                  {[
+                    "Origem",
+                    "Captura",
+                    "Automação",
+                    "Atendimento",
+                    "Conversão",
+                    "Análise"
+                  ].map((label, idx) => (
                     <motion.div 
                       key={idx}
-                      initial={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: idx * 0.15 }}
-                      className="relative"
+                      transition={{ duration: 0.3, delay: idx * 0.1 }}
+                      className="flex items-center gap-4 relative z-10"
                     >
-                      <div className="absolute -left-[35px] top-1.5 w-3 h-3 rounded-full bg-[#C9A84C] shadow-[0_0_10px_rgba(201,168,76,0.3)] z-10"></div>
-                      <div>
-                        <div className="flex items-center gap-2 mb-0.5">
-                          <span className="text-[#C9A84C] font-bold text-[0.85rem]">{node.num}</span>
-                          <span className="text-white font-bold text-lg leading-none">{node.label}</span>
-                        </div>
-                        <p className="text-[#888888] text-[0.8rem] ml-6">{node.desc}</p>
-                      </div>
+                      <div className="w-3 h-3 rounded-full border-2 border-[#C9A84C] bg-[#141414] shadow-[0_0_8px_rgba(201,168,76,0.3)]"></div>
+                      <span className="text-white font-medium text-sm md:text-base tracking-wide">{label}</span>
                     </motion.div>
                   ))}
                 </div>
               </div>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.8 }}
-                className="pl-8"
-              >
-                <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB." target="_blank" rel="noreferrer" className="inline-block bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-4 rounded-full hover:scale-105 transition-all duration-300 shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)] text-center w-full sm:w-auto">
-                  Quero essa infraestrutura no meu negócio →
-                </a>
-              </motion.div>
-            </div>
+              <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB." target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-4 rounded-full hover:bg-[#E2C873] transition-all duration-300 w-full sm:w-max shadow-[0_4px_20px_rgba(201,168,76,0.2)]">
+                Quero essa estrutura →
+              </a>
+            </motion.div>
 
-            {/* Right Side: Compact Grid of Cards */}
-            <div className="lg:w-[65%] grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Right Side: 2x3 Grid of Cards without tags */}
+            <div className="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5 w-full">
               {infrastructureCards.map((card, idx) => (
                 <motion.div 
                   key={idx}
                   initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
-                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: idx * 0.1 } } }}
-                  className="bg-[#1A1A1A] p-6 rounded-[12px] border border-white/5 border-t-transparent hover:border-t-[#C9A84C] hover:border-t-2 hover:border-[#C9A84C]/30 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] transition-all duration-300 flex flex-col group h-full"
+                  variants={{ hidden: { opacity: 0, y: 15 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: idx * 0.1 } } }}
+                  className="bg-[#1A1A1A] p-6 lg:p-7 rounded-[12px] border border-white/5 hover:border-[#C9A84C]/20 transition-all duration-300 flex flex-col group h-full shadow-lg"
                 >
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[#C9A84C]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#C9A84C]/20 transition-colors">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-8 h-8 rounded-full bg-transparent flex items-center justify-center flex-shrink-0 text-[#C9A84C]">
                       {card.icon}
                     </div>
-                    <h3 className="text-lg font-serif font-bold text-white leading-tight">{card.title}</h3>
+                    <h3 className="text-base lg:text-lg font-serif font-bold text-white leading-tight">{card.title}</h3>
                   </div>
-                  <p className="text-[#888888] text-sm leading-relaxed mb-6 flex-grow">{card.desc}</p>
-                  <div className="flex flex-wrap gap-1.5 mt-auto pt-2 border-t border-white/5">
-                    {card.tags.map(tag => (
-                      <span key={tag} className="text-[9px] font-bold uppercase tracking-wider text-[#C9A84C] bg-[#C9A84C]/5 px-2.5 py-0.5 rounded-full border border-transparent group-hover:border-[#C9A84C]/20 transition-all">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-[#888888] text-[0.85rem] leading-relaxed flex-grow opacity-90">{card.desc}</p>
                 </motion.div>
               ))}
             </div>
