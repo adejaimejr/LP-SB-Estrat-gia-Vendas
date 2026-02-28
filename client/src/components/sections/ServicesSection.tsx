@@ -237,7 +237,7 @@ export default function ServicesSection() {
               <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">Como Funciona</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-bold leading-tight font-serif">
-              Do diagnóstico aos <span className="text-gradient-gold italic">resultados</span> em 4 passos
+              Do diagnóstico aos <span className="text-gradient-gold italic">resultados</span> <br className="hidden md:block" /> em 4 passos
             </h2>
           </motion.div>
 
