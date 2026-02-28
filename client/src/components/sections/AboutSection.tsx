@@ -197,7 +197,7 @@ export default function AboutSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             <div>
               <div className="text-[#C9A84C] font-serif font-bold text-3xl mb-4 tracking-tighter">SB</div>
-              <p className="text-[#888888]">Estratégias que transformam vendas em resultados.</p>
+              <p className="text-[#888888] leading-relaxed">Metodologia comprovada para transformar seu atendimento em uma máquina de vendas previsível e lucrativa.</p>
             </div>
             <div>
               <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Links Rápidos</h4>
@@ -211,28 +211,25 @@ export default function AboutSection() {
               <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Contato</h4>
               <ul className="space-y-3 text-[#888888]">
                 <li>(92) 98111-2101</li>
-                <li>samarabenevides@gmail.com</li>
-                <li>www.samarabenevides.com.br</li>
+                <li><a href="mailto:atendimento@sbestrategiaevendas.com.br" className="hover:text-[#C9A84C] transition-colors">atendimento@sbestrategiaevendas.com.br</a></li>
+                <li><a href="https://sbestrategiaevendas.com.br" className="hover:text-[#C9A84C] transition-colors">www.sbestrategiaevendas.com.br</a></li>
               </ul>
             </div>
             <div>
               <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Redes Sociais</h4>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-white hover:bg-[#C9A84C] hover:text-[#0A0A0A] hover:border-[#C9A84C] transition-all">
+                <a href="https://www.instagram.com/samarabeneviides" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-white hover:bg-[#C9A84C] hover:text-[#0A0A0A] hover:border-[#C9A84C] transition-all">
                   <Instagram size={20} />
-                </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-white hover:bg-[#C9A84C] hover:text-[#0A0A0A] hover:border-[#C9A84C] transition-all">
-                  <Linkedin size={20} />
                 </a>
               </div>
             </div>
           </div>
-          <div className="pt-8 border-t border-[#C9A84C]/10 flex flex-col items-center justify-center gap-2">
+          <div className="pt-8 border-t border-[#C9A84C]/10 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-[#666666] text-sm">
-              &copy; 2026 SB Vendas.
+              &copy; 2026 SB Estratégia & Vendas.
             </p>
-            <p className="text-[#666666] text-sm">
-              Criado com <span className="text-red-500">❤</span> por <span className="text-white font-semibold">i92Tech</span>
+            <p className="text-[#666666] text-sm flex items-center gap-1">
+              Criado com <span className="text-[#994747]">❤</span> por <span className="text-white font-semibold ml-1">i92Tech</span>
             </p>
           </div>
         </div>
