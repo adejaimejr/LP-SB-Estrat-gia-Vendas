@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, TrendingUp, Star } from "lucide-react";
+import { Menu, X, TrendingUp, Star, UserCheck, CheckCircle2 } from "lucide-react";
 import heroImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.18_-_cópia_1772248771760.jpeg";
 
 export default function HeroSection() {
@@ -145,11 +145,17 @@ export default function HeroSection() {
                 <div className="text-white font-bold text-sm">4.9/5 <span className="text-[#888888] font-normal">Rating</span></div>
               </div>
 
-              <div className="hidden lg:flex absolute right-4 bottom-20 animate-float bg-[#1E3A2F] border border-[#25D366]/30 rounded-xl p-3 items-center gap-3 shadow-xl z-20">
-                <div className="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center text-white">
-                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" fill="currentColor"></path></svg>
+              <div className="hidden lg:flex absolute right-0 bottom-24 animate-float bg-[#1A1A1A] border border-[#C9A84C]/20 rounded-xl p-3 pr-5 items-center gap-4 shadow-[0_12px_40px_rgba(0,0,0,0.5)] z-20">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#C9A84C]/20 to-transparent flex items-center justify-center text-[#C9A84C] border border-[#C9A84C]/10">
+                  <UserCheck size={24} />
                 </div>
-                <div className="text-white font-medium text-sm">Lead convertido ✓</div>
+                <div>
+                  <div className="text-white font-bold text-sm tracking-wide">Lead convertido</div>
+                  <div className="text-[#4ADE80] text-xs font-semibold flex items-center gap-1.5 mt-1">
+                    <CheckCircle2 size={14} />
+                    Negócio fechado
+                  </div>
+                </div>
               </div>
 
               <img 
