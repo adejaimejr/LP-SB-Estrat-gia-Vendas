@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Fingerprint, Award, Heart, TrendingUp, BookOpen, Star, Linkedin, Instagram, MessageCircle } from "lucide-react";
-import aboutImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.18_(1)_1772248771760.jpeg";
+import aboutImg from "@assets/WhatsApp_Image_2026-02-28_at_17.19.01_1772314657032.jpeg";
 import ctaImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.19_1772310789154.jpeg";
 
 const fadeUp = {
