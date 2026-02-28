@@ -1,0 +1,267 @@
+# SB VENDAS — Refinamento V3: Fotos, Textos e Polimento Final
+
+---
+
+## 📸 ESTRATÉGIA DE FOTOS — REDISTRIBUIÇÃO
+
+A foto mais impactante da Samara (blazer preto, cabelo ao vento, fundo escuro) está sendo usada apenas num círculo pequeno no CTA final. Essa foto projeta poder, autoridade e confiança. Ela precisa ser a foto principal do HERO.
+
+### Nova distribuição de fotos:
+
+**HERO:** Trocar para a foto do blazer preto com cabelo ao vento (arquivo: WhatsApp_Image_2026-02-08_at_09_58_19__2_.jpeg)
+- Motivo: fundo escuro integra perfeitamente com o tema dark, pose poderosa e confiante, cabelo dinâmico cria movimento, é a foto que mais transmite autoridade e liderança
+- O fundo cinza escuro da foto se mistura naturalmente com o background #0A0A0A da página
+- Essa foto vai fazer o visitante parar e prestar atenção
+
+**SEÇÃO RESULTADOS:** Manter a foto do blazer bege (WhatsApp_Image_2026-02-08_at_09_58_19__1_.jpeg)
+- Está perfeita nesta seção, transmite elegância e credibilidade
+
+**SEÇÃO SOBRE SAMARA:** Manter a foto sorrindo no café (WhatsApp_Image_2026-02-08_at_09_58_18__1_.jpeg)
+- O sorriso humaniza a marca e combina com o tom mais pessoal desta seção
+
+**CTA FINAL:** Trocar para a foto atual do hero (colete branco com fundo preto — WhatsApp_Image_2026-02-08_at_09_58_18_-_co_pia.jpeg)
+- A pose contemplativa combina com "Sua próxima venda começa com uma conversa"
+- Usar como círculo maior (160px) com borda dourada
+
+---
+
+## ✍️ REFINAMENTO DE TEXTOS — DOBRA POR DOBRA
+
+### DOBRA 1 — HERO
+
+**Subtítulo atual:** "Sou Samara Benevides, especialista em estratégias comerciais e automação inteligente. Já transformei os resultados de mais de 50 empresas com processos que unem tecnologia e atendimento humanizado."
+
+**Problema:** Ainda tem cara de texto institucional. Precisa ser mais pessoal e direto, como se ela estivesse falando com você.
+
+**Novo subtítulo:** "Ajudo empresas a vender mais todos os dias com estratégia comercial, automação de WhatsApp e processos que realmente funcionam. Mais de 50 negócios já passaram por aqui."
+
+**Por que é melhor:** Começa com o benefício ("vender mais todos os dias"), lista os serviços de forma natural, e "já passaram por aqui" é mais coloquial e confiante do que "transformei os resultados".
+
+**Indicadores de confiança (abaixo dos CTAs):**
+Atual: "+50 empresas atendidas · +50% aumento médio · 4 anos de experiência"
+Novo: "+50 empresas transformadas · +50% de aumento médio em faturamento · 4 anos de experiência"
+(Trocar "atendidas" por "transformadas" — mais impactante. Adicionar "em faturamento" para especificar.)
+
+---
+
+### DOBRA 2 — MARQUEE
+
+**Atual:** "QUEM JÁ CONFIOU NA NOSSA ESTRATÉGIA" ✅ Bom
+
+Sem alteração necessária. O duplo scroll está funcionando bem.
+
+---
+
+### DOBRA 3 — PAIN POINTS
+
+**Heading:** "Quantas vendas sua empresa perdeu só *esta semana*?" ✅ Forte
+
+**Cards — pequenos ajustes de texto:**
+
+**Card 1 — Leads que não respondem:**
+Atual: "O lead chega quente, mas ninguém responde a tempo. Sem follow-up estruturado, as oportunidades esfriam e viram venda pro concorrente."
+Novo: "O lead chega quente, mas ninguém responde a tempo. Sem follow-up estruturado, a oportunidade esfria e vira venda do concorrente."
+(Singular "a oportunidade" flui melhor, "do concorrente" é mais natural que "pro concorrente")
+
+**Card 3 — Equipe sem direcionamento:**
+Atual: "Sua equipe vende no feeling, sem processo definido. Cada vendedor faz do seu jeito e você não sabe onde está o gargalo."
+Novo: "Sua equipe vende no improviso, sem processo definido. Cada vendedor faz do seu jeito e você não consegue identificar onde está o gargalo."
+("Improviso" é mais claro que "feeling" para o público brasileiro em geral, "não consegue identificar" é mais específico)
+
+**Card 4 — Tempo perdido:**
+Atual: "Você gasta horas respondendo mensagem por mensagem, sem automação. O tempo que deveria ir pra estratégia vai todo pro operacional."
+Novo: "Horas do seu dia vão embora respondendo mensagem por mensagem. O tempo que deveria ir pra estratégia é consumido pelo operacional."
+(Começar com "Horas do seu dia" é mais dramático, "é consumido pelo" soa mais forte)
+
+---
+
+### DOBRA 4 — SERVIÇOS
+
+**Heading:** "O Método SB: da estratégia à *execução real*" ✅ Forte
+
+**Subtítulo atual:** "Diagnóstico, processos, ferramentas e treinamentos. Tudo o que seu time comercial precisa pra vender mais e melhor."
+**Novo:** "Diagnóstico, processos, ferramentas e treinamento. Tudo que seu comercial precisa pra vender mais, melhor e com previsibilidade."
+("Previsibilidade" é a palavra que todo empresário quer ouvir. Removido "o" de "Tudo o que" para ficar mais coloquial. "Time comercial" → "comercial" mais direto.)
+
+**CTA "Fale com um especialista →"** ✅ Excelente adição
+
+**Badge "MAIS PROCURADO"** ✅ Ótimo no card de Consultoria
+
+---
+
+### DOBRA 5 — RESULTADOS
+
+**Heading:** "O que acontece quando a SB entra na *sua operação*" ✅ Forte
+
+**Subtítulo atual:** "Nossos clientes não apenas melhoram processos. Eles transformam resultados financeiros reais."
+**Novo:** "Nossos clientes não apenas melhoram processos. Eles colhem resultados financeiros reais, mês após mês."
+("Colhem" é mais concreto que "transformam", e "mês após mês" reforça a ideia de continuidade e consistência.)
+
+---
+
+### DOBRA 6 — TIMELINE
+
+**Tudo está ótimo com os prazos (Semana 1, Semana 2-3, etc.)** ✅
+
+**Pequeno ajuste no texto do passo 4:**
+Atual: "Monitoramos os resultados, ajustamos estratégias em tempo real e garantimos crescimento contínuo."
+Novo: "Monitoramos seus resultados de perto, ajustamos o que for necessário e garantimos que o crescimento não pare."
+("Seus resultados" é mais pessoal, "o crescimento não pare" é mais impactante que "crescimento contínuo")
+
+---
+
+### DOBRA 7 — SOBRE SAMARA
+
+**Heading:** "Especialista que transforma *atendimento em resultado*" ✅
+
+**Bio parágrafo 1:**
+Atual: "Com mais de 4 anos de experiência em vendas online, CRM e atendimento comercial, Samara Benevides fundou a SB Vendas com um objetivo claro: transformar a forma como empresas vendem. Já foram mais de 50 empresas atendidas nos setores de saúde, estética, varejo, educação e tecnologia."
+Novo: "Samara Benevides fundou a SB Vendas com um objetivo claro: mudar a forma como empresas vendem no digital. Com mais de 4 anos de experiência em vendas online, CRM e atendimento comercial, já são mais de 50 empresas nos setores de saúde, estética, varejo, educação e tecnologia que passaram pelo seu método."
+
+**Por que é melhor:** Começa com o nome dela (mais impactante como primeira palavra), reorganiza a estrutura para fluir melhor, "mudar" é mais direto que "transformar" (que já foi usado demais na página), "que passaram pelo seu método" reforça o posicionamento do Método SB.
+
+**Bio parágrafo 2:**
+Atual: "Atuando lado a lado com cada cliente, Samara combina estratégia, humanização e tecnologia para criar processos que realmente funcionam. Do primeiro contato no WhatsApp até o fechamento da venda, cada etapa é pensada para converter mais e fidelizar melhor."
+Novo: "Lado a lado com cada cliente, ela combina estratégia, humanização e tecnologia para criar processos que realmente funcionam. Do primeiro contato no WhatsApp até o fechamento, cada etapa é desenhada para converter mais e fidelizar melhor."
+
+(Removido "Atuando" — verbo gerúndio no início é padrão de IA. "Ela" no lugar de "Samara" evita repetição. "Desenhada" é mais intencional que "pensada".)
+
+**Citação:** "Vendas não são apenas números. São conexões que geram confiança e fidelidade." ✅ Perfeita
+
+**CTA "Conheça minha trajetória":**
+Trocar para: "Saiba mais sobre meu trabalho"
+(Mais direto e menos formal. "Trajetória" soa como biografia de LinkedIn.)
+
+---
+
+### DOBRA 8 — DEPOIMENTOS
+
+**Heading:** "Quem trabalha com a SB Vendas, *recomenda*" ✅
+
+**Os 3 depoimentos estão visíveis e completos agora** ✅
+
+**Terceiro depoimento (Empresário - Setor de Varejo):**
+Atual: "Depois que a Samara estruturou nosso processo comercial, nosso time começou a converter o dobro. Em 3 meses, o faturamento subiu 40%."
+
+**Problema:** Esse depoimento parece fabricado porque é genérico demais e perfeito demais. Precisa parecer mais real.
+
+Novo: "A Samara reestruturou toda nossa operação de vendas pelo WhatsApp. Em menos de 3 meses, nosso time já estava batendo meta com folga. Recomendo de olhos fechados."
+
+**Por que é melhor:** Menciona WhatsApp (serviço real), "batendo meta com folga" soa mais natural do que "faturamento subiu 40%", "recomendo de olhos fechados" é linguagem real de cliente satisfeito.
+
+---
+
+### DOBRA 9 — DIFERENCIAIS
+
+**Heading:** "Por que escolher a *SB Vendas*?" ✅
+
+**Textos atuais estão bons** ✅
+
+**Único ajuste — "Foco em Resultados":**
+Atual: "Cada ação tem métrica, cada decisão tem dado por trás. Se não gera resultado, a gente ajusta até gerar."
+Novo: "Cada ação tem métrica, cada decisão tem dado por trás. Se não está gerando resultado, ajustamos até gerar."
+(Mais direto, sem "a gente" que soa informal demais para essa seção.)
+
+---
+
+### DOBRA 10 — CTA FINAL
+
+**Heading:** "Sua próxima venda começa com uma *conversa*" ✅ Perfeito
+
+**Subtítulo atual:** "Agende uma consultoria gratuita e descubra como podemos potencializar os resultados do seu negócio. Sem compromisso, sem enrolação."
+**Novo:** "Agende sua consultoria gratuita e descubra como potencializar os resultados do seu negócio. Sem compromisso, sem enrolação."
+("Sua" no lugar de "uma" é mais pessoal, removido "podemos" que enfraquece a frase.)
+
+---
+
+### FOOTER
+
+**Tagline:** "Estratégias que transformam vendas em resultados." ✅
+
+**Copyright atual:** "© 2026 SB Vendas — Estratégias & Vendas. Todos os direitos reservados."
+**Novo:** "© 2026 SB Vendas. Todos os direitos reservados."
+(Remover "— Estratégias & Vendas" — redundante e tem o travessão que pedimos para eliminar.)
+
+---
+
+## 🎨 AJUSTES VISUAIS
+
+### 1. Espaçamento entre Resultados e Timeline (Imagem 7)
+Há um espaço ENORME vazio entre o final da seção Resultados (onde a foto da Samara de blazer bege termina) e o início do "COMO FUNCIONA". Esse espaço em branco precisa ser reduzido:
+```css
+/* Reduzir o gap entre as seções */
+.results-section {
+  padding-bottom: 60px; /* ao invés de ~120px+ */
+}
+.timeline-section {
+  padding-top: 80px;
+}
+```
+
+### 2. Seção Diferenciais — Espaço vazio excessivo (Imagem 13)
+Entre o último diferencial ("Capacitação Contínua") e o CTA final, há um espaço em branco muito grande. Reduzir o padding inferior desta seção.
+
+### 3. Terceiro depoimento cortado (Imagem 11)
+O terceiro depoimento (Empresário) está com o texto levemente cortado na borda direita ("40%."). Verificar se tem overflow hidden ou se precisa de mais padding interno no card.
+
+### 4. Badge "Lead convertido" no Hero
+Atualmente mostra "Lead convertido" com "Negócio fechado" embaixo. Simplificar para apenas:
+- Ícone WhatsApp verde ✓
+- "Lead convertido"
+(Remover "Negócio fechado" — são duas informações competindo num badge pequeno)
+
+### 5. Botão WhatsApp flutuante
+O ícone atual parece ser um balão de chat genérico, não o ícone oficial do WhatsApp. Substituir pelo SVG real do WhatsApp:
+```html
+<svg viewBox="0 0 24 24" fill="white" width="28" height="28">
+  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+</svg>
+```
+
+### 6. Consistência de hover na navbar
+Os links da navbar (INÍCIO, SERVIÇOS, etc.) devem ter hover dourado com underline slide-in:
+```css
+nav a:hover {
+  color: #C9A84C;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #C9A84C;
+  transition: width 0.3s ease;
+}
+nav a:hover::after {
+  width: 100%;
+}
+```
+
+---
+
+## 🔍 REVISÃO GERAL — VERIFICAR SE AINDA EXISTE ALGUM TRAVESSÃO (—)
+
+Fazer busca global no código por "—" (em dash) e "\u2014" (unicode em dash). Se encontrar qualquer um, substituir por vírgula ou ponto final. Verificar especialmente:
+
+- Footer copyright (remover "— Estratégias & Vendas")
+- Qualquer texto de descrição que tenha escapado
+- Alt texts de imagens
+- Meta descriptions
+
+---
+
+## RESUMO DE PRIORIDADE
+
+1. **TROCAR FOTO DO HERO** para blazer preto (maior impacto visual possível)
+2. **Reescrever subtítulo do hero** (mais pessoal e direto)
+3. **Mover foto do colete branco** para o CTA final
+4. **Reduzir espaços vazios** entre Resultados→Timeline e Diferenciais→CTA
+5. **Ajustar textos da bio** da Samara (melhor fluidez)
+6. **Reescrever terceiro depoimento** (parecer mais natural)
+7. **Simplificar badge** "Lead convertido" no hero
+8. **Trocar ícone WhatsApp** flutuante para SVG real
+9. **Ajustes de texto** nos pain points e serviços
+10. **Remover travessão** do copyright no footer
+11. **Hover dourado** nos links da navbar

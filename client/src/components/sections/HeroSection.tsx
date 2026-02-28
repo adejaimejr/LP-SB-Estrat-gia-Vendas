@@ -146,15 +146,11 @@ export default function HeroSection() {
               </div>
 
               <div className="hidden lg:flex absolute right-0 bottom-24 animate-float bg-[#1A1A1A] border border-[#C9A84C]/20 rounded-xl p-3 pr-5 items-center gap-4 shadow-[0_12px_40px_rgba(0,0,0,0.5)] z-20">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#C9A84C]/20 to-transparent flex items-center justify-center text-[#C9A84C] border border-[#C9A84C]/10">
-                  <UserCheck size={24} />
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#25D366]/20 to-transparent flex items-center justify-center text-[#25D366] border border-[#25D366]/10">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" fill="currentColor"></path><path d="m9 12 2 2 4-4" stroke="#0A0A0A" strokeWidth="3"></path><path d="m9 12 2 2 4-4" stroke="#25D366" strokeWidth="2"></path></svg>
                 </div>
                 <div>
                   <div className="text-white font-bold text-sm tracking-wide">Lead convertido</div>
-                  <div className="text-[#4ADE80] text-xs font-semibold flex items-center gap-1.5 mt-1">
-                    <CheckCircle2 size={14} />
-                    Negócio fechado
-                  </div>
                 </div>
               </div>
 
