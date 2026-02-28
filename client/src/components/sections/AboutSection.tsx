@@ -94,29 +94,29 @@ export default function AboutSection() {
         </div>
       </section>
 
-      {/* Infrastructure Ecosystem (Simplified side-by-side layout) */}
-      <section id="ecossistema" className="py-24 bg-[#141414] overflow-hidden">
+      {/* Infrastructure Ecosystem (Compact version for single screen fit) */}
+      <section id="ecossistema" className="py-16 md:py-20 bg-[#141414] overflow-hidden min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center lg:items-start">
             
             {/* Left Side: Text and Simple Flow */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-[40%] flex flex-col">
-              <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-4 py-1 rounded-full mb-6 self-start">
-                <span className="text-[#C9A84C] uppercase text-[0.65rem] font-bold tracking-[0.15em]">Nossa Infraestrutura</span>
+              <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-3 py-1 rounded-full mb-4 self-start">
+                <span className="text-[#C9A84C] uppercase text-[0.6rem] font-bold tracking-[0.15em]">Nossa Infraestrutura</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight font-serif mb-6 text-white tracking-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-[2.2rem] font-bold leading-[1.1] font-serif mb-4 text-white tracking-tight">
                 Controle da origem à <span className="text-[#C9A84C] italic font-normal">conversão</span> do lead
               </h2>
-              <p className="text-[#888888] text-base mb-10 leading-relaxed max-w-md">
+              <p className="text-[#888888] text-sm mb-6 leading-relaxed max-w-[380px]">
                 Implantamos o ecossistema tecnológico que sua empresa precisa para rastrear, nutrir e converter com previsibilidade.
               </p>
 
               {/* Simple Vertical Flow */}
-              <div className="relative pl-3 mb-12">
+              <div className="relative pl-3 mb-8">
                 {/* Thin vertical line connecting circles */}
                 <div className="absolute left-[15px] top-2 bottom-2 w-[1px] bg-[#C9A84C]/30"></div>
 
-                <div className="space-y-6 relative">
+                <div className="space-y-4 relative">
                   {[
                     "Origem",
                     "Captura",
@@ -133,34 +133,37 @@ export default function AboutSection() {
                       transition={{ duration: 0.3, delay: idx * 0.1 }}
                       className="flex items-center gap-4 relative z-10"
                     >
-                      <div className="w-3 h-3 rounded-full border-2 border-[#C9A84C] bg-[#141414] shadow-[0_0_8px_rgba(201,168,76,0.3)]"></div>
-                      <span className="text-white font-medium text-sm md:text-base tracking-wide">{label}</span>
+                      <div className="w-2.5 h-2.5 rounded-full border-2 border-[#C9A84C] bg-[#141414] shadow-[0_0_8px_rgba(201,168,76,0.3)]"></div>
+                      <span className="text-white font-medium text-sm tracking-wide">{label}</span>
                     </motion.div>
                   ))}
                 </div>
               </div>
 
-              <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB." target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-4 rounded-full hover:bg-[#E2C873] transition-all duration-300 w-full sm:w-max shadow-[0_4px_20px_rgba(201,168,76,0.2)]">
+              <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB." target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] text-[#0A0A0A] font-bold px-6 py-3 rounded-full hover:bg-[#E2C873] transition-all duration-300 w-full sm:w-max shadow-[0_4px_20px_rgba(201,168,76,0.2)] text-sm">
                 Quero essa estrutura →
               </a>
             </motion.div>
 
-            {/* Right Side: 2x3 Grid of Cards without tags */}
-            <div className="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5 w-full">
+            {/* Right Side: 2x3 Grid of Cards */}
+            <div className="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-4 w-full">
               {infrastructureCards.map((card, idx) => (
                 <motion.div 
                   key={idx}
                   initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
                   variants={{ hidden: { opacity: 0, y: 15 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: idx * 0.1 } } }}
-                  className="bg-[#1A1A1A] p-6 lg:p-7 rounded-[12px] border border-white/5 hover:border-[#C9A84C]/20 transition-all duration-300 flex flex-col group h-full shadow-lg"
+                  className="bg-[#1A1A1A] p-5 rounded-[12px] border border-white/5 hover:border-[#C9A84C]/20 transition-all duration-300 flex flex-col group h-full shadow-lg"
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-8 h-8 rounded-full bg-transparent flex items-center justify-center flex-shrink-0 text-[#C9A84C]">
-                      {card.icon}
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="text-[#C9A84C]">
+                      {/* Scaled down icon */}
+                      <div className="scale-90 transform origin-left">
+                        {card.icon}
+                      </div>
                     </div>
-                    <h3 className="text-base lg:text-lg font-serif font-bold text-white leading-tight">{card.title}</h3>
+                    <h3 className="text-[15px] font-serif font-bold text-white leading-tight">{card.title}</h3>
                   </div>
-                  <p className="text-[#888888] text-[0.85rem] leading-relaxed flex-grow opacity-90">{card.desc}</p>
+                  <p className="text-[#888888] text-[0.75rem] leading-[1.5] flex-grow opacity-90">{card.desc}</p>
                 </motion.div>
               ))}
             </div>
