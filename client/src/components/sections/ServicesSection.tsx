@@ -188,7 +188,7 @@ export default function ServicesSection() {
             >
               <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
                 <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
-                  <AnimatedCounter value={45} prefix="+" suffix="%" />
+                  <AnimatedCounter value={50} prefix="+" suffix="%" />
                 </div>
                 <div className="text-[#888888] font-medium leading-tight">Aumento médio na conversão de leads</div>
               </motion.div>
@@ -200,7 +200,7 @@ export default function ServicesSection() {
               </motion.div>
               <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
                 <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
-                  <AnimatedCounter value={50} prefix="+" />
+                  <AnimatedCounter value={45} prefix="+" />
                 </div>
                 <div className="text-[#888888] font-medium leading-tight">Empresas operando com nossa metodologia</div>
               </motion.div>
