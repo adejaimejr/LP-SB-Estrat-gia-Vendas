@@ -38,10 +38,10 @@ function AnimatedCounter({ value, suffix = "", prefix = "" }: { value: number, s
 
 export default function ServicesSection() {
   const problems = [
-    { num: "01", icon: <MessageCircleX className="text-[#EF4444]" size={28} />, title: "Leads que não respondem", desc: "O lead chega quente, mas ninguém responde a tempo. Sem follow-up estruturado, as oportunidades esfriam e viram venda pro concorrente." },
+    { num: "01", icon: <MessageCircleX className="text-[#EF4444]" size={28} />, title: "Leads que não respondem", desc: "O lead chega quente, mas ninguém responde a tempo. Sem follow-up estruturado, a oportunidade esfria e vira venda do concorrente." },
     { num: "02", icon: <TrendingDown className="text-[#EF4444]" size={28} />, title: "Conversão baixa", desc: "Muito lead entrando, pouco cliente saindo. Sem um script e um funil claro, sua equipe atende no improviso e perde venda todo dia." },
-    { num: "03", icon: <UserX className="text-[#EF4444]" size={28} />, title: "Equipe sem direcionamento", desc: "Sua equipe vende no feeling, sem processo definido. Cada vendedor faz do seu jeito e você não sabe onde está o gargalo." },
-    { num: "04", icon: <Clock className="text-[#EF4444]" size={28} />, title: "Tempo perdido", desc: "Você gasta horas respondendo mensagem por mensagem, sem automação. O tempo que deveria ir pra estratégia vai todo pro operacional." },
+    { num: "03", icon: <UserX className="text-[#EF4444]" size={28} />, title: "Equipe sem direcionamento", desc: "Sua equipe vende no improviso, sem processo definido. Cada vendedor faz do seu jeito e você não consegue identificar onde está o gargalo." },
+    { num: "04", icon: <Clock className="text-[#EF4444]" size={28} />, title: "Tempo perdido", desc: "Horas do seu dia vão embora respondendo mensagem por mensagem. O tempo que deveria ir pra estratégia é consumido pelo operacional." },
   ];
 
   const services = [
@@ -63,7 +63,7 @@ export default function ServicesSection() {
     { num: "01", period: "Semana 1", title: "Diagnóstico", desc: "Analisamos toda a sua operação comercial, identificamos gargalos e mapeamos as melhores oportunidades de crescimento." },
     { num: "02", period: "Semana 2-3", title: "Estratégia", desc: "Criamos um plano personalizado com scripts, fluxos e ferramentas ideais pro seu modelo de negócio." },
     { num: "03", period: "Semana 3-4", title: "Implantação", desc: "Implementamos CRM, automações, chatbots e treinamos sua equipe para operar tudo com excelência." },
-    { num: "04", period: "Contínuo", title: "Acompanhamento", desc: "Monitoramos os resultados, ajustamos estratégias em tempo real e garantimos crescimento contínuo." },
+    { num: "04", period: "Contínuo", title: "Acompanhamento", desc: "Monitoramos seus resultados de perto, ajustamos o que for necessário e garantimos que o crescimento não pare." },
   ];
 
   return (
@@ -113,7 +113,7 @@ export default function ServicesSection() {
               O Método SB: da estratégia à <span className="text-gradient-gold italic">execução real</span>
             </h2>
             <p className="text-[#B8B8B8] text-lg">
-              Diagnóstico, processos, ferramentas e treinamentos. Tudo o que seu time comercial precisa pra vender mais e melhor.
+              Diagnóstico, processos, ferramentas e treinamento. Tudo que seu comercial precisa pra vender mais, melhor e com previsibilidade.
             </p>
           </motion.div>
 
@@ -161,7 +161,7 @@ export default function ServicesSection() {
       </section>
 
       {/* Results / Stats */}
-      <section id="resultados" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
+      <section id="resultados" className="pt-24 pb-16 bg-[#0A0A0A] relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,168,76,0.08)_0%,transparent_70%)] pointer-events-none"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
@@ -173,7 +173,7 @@ export default function ServicesSection() {
                 O que acontece quando a SB entra na <span className="text-gradient-gold italic">sua operação</span>
               </h2>
               <p className="text-[#B8B8B8] text-lg mb-10">
-                Nossos clientes não apenas melhoram processos. Eles transformam resultados financeiros reais.
+                Nossos clientes não apenas melhoram processos. Eles colhem resultados financeiros reais, mês após mês.
               </p>
               <img src={resultsImg} alt="Samara Benevides Resultados" className="rounded-2xl shadow-[0_0_30px_rgba(201,168,76,0.1)] border border-[#C9A84C]/10 w-full max-w-md" />
             </motion.div>
@@ -213,7 +213,7 @@ export default function ServicesSection() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-[#141414] overflow-hidden">
+      <section className="pt-20 pb-24 bg-[#141414] overflow-hidden">
         <div className="container mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center max-w-3xl mx-auto mb-20">
             <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-5 py-1.5 rounded-full mb-6">

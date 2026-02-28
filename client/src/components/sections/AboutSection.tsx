@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Fingerprint, Award, Heart, TrendingUp, BookOpen, Star, Linkedin, Instagram, MessageCircle } from "lucide-react";
 import aboutImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.18_(1)_1772248771760.jpeg";
-import ctaImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.19_(2)_1772248771761.jpeg";
+import ctaImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.18_-_cópia_1772248771760.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -27,7 +27,7 @@ export default function AboutSection() {
     { 
       author: "Empresário", 
       role: "Setor de Varejo", 
-      text: "Depois que a Samara estruturou nosso processo comercial, nosso time começou a converter o dobro. Em 3 meses, o faturamento subiu 40%.",
+      text: "A Samara reestruturou toda nossa operação de vendas pelo WhatsApp. Em menos de 3 meses, nosso time já estava batendo meta com folga. Recomendo de olhos fechados.",
       time: "10:15",
       initials: "EV"
     }
@@ -37,7 +37,7 @@ export default function AboutSection() {
     { num: "01", icon: <Fingerprint size={28} />, title: "Abordagem Personalizada", desc: "Nada de template. Analisamos seu mercado, seu público e suas métricas para criar uma estratégia exclusiva pro seu negócio." },
     { num: "02", icon: <Award size={28} />, title: "Experiência e Autoridade", desc: "Mais de 4 anos de experiência prática em vendas online e CRM, com mais de 50 empresas transformadas." },
     { num: "03", icon: <Heart size={28} />, title: "Humanização do Atendimento", desc: "Tecnologia sem perder o toque humano. Seus clientes se sentem acolhidos em cada etapa, do primeiro contato ao pós-venda." },
-    { num: "04", icon: <TrendingUp size={28} />, title: "Foco em Resultados", desc: "Cada ação tem métrica, cada decisão tem dado por trás. Se não gera resultado, a gente ajusta até gerar." },
+    { num: "04", icon: <TrendingUp size={28} />, title: "Foco em Resultados", desc: "Cada ação tem métrica, cada decisão tem dado por trás. Se não está gerando resultado, ajustamos até gerar." },
     { num: "05", icon: <BookOpen size={28} />, title: "Capacitação Contínua", desc: "Seu time não fica dependente da gente. Treinamos pra que sua equipe opere com autonomia e alta performance." }
   ];
 
@@ -59,8 +59,8 @@ export default function AboutSection() {
                 Especialista que transforma <span className="text-gradient-gold italic">atendimento em resultado</span>
               </h2>
               <div className="space-y-6 text-[#B8B8B8] text-lg text-left">
-                <p>Com mais de 4 anos de experiência em vendas online, CRM e atendimento comercial, Samara Benevides fundou a SB Vendas com um objetivo claro: transformar a forma como empresas vendem. Já foram mais de 50 empresas atendidas nos setores de saúde, estética, varejo, educação e tecnologia.</p>
-                <p>Atuando lado a lado com cada cliente, Samara combina estratégia, humanização e tecnologia para criar processos que realmente funcionam. Do primeiro contato no WhatsApp até o fechamento da venda, cada etapa é pensada para converter mais e fidelizar melhor.</p>
+                <p>Samara Benevides fundou a SB Vendas com um objetivo claro: mudar a forma como empresas vendem no digital. Com mais de 4 anos de experiência em vendas online, CRM e atendimento comercial, já são mais de 50 empresas nos setores de saúde, estética, varejo, educação e tecnologia que passaram pelo seu método.</p>
+                <p>Lado a lado com cada cliente, ela combina estratégia, humanização e tecnologia para criar processos que realmente funcionam. Do primeiro contato no WhatsApp até o fechamento, cada etapa é desenhada para converter mais e fidelizar melhor.</p>
               </div>
               <blockquote className="mt-8 border-l-4 border-[#C9A84C] pl-6 py-2 text-left">
                 <p className="text-2xl font-serif italic text-[#C9A84C] leading-relaxed">
@@ -69,7 +69,7 @@ export default function AboutSection() {
               </blockquote>
               <div className="mt-10 lg:text-left">
                 <a href="#contato" className="inline-block border border-[#C9A84C]/40 text-[#C9A84C] font-bold px-8 py-4 rounded-full hover:bg-[#C9A84C]/10 hover:border-[#C9A84C] hover:shadow-[0_0_20px_rgba(201,168,76,0.1)] transition-all duration-300">
-                  Conheça minha trajetória
+                  Saiba mais sobre meu trabalho
                 </a>
               </div>
             </motion.div>
@@ -126,7 +126,7 @@ export default function AboutSection() {
       </section>
 
       {/* Differentials */}
-      <section className="py-24 bg-[#0A0A0A] relative">
+      <section className="pt-24 pb-12 bg-[#0A0A0A] relative">
         <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#C9A84C_1px,transparent_1px)] [background-size:20px_20px]"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center max-w-3xl mx-auto mb-16">
@@ -163,18 +163,18 @@ export default function AboutSection() {
       </section>
 
       {/* CTA Final */}
-      <section id="contato" className="py-24 lg:py-32 cta-section">
+      <section id="contato" className="pt-16 pb-24 lg:pt-20 lg:pb-32 cta-section">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center max-w-4xl mx-auto">
             <div className="relative inline-block mb-10">
               <div className="absolute inset-0 bg-[#C9A84C] rounded-full blur-[20px] opacity-30"></div>
-              <img src={ctaImg} alt="Samara" className="relative w-[140px] h-[140px] rounded-full mx-auto object-cover border-[3px] border-[#C9A84C]/60 shadow-[0_0_40px_rgba(201,168,76,0.25)]" />
+              <img src={ctaImg} alt="Samara" className="relative w-[160px] h-[160px] rounded-full mx-auto object-cover border-[3px] border-[#C9A84C]/60 shadow-[0_0_40px_rgba(201,168,76,0.25)]" />
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-[clamp(2.5rem,4vw,3.5rem)] font-bold leading-tight mb-6 font-serif">
               Sua próxima venda começa com uma <span className="text-gradient-gold italic">conversa</span>
             </h2>
             <p className="text-[#B8B8B8] text-xl mb-12 max-w-2xl mx-auto">
-              Agende uma consultoria gratuita e descubra como podemos potencializar os resultados do seu negócio. Sem compromisso, sem enrolação.
+              Agende sua consultoria gratuita e descubra como potencializar os resultados do seu negócio. Sem compromisso, sem enrolação.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
               <a href="https://wa.me/5592981112101?text=Olá! Gostaria de agendar uma consultoria gratuita." target="_blank" rel="noreferrer" className="bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-5 rounded-full hover:scale-105 transition-all duration-300 w-full sm:w-auto shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)]">
@@ -230,7 +230,7 @@ export default function AboutSection() {
           </div>
           <div className="pt-8 border-t border-[#C9A84C]/10 text-center">
             <p className="text-[#666666] text-sm">
-              &copy; 2026 SB Vendas — Estratégias & Vendas. Todos os direitos reservados.
+              &copy; 2026 SB Vendas. Todos os direitos reservados.
             </p>
           </div>
         </div>

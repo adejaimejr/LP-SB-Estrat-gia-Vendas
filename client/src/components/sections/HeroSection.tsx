@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, TrendingUp, Star, UserCheck, CheckCircle2 } from "lucide-react";
-import heroImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.18_-_cópia_1772248771760.jpeg";
+import { Menu, X, TrendingUp, Star } from "lucide-react";
+import heroImg from "@assets/WhatsApp_Image_2026-02-08_at_09.58.19_(2)_1772248771761.jpeg";
 
 export default function HeroSection() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,7 +41,7 @@ export default function HeroSection() {
           
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="text-[#B8B8B8] hover:text-white font-semibold uppercase text-[11px] tracking-[0.15em] transition-colors relative group">
+              <a key={link.name} href={link.href} className="text-[#B8B8B8] hover:text-[#C9A84C] font-semibold uppercase text-[11px] tracking-[0.15em] transition-colors relative group">
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C9A84C] transition-all duration-300 group-hover:w-full"></span>
               </a>
@@ -96,7 +96,7 @@ export default function HeroSection() {
                 Transforme seu atendimento em uma <span className="text-gradient-gold italic font-serif">máquina de vendas</span>
               </h1>
               <p className="text-[#B8B8B8] text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0">
-                Sou Samara Benevides, especialista em estratégias comerciais e automação inteligente. Já transformei os resultados de mais de 50 empresas com processos que unem tecnologia e atendimento humanizado.
+                Ajudo empresas a vender mais todos os dias com estratégia comercial, automação de WhatsApp e processos que realmente funcionam. Mais de 50 negócios já passaram por aqui.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-start relative z-20">
                 <a href="#contato" className="bg-[#C9A84C] text-[#0A0A0A] text-center font-bold px-8 py-4 rounded-full hover:bg-[#E2C873] transition-all duration-300 btn-primary-glow shadow-[0_4px_20px_rgba(201,168,76,0.2)]">
@@ -108,10 +108,10 @@ export default function HeroSection() {
               </div>
               <div className="flex flex-wrap gap-6 text-sm md:text-base font-semibold text-[#888888] justify-center lg:justify-start">
                 <div className="flex items-center gap-2">
-                  <span className="text-[#C9A84C]">+50</span> empresas atendidas
+                  <span className="text-[#C9A84C]">+50</span> empresas transformadas
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#C9A84C]">+50%</span> aumento médio
+                  <span className="text-[#C9A84C]">+50%</span> de aumento médio em faturamento
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-[#C9A84C]">4</span> anos de experiência
