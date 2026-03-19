@@ -36,7 +36,93 @@ function AnimatedCounter({ value, suffix = "", prefix = "" }: { value: number, s
   return <span ref={ref}>{prefix}{count}{suffix}</span>;
 }
 
+
+
+function ProblemItem({ prob, idx, activeIndex }: { prob: any, idx: number, activeIndex: number }) {
+  const ref = useRef(null);
+  
+  // Apenas o scroll define o foco
+  const isActive = activeIndex === idx;
+
+  return (
+    <motion.div 
+      ref={ref}
+      initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
+      variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, delay: idx * 0.15, ease: [0.21, 0.47, 0.32, 0.98] } } }}
+      className={`group relative border-b border-white/[0.06] last:border-0 py-12 md:py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-12 transition-all duration-700 -mx-6 px-6 sm:mx-0 sm:px-8 rounded-2xl md:rounded-none ${isActive ? 'bg-gradient-to-r from-red-950/10 to-transparent' : 'opacity-30 blur-[0.5px]'}`}
+      data-problem-item={idx}
+    >
+      <div className={`absolute left-0 w-[3px] bg-gradient-to-b from-transparent ${isActive ? 'via-red-600 shadow-[0_0_15px_rgba(220,38,38,0.5)]' : 'via-transparent'} to-transparent transition-all duration-700 ease-in-out ${isActive ? 'opacity-100 top-0 bottom-0 animate-pulse' : 'opacity-0 top-1/4 bottom-1/4'}`} />
+      
+      {/* Glitch/Danger Subtle Effect */}
+      {isActive && (
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,rgba(220,38,38,0.06),transparent_60%)] pointer-events-none mix-blend-screen" />
+      )}
+
+      <div className={`absolute right-4 md:right-12 top-1/2 -translate-y-1/2 text-[100px] md:text-[140px] font-serif font-black transition-all duration-1000 pointer-events-none select-none tracking-tighter ${isActive ? 'text-red-500/[0.04] scale-105' : 'text-white/[0.02] scale-100'}`}>
+        {prob.num}
+      </div>
+
+      <div className="w-full md:w-[45%] flex flex-col relative z-10 pl-2 md:pl-4">
+        <div className="flex items-center gap-4 mb-5">
+          <span className={`font-serif italic text-lg transition-colors duration-700 ${isActive ? 'text-red-500 font-bold' : 'text-[#C9A84C]'}`}>{prob.num}</span>
+          <span className={`h-[1px] w-12 bg-gradient-to-r transition-colors duration-700 ${isActive ? 'from-red-500/80' : 'from-[#C9A84C]/60'} to-transparent`}></span>
+        </div>
+        <h3 className={`text-[26px] md:text-[32px] font-serif font-semibold transition-colors duration-500 leading-tight tracking-tight ${isActive ? 'text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]' : 'text-white/80'}`}>
+          {prob.title}
+        </h3>
+      </div>
+      
+      <div className="w-full md:w-[45%] flex items-start relative z-10 pr-2 md:pr-4">
+        <p className={`transition-colors duration-500 text-[16px] md:text-[17px] leading-relaxed w-full font-light ${isActive ? 'text-red-50/80' : 'text-[#9CA3AF]'}`}>
+          {prob.desc}
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function ServicesSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const items = document.querySelectorAll('[data-problem-item]');
+      if (!items.length) return;
+
+      const viewHeight = window.innerHeight;
+      let closestIdx = 0;
+      let closestDistance = Infinity;
+
+      items.forEach((item, idx) => {
+        const rect = item.getBoundingClientRect();
+        const elementCenter = rect.top + (rect.height / 2);
+        const screenCenter = viewHeight / 2;
+        
+        // Calcular a distância do centro do elemento até o centro da tela
+        const distance = Math.abs(screenCenter - elementCenter);
+        
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIdx = idx;
+        }
+      });
+
+      // Se o scroll está no topo da tela, garantir que o primeiro fique ativo
+      if (window.scrollY < 100) {
+        setActiveIndex(0);
+      } else {
+        setActiveIndex(closestIdx);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // setTimeout to ensure elements are rendered
+    setTimeout(handleScroll, 100);
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const problems = [
     { num: "01", icon: <MessageCircleX className="text-[#EF4444]" size={28} />, title: "Leads que não respondem", desc: "O lead chega quente, mas ninguém responde a tempo. Sem follow-up estruturado, a oportunidade esfria e vira venda do concorrente." },
     { num: "02", icon: <TrendingDown className="text-[#EF4444]" size={28} />, title: "Conversão baixa", desc: "Muito lead entrando, pouco cliente saindo. Sem um script e um funil claro, sua equipe atende no improviso e perde venda todo dia." },
@@ -80,20 +166,12 @@ export default function ServicesSection() {
             </h2>
           </motion.div>
 
-          <div className="max-w-[720px] mx-auto flex flex-col">
+          <div className="max-w-[960px] mx-auto flex flex-col relative">
+            {/* Subtle vertical guide line for the section */}
+            <div className="hidden md:block absolute left-[45%] top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-white/[0.05] to-transparent pointer-events-none" />
+
             {problems.map((prob, idx) => (
-              <motion.div 
-                key={idx}
-                initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
-                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.1 } } }}
-                className={`py-8 ${idx !== 0 ? 'border-t border-white/10' : ''}`}
-              >
-                <div className="text-[#C9A84C] text-[13px] font-bold uppercase tracking-[0.15em] mb-4 text-left">
-                  {prob.num}
-                </div>
-                <h3 className="text-[24px] font-semibold text-white mb-3 leading-tight">{prob.title}</h3>
-                <p className="text-[#B8B8B8] text-[16px] leading-relaxed max-w-2xl">{prob.desc}</p>
-              </motion.div>
+              <ProblemItem key={idx} prob={prob} idx={idx} activeIndex={activeIndex} />
             ))}
           </div>
         </div>
