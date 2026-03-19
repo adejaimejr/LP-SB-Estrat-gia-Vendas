@@ -1,0 +1,80 @@
+Preciso fazer 2 alterações no site: favicon e imagem de compartilhamento
+no WhatsApp (og:image). Execute as duas juntas.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ALTERAÇÃO 1 — FAVICON (ícone da aba do navegador)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+O favicon atual (/favicon.png) é o logo padrão do Replit.
+Substituir por um favicon com a identidade do site: 
+letras "SB" em dourado sobre fundo preto.
+
+PASSO 1 — Criar o arquivo public/favicon.svg com este conteúdo exato:
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0A0A0A"/>
+  <text
+    x="32"
+    y="44"
+    font-family="Georgia, serif"
+    font-size="30"
+    font-weight="700"
+    fill="#C9A84C"
+    text-anchor="middle"
+    letter-spacing="-1"
+  >SB</text>
+</svg>
+
+PASSO 2 — No index.html, dentro do <head>, substituir a linha do favicon
+atual por estas 4 linhas (suporte a todos os navegadores e dispositivos):
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+<meta name="theme-color" content="#0A0A0A" />
+
+Manter o arquivo favicon.png existente sem apagar — apenas não usá-lo.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ALTERAÇÃO 2 — OG IMAGE (prévia ao compartilhar no WhatsApp)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+O WhatsApp usa a meta tag og:image para mostrar a prévia do link.
+A imagem atual (/opengraph.jpg) precisa ser substituída pela imagem
+da primeira dobra do site que será enviada separadamente.
+
+PASSO 1 — A imagem da hero section do site (primeira dobra com a Samara)
+será enviada como arquivo. Salvar ela em:
+public/og-image.jpg
+
+Dimensões ideais para WhatsApp: 1200x630px.
+Se a imagem enviada tiver dimensões diferentes, usar assim mesmo —
+o WhatsApp vai recortar para exibir.
+
+PASSO 2 — No index.html, dentro do <head>, atualizar as 3 linhas
+de og:image e twitter:image para apontar para o novo arquivo:
+
+Localizar:
+<meta property="og:image" content="https://sb-landing-page.replit.app/opengraph.jpg" />
+<meta name="twitter:image" content="https://sb-landing-page.replit.app/opengraph.jpg" />
+
+Substituir por:
+<meta property="og:image" content="https://sbestrategiaevendas.com.br/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="SB Estratégia & Vendas — Consultoria de Vendas em Manaus" />
+<meta name="twitter:image" content="https://sbestrategiaevendas.com.br/og-image.jpg" />
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VERIFICAÇÃO APÓS O DEPLOY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Para confirmar que o favicon está correto:
+curl -s -o /dev/null -w "%{http_code}" https://sb-landing-page.replit.app/favicon.svg
+(esperado: 200)
+
+Para confirmar og:image:
+curl -s https://sb-landing-page.replit.app | grep -i "og:image"
+(esperado: linha com sbestrategiaevendas.com.br/og-image.jpg)
+
+NÃO alterar nenhum outro elemento do site.
