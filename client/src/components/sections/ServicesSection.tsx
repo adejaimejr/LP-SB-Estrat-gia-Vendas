@@ -359,31 +359,34 @@ export default function ServicesSection() {
                 hidden: { opacity: 0 },
                 visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
               }} 
-              className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12 order-2 lg:order-1"
+              className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10 md:gap-y-12 order-2 lg:order-1"
             >
-              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
+              <motion.div variants={fadeUp} className="border-l-2 border-[#C9A84C]/25 pl-5">
+                <div className="text-[3.5rem] lg:text-[4.5rem] font-sans font-extrabold text-[#C9A84C] mb-2 tracking-tighter leading-none">
                   <AnimatedCounter value={50} prefix="+" suffix="%" />
                 </div>
-                <div className="text-[#888888] font-medium leading-tight">Aumento médio na conversão de leads</div>
+                <div className="text-[#888888] text-sm md:text-base font-medium leading-relaxed">Aumento médio na conversão de leads</div>
               </motion.div>
-              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
-                  <AnimatedCounter value={3} prefix="X" />
+              
+              <motion.div variants={fadeUp} className="border-l-2 border-[#C9A84C]/25 pl-5">
+                <div className="text-[3.5rem] lg:text-[4.5rem] font-sans font-extrabold text-[#C9A84C] mb-2 tracking-tighter leading-none">
+                  <AnimatedCounter value={3} suffix="x" />
                 </div>
-                <div className="text-[#888888] font-medium leading-tight">Mais velocidade no tempo de resposta</div>
+                <div className="text-[#888888] text-sm md:text-base font-medium leading-relaxed">Mais velocidade no tempo de resposta</div>
               </motion.div>
-              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
+              
+              <motion.div variants={fadeUp} className="border-l-2 border-[#C9A84C]/25 pl-5">
+                <div className="text-[3.5rem] lg:text-[4.5rem] font-sans font-extrabold text-[#C9A84C] mb-2 tracking-tighter leading-none">
                   <AnimatedCounter value={45} prefix="+" />
                 </div>
-                <div className="text-[#888888] font-medium leading-tight">Empresas operando com nossa metodologia</div>
+                <div className="text-[#888888] text-sm md:text-base font-medium leading-relaxed">Empresas operando com nossa metodologia</div>
               </motion.div>
-              <motion.div variants={fadeUp} className="border-l border-[#C9A84C]/25 pl-6">
-                <div className="text-5xl lg:text-6xl font-serif font-extrabold text-[#C9A84C] mb-2 tracking-tighter">
+              
+              <motion.div variants={fadeUp} className="border-l-2 border-[#C9A84C]/25 pl-5">
+                <div className="text-[3.5rem] lg:text-[4.5rem] font-sans font-extrabold text-[#C9A84C] mb-2 tracking-tighter leading-none">
                   <AnimatedCounter value={100} suffix="%" />
                 </div>
-                <div className="text-[#888888] font-medium leading-tight">De processos comerciais mapeados e estruturados</div>
+                <div className="text-[#888888] text-sm md:text-base font-medium leading-relaxed">De processos comerciais mapeados e estruturados</div>
               </motion.div>
             </motion.div>
 
