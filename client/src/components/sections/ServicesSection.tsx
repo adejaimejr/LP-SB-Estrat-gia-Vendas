@@ -182,10 +182,10 @@ export default function ServicesSection() {
 
   
   const solutions = [
-    { num: "01", title: "Respostas que não param", desc: "Todo lead que chega recebe atenção imediata. Automações inteligentes garantem que nenhuma oportunidade esfrie enquanto sua equipe dorme." },
-    { num: "02", title: "Funil que fecha", desc: "Script validado, abordagem estruturada e CRM configurado pro seu negócio. Sua equipe para de improvisar e começa a converter." },
-    { num: "03", title: "Equipe que sabe o que fazer", desc: "Cada vendedor com processo definido, meta clara e ferramentas certas. Você enxerga o gargalo antes de ele virar prejuízo." },
-    { num: "04", title: "Negócio no piloto automático", desc: "Automações cuidam do operacional. Você e sua equipe focam no que importa: estratégia e fechamento." },
+    { num: "01", title: "Lead respondido em segundos", desc: "WhatsApp, Instagram e e-mail integrados num único fluxo automatizado. Nenhum lead fica sem resposta enquanto sua equipe está ocupada." },
+    { num: "02", title: "CRM que mostra onde está cada lead", desc: "Pipeline visual com cada oportunidade no estágio certo. Sua equipe sabe exatamente quem abordar, quando e com qual abordagem - sem improviso." },
+    { num: "03", title: "Processo que não depende de um vendedor bom", desc: "Playbook definido, scripts validados e follow-up automático. A operação roda mesmo quando o melhor vendedor está de folga." },
+    { num: "04", title: "Relatório que aponta onde está o dinheiro", desc: "Taxa de conversão por canal, tempo de resposta e custo por lead em tempo real. Você decide com dado, não com achismo." },
   ];
 
   const problems = [
@@ -242,18 +242,26 @@ export default function ServicesSection() {
         </div>
       </section>
 
+      {/* Transition Separator */}
+      <div className="bg-[#0A0A0A] py-12 relative flex justify-center items-center">
+        <div className="absolute left-1/2 -translate-x-1/2 w-full max-w-[860px] h-[1px] bg-[#C9A84C]/40"></div>
+        <div className="relative bg-[#0A0A0A] px-4 text-[#C9A84C]/60 text-[11px] font-bold uppercase tracking-[0.2em] z-10">
+          MAS ISSO TEM SOLUÇÃO
+        </div>
+      </div>
+
       {/* Solutions Section */}
       <section className="py-24 bg-[#0A0A0A]">
         <div className="container mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="text-center max-w-3xl mx-auto mb-16">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="text-center w-full max-w-[1000px] mx-auto mb-16">
             <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-5 py-1.5 rounded-full mb-6">
               <span className="text-[#C9A84C] uppercase text-[0.75rem] font-bold tracking-[0.15em]">A Virada</span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-bold leading-tight font-serif text-white">
-              É exatamente isso que a gente resolve.
+            <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-tight font-serif text-white">
+              Seu comercial no controle.
             </h2>
-            <p className="text-[#9CA3AF] text-lg mt-6">
-              Cada problema tem um processo testado por trás.
+            <p className="text-[#E5E7EB] text-[16px] mt-6 max-w-[560px] mx-auto">
+              WhatsApp respondendo, CRM funcionando, funil mapeado e relatório em tempo real.
             </p>
           </motion.div>
 
