@@ -1,0 +1,563 @@
+# SEO COMPLETO — SB Estratégia & Vendas
+# Cole este prompt no Replit Agent e execute tudo de uma vez.
+
+---
+
+## CONTEXTO TÉCNICO
+
+Este site é uma SPA (Single Page Application) em React/Vite. O Google
+recebe um HTML vazio porque o conteúdo é carregado por JavaScript.
+Isso faz o site ser invisível nas buscas. A solução é:
+
+1. Colocar conteúdo HTML estático dentro da `<div id="root">` no index.html
+2. Adicionar todas as meta tags diretamente no `<head>` (não via JS)
+3. Criar robots.txt e sitemap.xml em public/
+4. Adicionar um loading overlay que cobre visualmente o conteúdo SEO
+   enquanto o React carrega (o Google lê o HTML estático por baixo)
+
+REGRAS OBRIGATÓRIAS — NUNCA VIOLAR:
+- NUNCA use display:none, visibility:hidden, font-size:0 no conteúdo SEO
+- NUNCA coloque meta tags injetadas por JavaScript
+- O conteúdo dentro da div#root deve ser visível, legível e real
+- Verificar se existe document.title, React Helmet ou useEffect que
+  sobrescreve o <title> — se existir, REMOVER
+
+---
+
+## PASSO 1 — CONTEÚDO ESTÁTICO NA DIV#ROOT
+
+Abra o arquivo index.html (raiz ou public/index.html).
+Localize `<div id="root"></div>` e substitua por:
+
+```html
+<div id="root">
+  <header style="max-width:900px;margin:0 auto;padding:24px 20px;
+    font-family:system-ui,sans-serif;border-bottom:1px solid #222;">
+    <h1 style="font-size:1.6rem;color:#C9A84C;margin:0 0 8px 0;
+      font-weight:700;line-height:1.3;">
+      Consultoria de Vendas em Manaus | SB Estratégia &amp; Vendas
+      — Transforme seu atendimento em uma máquina de vendas
+    </h1>
+    <p style="color:#888;font-size:0.9rem;margin:0 0 12px 0;">
+      Samara Benevides · Especialista em Estratégia Comercial,
+      CRM, Automação de WhatsApp e Processos de Vendas Digitais
+      · Mais de 45 empresas transformadas em Manaus e no Brasil.
+    </p>
+    <nav style="display:flex;gap:16px;flex-wrap:wrap;">
+      <a href="#sobre" style="color:#C9A84C;text-decoration:none;
+        font-size:0.85rem;">Sobre</a>
+      <a href="#servicos" style="color:#C9A84C;text-decoration:none;
+        font-size:0.85rem;">Serviços</a>
+      <a href="#resultados" style="color:#C9A84C;text-decoration:none;
+        font-size:0.85rem;">Resultados</a>
+      <a href="#contato" style="color:#C9A84C;text-decoration:none;
+        font-size:0.85rem;">Contato</a>
+    </nav>
+  </header>
+
+  <main style="max-width:900px;margin:0 auto;padding:32px 20px;
+    font-family:system-ui,sans-serif;color:#333;">
+
+    <section id="sobre" style="margin-bottom:40px;">
+      <h2 style="font-size:1.3rem;color:#C9A84C;margin:0 0 12px 0;">
+        Sobre Samara Benevides — Consultora de Vendas em Manaus
+      </h2>
+      <p style="line-height:1.7;color:#555;">
+        Samara Benevides fundou a SB Estratégia &amp; Vendas com um
+        objetivo claro: transformar a forma como empresas vendem no
+        digital. Com mais de 10 anos de experiência em vendas, CRM e
+        atendimento comercial, já são mais de 45 empresas nos setores
+        de saúde, estética, varejo, educação e tecnologia que passaram
+        pelo seu método em Manaus e em todo o Brasil. Combinando
+        estratégia, humanização e tecnologia — do primeiro contato no
+        WhatsApp até o fechamento — cada etapa é desenhada para
+        converter mais e fidelizar melhor.
+      </p>
+    </section>
+
+    <section id="servicos" style="margin-bottom:40px;">
+      <h2 style="font-size:1.3rem;color:#C9A84C;margin:0 0 20px 0;">
+        Serviços de Consultoria Comercial em Manaus
+      </h2>
+
+      <h3 style="font-size:1.05rem;color:#222;margin:0 0 6px 0;">
+        Assessoria Comercial Estratégica
+      </h3>
+      <p style="line-height:1.7;color:#555;margin:0 0 20px 0;">
+        Análise completa da operação de vendas, identificação de
+        gargalos e criação de estratégia personalizada com playbook
+        e diagnóstico focado em crescimento real para empresas em
+        Manaus e no Brasil.
+      </p>
+
+      <h3 style="font-size:1.05rem;color:#222;margin:0 0 6px 0;">
+        Automação de WhatsApp e CRM
+      </h3>
+      <p style="line-height:1.7;color:#555;margin:0 0 20px 0;">
+        Implantação de CRM, automação de WhatsApp, chatbots
+        inteligentes e agentes de IA que trabalham 24h convertendo
+        leads pelo seu negócio. Integração omnichannel com Instagram,
+        Facebook Ads e Google Ads.
+      </p>
+
+      <h3 style="font-size:1.05rem;color:#222;margin:0 0 6px 0;">
+        SDR / Closer / Secretária Online
+      </h3>
+      <p style="line-height:1.7;color:#555;margin:0 0 20px 0;">
+        Serviço remoto de pré-venda, fechamento e atendimento
+        comercial. Terceirização de equipe de vendas com perfil
+        adequado à operação do seu negócio.
+      </p>
+
+      <h3 style="font-size:1.05rem;color:#222;margin:0 0 6px 0;">
+        Fluxos Conversacionais para WhatsApp
+      </h3>
+      <p style="line-height:1.7;color:#555;margin:0 0 20px 0;">
+        Criação de scripts e fluxos de follow-up para WhatsApp que
+        conduzem o lead do primeiro contato ao fechamento com
+        abordagem humanizada, personalizada e omnichannel.
+      </p>
+
+      <h3 style="font-size:1.05rem;color:#222;margin:0 0 6px 0;">
+        Treinamento de Equipes Comerciais
+      </h3>
+      <p style="line-height:1.7;color:#555;margin:0 0 20px 0;">
+        Capacitação com scripts de atendimento, técnicas de vendas
+        online e uso eficiente das ferramentas implantadas. Processo
+        comercial que não depende de um único vendedor.
+      </p>
+
+      <h3 style="font-size:1.05rem;color:#222;margin:0 0 6px 0;">
+        Dashboards e Acompanhamento de Resultados
+      </h3>
+      <p style="line-height:1.7;color:#555;margin:0 0 20px 0;">
+        Relatórios com análise de dados, KPIs, taxa de conversão por
+        canal, custo por lead e insights para otimização contínua.
+        Decisões baseadas em dados, não em achismo.
+      </p>
+    </section>
+
+    <section id="resultados" style="margin-bottom:40px;">
+      <h2 style="font-size:1.3rem;color:#C9A84C;margin:0 0 12px 0;">
+        Resultados Comprovados
+      </h2>
+      <p style="line-height:1.7;color:#555;">
+        +45 empresas transformadas · +50% de aumento médio em
+        faturamento · +6% de aumento médio na conversão de leads ·
+        3x mais velocidade no tempo de resposta · 100% dos processos
+        comerciais mapeados e estruturados. Clientes nos setores de
+        saúde, estética, varejo, educação e tecnologia em Manaus e
+        no Brasil.
+      </p>
+    </section>
+
+    <section id="contato" style="margin-bottom:40px;">
+      <h2 style="font-size:1.3rem;color:#C9A84C;margin:0 0 12px 0;">
+        Fale com a SB Estratégia &amp; Vendas — Manaus, AM
+      </h2>
+      <p style="line-height:2.2;color:#555;">
+        WhatsApp:
+        <a href="https://wa.me/5592981112101?text=Oi%2C+Samara%21+Quero+agendar+meu+diagn%C3%B3stico+gratuito."
+          style="color:#C9A84C;">(92) 98111-2101</a><br>
+        E-mail:
+        <a href="mailto:atendimento@sbestrategiaevendas.com.br"
+          style="color:#C9A84C;">atendimento@sbestrategiaevendas.com.br</a><br>
+        Endereço: R. Rodrigues Alves, 207, Conj. Dom Pedro I,
+        Dom Pedro, Manaus — AM, CEP 69040-180<br>
+        Horário: Segunda a Sexta, 09h às 18h<br>
+        Instagram:
+        <a href="https://instagram.com/samarabeneviides"
+          target="_blank" rel="noopener noreferrer"
+          style="color:#C9A84C;">@samarabeneviides</a><br>
+        Site:
+        <a href="https://sbestrategiaevendas.com.br"
+          style="color:#C9A84C;">www.sbestrategiaevendas.com.br</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer style="max-width:900px;margin:0 auto;padding:20px;
+    font-family:system-ui,sans-serif;color:#888;font-size:0.85rem;
+    border-top:1px solid #222;">
+    <p style="margin:0;">
+      © 2026 SB Estratégia &amp; Vendas · Consultoria Comercial em
+      Manaus, AM · Criado por
+      <a href="https://i92.tech" style="color:#C9A84C;">i92Tech</a>
+    </p>
+  </footer>
+</div>
+```
+
+---
+
+## PASSO 2 — LOADING OVERLAY
+
+Adicione IMEDIATAMENTE APÓS a tag `<body>` e ANTES da `<div id="root">`:
+
+```html
+<div id="loading-overlay" style="
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background-color:#0A0A0A;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  z-index:99999;
+  transition:opacity 0.5s ease-out;
+">
+  <div style="text-align:center;">
+    <h2 style="color:#C9A84C;font-family:Georgia,serif;
+      font-size:2rem;margin:0 0 6px 0;letter-spacing:2px;">
+      SB
+    </h2>
+    <p style="color:rgba(255,255,255,0.5);font-family:system-ui,sans-serif;
+      font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;margin:0;">
+      Estratégia &amp; Vendas
+    </p>
+  </div>
+  <div style="margin-top:40px;">
+    <div style="width:32px;height:32px;
+      border:2px solid rgba(201,168,76,0.2);
+      border-top:2px solid #C9A84C;
+      border-radius:50%;
+      animation:spin 1s linear infinite;">
+    </div>
+  </div>
+</div>
+<style>
+  @keyframes spin {
+    0%  { transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+  }
+</style>
+```
+
+No arquivo main.tsx (ou main.jsx ou index.tsx), adicione
+IMEDIATAMENTE APÓS o ReactDOM.createRoot(...).render(...):
+
+```javascript
+const overlay = document.getElementById('loading-overlay');
+if (overlay) {
+  setTimeout(() => {
+    overlay.style.opacity = '0';
+    setTimeout(() => { overlay.remove(); }, 500);
+  }, 100);
+}
+```
+
+---
+
+## PASSO 3 — META TAGS NO HEAD
+
+Substitua o conteúdo do `<head>` do index.html por:
+
+```html
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Consultoria de Vendas em Manaus | SB Estratégia &amp; Vendas</title>
+
+  <meta name="description" content="SB Estratégia &amp; Vendas, consultoria comercial em Manaus. CRM, automação de WhatsApp, treinamento de equipes e processos de vendas digitais. +45 empresas transformadas. Samara Benevides. Fale: (92) 98111-2101." />
+
+  <link rel="canonical" href="https://sbestrategiaevendas.com.br/" />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="BR-AM" />
+  <meta name="geo.placename" content="Manaus" />
+  <meta name="author" content="Samara Benevides — SB Estratégia &amp; Vendas" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SB Estratégia &amp; Vendas | Consultoria de Vendas em Manaus" />
+  <meta property="og:description" content="CRM, automação de WhatsApp e processos de vendas digitais. +45 empresas transformadas em Manaus. Fale com Samara Benevides." />
+  <meta property="og:image" content="https://sbestrategiaevendas.com.br/og-image.jpg" />
+  <meta property="og:url" content="https://sbestrategiaevendas.com.br/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="SB Estratégia &amp; Vendas" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SB Estratégia &amp; Vendas | Consultoria de Vendas em Manaus" />
+  <meta name="twitter:description" content="CRM, automação de WhatsApp e estratégia comercial. +45 empresas transformadas." />
+  <meta name="twitter:image" content="https://sbestrategiaevendas.com.br/og-image.jpg" />
+
+  <!-- Favicon (manter o existente) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+```
+
+ATENÇÃO: Procurar no projeto inteiro por:
+- `document.title`
+- `React Helmet` ou `import { Helmet }`
+- `useEffect` que contenha `title`
+- Configuração `title` no vite.config / index.html plugin
+
+Se qualquer um desses existir e sobrescrever o title, REMOVER.
+
+---
+
+## PASSO 4 — SCHEMA JSON-LD
+
+Adicione os 3 blocos abaixo dentro do `<head>`, após as meta tags:
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "SB Estratégia & Vendas",
+  "alternateName": "SB Vendas",
+  "description": "Consultoria comercial especializada em estratégia de vendas, automação de WhatsApp, CRM, treinamento de equipes e processos de vendas digitais para empresas em Manaus e no Brasil.",
+  "url": "https://sbestrategiaevendas.com.br",
+  "telephone": "+5592981112101",
+  "email": "atendimento@sbestrategiaevendas.com.br",
+  "image": "https://sbestrategiaevendas.com.br/og-image.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Rodrigues Alves, 207, Conjunto Dom Pedro I",
+    "addressLocality": "Manaus",
+    "addressRegion": "AM",
+    "postalCode": "69040-180",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-3.0860222",
+    "longitude": "-60.0383694"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "$$",
+  "founder": {
+    "@type": "Person",
+    "name": "Samara Benevides",
+    "jobTitle": "Especialista em Estratégia Comercial e Vendas Digitais",
+    "knowsAbout": [
+      "Vendas Digitais",
+      "CRM",
+      "Automação de WhatsApp",
+      "Treinamento Comercial",
+      "Funil de Vendas",
+      "Omnichannel",
+      "Processo Comercial"
+    ],
+    "sameAs": ["https://instagram.com/samarabeneviides"]
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+  },
+  "sameAs": [
+    "https://instagram.com/samarabeneviides",
+    "https://wa.me/5592981112101"
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Assessoria Comercial Estratégica",
+        "description": "Diagnóstico da operação de vendas, identificação de gargalos e criação de estratégia personalizada com playbook comercial."
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Automação de WhatsApp e CRM",
+        "description": "Implantação de CRM, automação de WhatsApp, chatbots e agentes de IA integrados ao processo comercial omnichannel."
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "SDR / Closer / Secretária Online",
+        "description": "Serviço remoto de pré-venda, fechamento e atendimento comercial terceirizado."
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Fluxos Conversacionais para WhatsApp",
+        "description": "Scripts e fluxos de follow-up automatizados que conduzem o lead do primeiro contato ao fechamento."
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Treinamento de Equipes Comerciais",
+        "description": "Capacitação com scripts de atendimento, técnicas de vendas online e treinamento nas ferramentas implantadas."
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Dashboards e Acompanhamento de Resultados",
+        "description": "Relatórios com KPIs, taxa de conversão por canal, custo por lead e desempenho da equipe em tempo real."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SB Estratégia & Vendas",
+  "url": "https://sbestrategiaevendas.com.br"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Samara Benevides",
+  "jobTitle": "Especialista em Estratégia Comercial e Vendas Digitais",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "SB Estratégia & Vendas"
+  },
+  "url": "https://sbestrategiaevendas.com.br",
+  "sameAs": ["https://instagram.com/samarabeneviides"],
+  "knowsAbout": [
+    "Estratégia Comercial",
+    "Automação de WhatsApp",
+    "CRM",
+    "Vendas Digitais",
+    "Funil de Vendas",
+    "Omnichannel",
+    "Treinamento de Equipes Comerciais",
+    "Processo Comercial"
+  ]
+}
+</script>
+```
+
+---
+
+## PASSO 5 — ARQUIVOS TÉCNICOS
+
+### Criar public/robots.txt com este conteúdo exato:
+
+```
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://sbestrategiaevendas.com.br/sitemap.xml
+```
+
+### Criar public/sitemap.xml com este conteúdo exato:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sbestrategiaevendas.com.br/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+```
+
+---
+
+## PASSO 6 — REDIRECT 301 REPLIT → DOMÍNIO OFICIAL
+
+No arquivo do servidor Express (server.js, index.js ou server/index.ts),
+adicione ANTES de todas as outras rotas:
+
+```javascript
+app.use((req, res, next) => {
+  const host = req.hostname || req.headers.host || '';
+  if (
+    host.includes('replit.app') ||
+    host.includes('repl.co') ||
+    host.includes('replit.dev')
+  ) {
+    return res.redirect(301,
+      `https://sbestrategiaevendas.com.br${req.originalUrl}`
+    );
+  }
+  next();
+});
+```
+
+---
+
+## PASSO 7 — IMAGEM OG
+
+Criar uma imagem 1200x630px com:
+- Fundo preto (#0A0A0A)
+- Texto "SB" em dourado (#C9A84C) centralizado, fonte serifada grande
+- Abaixo: "SB Estratégia & Vendas" em branco
+- Abaixo: "Consultoria Comercial em Manaus" em cinza claro
+- Salvar como: public/og-image.jpg
+
+Se não tiver a imagem agora, renomear o arquivo existente
+/opengraph.jpg para og-image.jpg dentro de public/.
+
+---
+
+## PASSO 8 — VERIFICAÇÃO FINAL
+
+Após o deploy, execute no terminal do Replit:
+
+```bash
+echo "=== TITLE ===" && \
+curl -s https://sb-landing-page.replit.app | grep -i "<title>" && \
+echo "" && \
+echo "=== META DESCRIPTION ===" && \
+curl -s https://sb-landing-page.replit.app | grep -i 'meta name="description"' && \
+echo "" && \
+echo "=== CANONICAL ===" && \
+curl -s https://sb-landing-page.replit.app | grep -i "canonical" && \
+echo "" && \
+echo "=== OG TAGS ===" && \
+curl -s https://sb-landing-page.replit.app | grep -i "og:" | head -5 && \
+echo "" && \
+echo "=== SCHEMA COUNT ===" && \
+curl -s https://sb-landing-page.replit.app | grep -o "application/ld+json" | wc -l && \
+echo "" && \
+echo "=== H1 NA DIV ROOT ===" && \
+curl -s https://sb-landing-page.replit.app | grep -c "<h1" && \
+echo "" && \
+echo "=== LOADING OVERLAY ===" && \
+curl -s https://sb-landing-page.replit.app | grep -c "loading-overlay" && \
+echo "" && \
+echo "=== ROBOTS.TXT ===" && \
+curl -s https://sb-landing-page.replit.app/robots.txt | head -5 && \
+echo "" && \
+echo "=== SITEMAP ===" && \
+curl -s https://sb-landing-page.replit.app/sitemap.xml | head -8
+```
+
+### Resultado esperado:
+
+| Item             | Esperado                                              |
+|------------------|-------------------------------------------------------|
+| TITLE            | Contém "Consultoria de Vendas em Manaus"              |
+| META DESCRIPTION | Presente com telefone e serviços                      |
+| CANONICAL        | Aponta para sbestrategiaevendas.com.br                |
+| OG TAGS          | 4+ linhas                                             |
+| SCHEMA COUNT     | 3                                                     |
+| H1 NA DIV ROOT   | 1                                                     |
+| LOADING OVERLAY  | 1                                                     |
+| ROBOTS.TXT       | Válido com linha Sitemap                              |
+| SITEMAP          | XML válido com domínio sbestrategiaevendas.com.br     |
+
+Se qualquer item falhar, corrija e rode o teste novamente antes de
+considerar concluído.
