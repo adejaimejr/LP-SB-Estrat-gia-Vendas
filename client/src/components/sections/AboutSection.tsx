@@ -143,9 +143,12 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              {/* Connected Flow - Mobile (Curved Journey Path) */}
-              <div className="lg:hidden relative w-full max-w-[300px] mx-auto mt-8 mb-12">
-                <div className="flex flex-col relative z-10">
+              {/* Connected Flow - Mobile (Alternating Timeline) */}
+              <div className="lg:hidden relative w-full max-w-[280px] mx-auto mt-10 mb-8">
+                {/* Center Line */}
+                <div className="absolute top-3 bottom-3 left-1/2 -translate-x-1/2 w-[1px] bg-gradient-to-b from-[#C9A84C]/0 via-[#C9A84C]/40 to-[#C9A84C]/0 z-0"></div>
+
+                <div className="flex flex-col gap-y-7 relative z-10">
                   {[
                     "Origem",
                     "Captura",
@@ -155,48 +158,26 @@ export default function AboutSection() {
                     "Análise"
                   ].map((label, idx) => {
                     const isRight = idx % 2 !== 0;
-                    const isLast = idx === 5;
                     return (
                       <motion.div 
                         key={idx}
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: idx * 0.1 }}
-                        className={`relative w-full h-[96px] flex items-center ${isRight ? 'justify-end' : 'justify-start'}`}
+                        transition={{ duration: 0.4, delay: idx * 0.1 }}
+                        className={`w-full flex ${isRight ? 'justify-end' : 'justify-start'} relative items-center min-h-[24px]`}
                       >
-                        {/* Curved Connecting Line to Next Item */}
-                        {!isLast && (
-                          <div className="absolute top-[50%] left-[20px] right-[20px] h-[96px] z-0 pointer-events-none">
-                            <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 100 100">
-                              <path 
-                                d={isRight ? "M 100,0 C 100,50 0,50 0,100" : "M 0,0 C 0,50 100,50 100,100"} 
-                                fill="none" 
-                                stroke={`url(#pathGradient-${idx})`} 
-                                strokeWidth="2" 
-                                strokeDasharray="6 4"
-                                vectorEffect="non-scaling-stroke"
-                              />
-                              <defs>
-                                <linearGradient id={`pathGradient-${idx}`} x1="0%" y1="0%" x2="0%" y2="100%">
-                                  <stop offset="0%" stopColor="rgba(201,168,76,0.6)" />
-                                  <stop offset="50%" stopColor="rgba(201,168,76,0.2)" />
-                                  <stop offset="100%" stopColor="rgba(201,168,76,0.6)" />
-                                </linearGradient>
-                              </defs>
-                            </svg>
-                          </div>
-                        )}
+                        {/* Connecting subtle line to the dot */}
+                        <div className={`absolute top-1/2 -translate-y-1/2 w-4 h-[1px] bg-[#C9A84C]/20 ${isRight ? 'left-[calc(50%+8px)]' : 'right-[calc(50%+8px)]'}`}></div>
 
-                        {/* Dot and Label */}
-                        <div className={`relative z-10 flex items-center ${isRight ? 'flex-row-reverse' : 'flex-row'} gap-4`}>
-                          <div className="w-10 h-10 rounded-full border border-[#C9A84C]/50 bg-[#0A0A0A] flex flex-shrink-0 items-center justify-center shadow-[0_0_15px_rgba(201,168,76,0.4)]">
-                            <div className="w-2.5 h-2.5 bg-[#C9A84C] rounded-full"></div>
-                          </div>
+                        {/* Center Dot */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[18px] h-[18px] rounded-full border border-[#C9A84C]/60 bg-[#141414] flex items-center justify-center shadow-[0_0_12px_rgba(201,168,76,0.3)] z-10">
+                          <div className="w-1.5 h-1.5 bg-[#C9A84C] rounded-full"></div>
+                        </div>
 
-                          <div className="bg-[#1A1A1A] border border-[#C9A84C]/20 px-5 py-2.5 rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.3)] backdrop-blur-sm">
-                            <span className="text-white font-medium text-[14px] tracking-wide">{label}</span>
-                          </div>
+                        {/* Label Container */}
+                        <div className={`w-[calc(50%-24px)] flex ${isRight ? 'justify-start' : 'justify-end'}`}>
+                          <span className="text-[#E5E7EB] font-medium text-[15px] tracking-wide shadow-sm">{label}</span>
                         </div>
                       </motion.div>
                     );
