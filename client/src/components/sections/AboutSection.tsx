@@ -94,28 +94,31 @@ export default function AboutSection() {
         </div>
       </section>
 
-      {/* Infrastructure Ecosystem (Compact version for single screen fit) */}
-      <section id="ecossistema" className="py-16 md:py-20 bg-[#141414] overflow-hidden min-h-screen flex items-center justify-center">
-        <div className="container mx-auto px-6 max-w-[1200px]">
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center lg:items-start">
+      {/* Infrastructure Ecosystem (Desktop Layout matches screenshot) */}
+      <section id="ecossistema" className="py-20 md:py-32 bg-[#0A0A0A] overflow-hidden min-h-screen flex items-center justify-center relative">
+        {/* Background Glows */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-[#C9A84C]/[0.03] blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div className="container mx-auto px-6 max-w-[1280px] relative z-10">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start lg:items-start">
             
             {/* Left Side: Text and Simple Flow */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-[40%] flex flex-col">
-              <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-3 py-1 rounded-full mb-4 self-start">
-                <span className="text-[#C9A84C] uppercase text-[0.6rem] font-bold tracking-[0.15em]">Nossa Infraestrutura</span>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-[35%] flex flex-col pt-2">
+              <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-4 py-1.5 rounded-full mb-8 self-start">
+                <span className="text-[#C9A84C] uppercase text-[0.65rem] font-bold tracking-[0.2em]">Nossa Infraestrutura</span>
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-[2.2rem] font-bold leading-[1.1] font-serif mb-4 text-white tracking-tight">
-                Controle da origem à <span className="text-[#C9A84C] italic font-normal">conversão</span> do lead
+              <h2 className="text-3xl md:text-4xl lg:text-[2.8rem] font-bold leading-[1.1] font-serif mb-6 text-white tracking-tight">
+                Controle da origem à <span className="text-gradient-gold italic font-normal">conversão</span> do lead
               </h2>
-              <p className="text-[#888888] text-sm mb-6 leading-relaxed max-w-[380px]">
+              <p className="text-[#888888] text-[15px] mb-10 leading-relaxed max-w-[400px]">
                 Implantamos o ecossistema tecnológico que sua empresa precisa para rastrear, nutrir e converter com previsibilidade.
               </p>
 
               {/* Connected Flow - Desktop */}
-              <div className="hidden lg:block relative pl-3 mb-8 w-full max-w-sm">
-                <div className="absolute left-[15px] top-4 bottom-4 w-[1px] bg-[#C9A84C]/30 z-0"></div>
+              <div className="hidden lg:block relative pl-1 mb-12 w-full max-w-sm">
+                <div className="absolute left-[13px] top-[14px] bottom-[14px] w-[1px] bg-gradient-to-b from-[#C9A84C]/30 via-[#C9A84C]/10 to-transparent z-0"></div>
 
-                <div className="flex flex-col space-y-0 relative z-10">
+                <div className="flex flex-col space-y-4 relative z-10">
                   {[
                     "Origem",
                     "Captura",
@@ -130,14 +133,12 @@ export default function AboutSection() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: idx * 0.1 }}
-                      className="relative"
+                      className="relative flex items-center gap-5 group cursor-default py-0.5"
                     >
-                      <div className="flex items-center gap-4 relative z-10 py-3">
-                        <div className="w-[18px] h-[18px] rounded-full border-2 border-[#C9A84C] bg-[#141414] shadow-[0_0_8px_rgba(201,168,76,0.3)] flex-shrink-0 flex items-center justify-center">
-                          <div className="w-1.5 h-1.5 bg-[#C9A84C] rounded-full opacity-50"></div>
-                        </div>
-                        <span className="text-white font-medium text-[15px] tracking-wide">{label}</span>
+                      <div className="w-[18px] h-[18px] rounded-full border-[1.5px] border-[#C9A84C] bg-[#0A0A0A] flex-shrink-0 flex items-center justify-center relative z-10 shadow-[0_0_10px_rgba(201,168,76,0.15)] group-hover:border-[#C9A84C] transition-colors duration-300">
+                        <div className="w-[6px] h-[6px] bg-[#C9A84C] rounded-full"></div>
                       </div>
+                      <span className="text-[#E5E7EB] font-medium text-[16px] tracking-wide group-hover:text-white transition-colors duration-300">{label}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -185,30 +186,29 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              <a href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre a infraestrutura de vendas da SB." target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] text-[#0A0A0A] font-bold px-6 py-3 rounded-full hover:bg-[#E2C873] transition-all duration-300 w-full sm:w-max shadow-[0_4px_20px_rgba(201,168,76,0.2)] text-sm">
-                Quero essa estrutura →
+              <a href="https://wa.me/5592981112101?text=Olá! Gostaria de agendar uma reunião." target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-3.5 rounded-full hover:bg-[#E2C873] transition-all duration-300 w-full sm:w-max shadow-[0_4px_20px_rgba(201,168,76,0.2)] text-[15px]">
+                Quero essa estrutura
               </a>
             </motion.div>
 
             {/* Right Side: 2x3 Grid of Cards */}
-            <div className="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-4 w-full">
+            <div className="lg:w-[65%] grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5 w-full">
               {infrastructureCards.map((card, idx) => (
                 <motion.div 
                   key={idx}
                   initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
                   variants={{ hidden: { opacity: 0, y: 15 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: idx * 0.1 } } }}
-                  className="bg-[#1A1A1A] p-5 rounded-[12px] border border-white/5 hover:border-[#C9A84C]/20 transition-all duration-300 flex flex-col group h-full shadow-lg"
+                  className="bg-[#171717]/80 backdrop-blur-sm p-6 lg:p-7 rounded-[16px] border border-white/[0.03] hover:border-[#C9A84C]/20 transition-all duration-300 flex flex-col group h-full shadow-lg"
                 >
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="text-[#C9A84C]">
-                      {/* Scaled down icon */}
-                      <div className="scale-90 transform origin-left">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="text-[#C9A84C] opacity-80 group-hover:opacity-100 transition-opacity">
+                      <div className="scale-100 transform origin-left">
                         {card.icon}
                       </div>
                     </div>
-                    <h3 className="text-[15px] font-serif font-bold text-white leading-tight">{card.title}</h3>
+                    <h3 className="text-[17px] font-serif font-bold text-white leading-tight">{card.title}</h3>
                   </div>
-                  <p className="text-[#888888] text-[0.75rem] leading-[1.5] flex-grow opacity-90">{card.desc}</p>
+                  <p className="text-[#888888] text-[14px] leading-[1.6] flex-grow font-light">{card.desc}</p>
                 </motion.div>
               ))}
             </div>
