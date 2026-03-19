@@ -102,8 +102,8 @@ export default function HeroSection() {
                 Ajudo empresas a vender mais todos os dias com estratégia comercial, automação de WhatsApp e processos que realmente funcionam. Mais de 50 negócios já passaram por aqui.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-start relative z-20">
-                <a href="#contato" className="bg-[#C9A84C] text-[#0A0A0A] text-center font-bold px-8 py-4 rounded-full hover:bg-[#E2C873] transition-all duration-300 btn-primary-glow shadow-[0_4px_20px_rgba(201,168,76,0.2)]">
-                  Agendar Reunião
+                <a href="https://wa.me/5592981112101?text=Oi, Samara! Quero agendar um diagnóstico gratuito do meu comercial. Quando podemos conversar?" target="_blank" rel="noreferrer" className="bg-[#C9A84C] text-[#0A0A0A] text-center font-bold px-8 py-4 rounded-full hover:bg-[#E2C873] transition-all duration-300 btn-primary-glow shadow-[0_4px_20px_rgba(201,168,76,0.2)]">
+                  Quero Meu Diagnóstico Grátis
                 </a>
                 <a href="#resultados" className="border border-[#C9A84C]/40 text-[#C9A84C] text-center font-bold px-8 py-4 rounded-full hover:bg-[#C9A84C]/10 hover:border-[#C9A84C] transition-all duration-300">
                   Veja os Resultados

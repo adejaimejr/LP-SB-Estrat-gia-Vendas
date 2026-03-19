@@ -328,8 +328,8 @@ export default function ServicesSection() {
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
             className="text-center mt-16"
           >
-            <a href="https://wa.me/5592981112101?text=Olá! Gostaria de agendar uma reunião." target="_blank" rel="noreferrer" className="inline-block bg-[#C9A84C] text-[#0A0A0A] font-bold px-10 py-5 rounded-full hover:scale-105 transition-all duration-300 btn-primary-glow shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)]">
-              Agendar Reunião de Diagnóstico
+            <a href="https://wa.me/5592981112101?text=Oi, Samara! Vi os serviços no site e quero entender qual faz mais sentido pro meu negócio. Pode me ajudar?" target="_blank" rel="noreferrer" className="inline-block bg-[#C9A84C] text-[#0A0A0A] font-bold px-10 py-5 rounded-full hover:scale-105 transition-all duration-300 btn-primary-glow shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)]">
+              Quero um Diagnóstico Gratuito
             </a>
           </motion.div>
         </div>

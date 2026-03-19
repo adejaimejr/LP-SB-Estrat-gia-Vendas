@@ -1,0 +1,69 @@
+Preciso atualizar os textos e links de todos os botões e CTAs do site.
+Não alterar visual, cores nem layout — apenas os textos dos botões
+e as mensagens pré-definidas dos links do WhatsApp.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BOTÕES — ALTERAR APENAS O TEXTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Hero — botão principal dourado:
+   DE: "Agendar Reunião"
+   PARA: "Quero Meu Diagnóstico Grátis"
+
+2. Seção Serviços — botão dourado abaixo dos cards:
+   DE: "Agendar Reunião de Diagnóstico"
+   PARA: "Quero um Diagnóstico Gratuito"
+
+3. Seção Ecossistema — botão "Quero essa estrutura →":
+   DE: "Quero essa estrutura →"
+   PARA: "Quero Essa Estrutura no Meu Negócio →"
+
+4. CTA Final — botão 1 dourado:
+   DE: "Agendar Reunião"
+   PARA: "Agendar Meu Diagnóstico Gratuito"
+
+5. CTA Final — botão 2 contorno verde:
+   DE: "Falar pelo WhatsApp"
+   PARA: "Falar Agora pelo WhatsApp"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LINKS DO WHATSAPP — ALTERAR APENAS O PARÂMETRO "text="
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+O número +5592981112101 permanece igual em todos.
+Alterar apenas a mensagem pré-definida (text=) de cada link:
+
+1. Botão flutuante do WhatsApp (canto inferior direito):
+   MENSAGEM: "Oi, Samara! Vi seu site e quero entender como 
+   vocês podem ajudar meu negócio a vender mais. 
+   Pode me contar mais?"
+
+2. Hero — botão "Quero Meu Diagnóstico Grátis":
+   MENSAGEM: "Oi, Samara! Quero agendar um diagnóstico 
+   gratuito do meu comercial. Quando podemos conversar?"
+
+3. Serviços — botão "Quero um Diagnóstico Gratuito":
+   MENSAGEM: "Oi, Samara! Vi os serviços no site e quero 
+   entender qual faz mais sentido pro meu negócio. 
+   Pode me ajudar?"
+
+4. Ecossistema — botão "Quero Essa Estrutura no Meu Negócio":
+   MENSAGEM: "Oi, Samara! Quero entender como implementar 
+   o ecossistema de automação e CRM no meu negócio. 
+   Como funciona?"
+
+5. CTA Final — botão 1 "Agendar Meu Diagnóstico Gratuito":
+   MENSAGEM: "Oi, Samara! Quero agendar meu diagnóstico 
+   gratuito. Tenho interesse em estruturar meu 
+   processo comercial com vocês."
+
+6. CTA Final — botão 2 "Falar Agora pelo WhatsApp":
+   Manter sem mensagem pré-definida 
+   (link direto: https://wa.me/5592981112101)
+
+7. Rodapé — número (92) 98111-2101:
+   MENSAGEM: "Oi, Samara! Quero saber mais sobre como a 
+   SB Vendas pode ajudar meu negócio."
+
+NÃO alterar: nav "Fale Comigo", botão secundário 
+"Veja os Resultados", cores, layouts ou qualquer 
+outro elemento visual.

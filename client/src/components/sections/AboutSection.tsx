@@ -186,8 +186,8 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              <a href="https://wa.me/5592981112101?text=Olá! Gostaria de agendar uma reunião." target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-3.5 rounded-full hover:bg-[#E2C873] transition-all duration-300 w-full sm:w-max shadow-[0_4px_20px_rgba(201,168,76,0.2)] text-[15px]">
-                Quero essa estrutura
+              <a href="https://wa.me/5592981112101?text=Oi, Samara! Quero entender como implementar o ecossistema de automação e CRM no meu negócio. Como funciona?" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] text-[#0A0A0A] font-bold px-8 py-3.5 rounded-full hover:bg-[#E2C873] transition-all duration-300 w-full sm:w-max shadow-[0_4px_20px_rgba(201,168,76,0.2)] text-[15px]">
+                Quero Essa Estrutura no Meu Negócio &rarr;
               </a>
             </motion.div>
 
@@ -269,12 +269,12 @@ export default function AboutSection() {
               Agende uma reunião e descubra como potencializar os resultados do seu negócio. Sem compromisso, sem enrolação.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-              <a href="https://wa.me/5592981112101?text=Olá! Gostaria de agendar uma reunião." target="_blank" rel="noreferrer" className="bg-[#C9A84C] text-[#0A0A0A] font-bold px-10 py-5 rounded-full hover:scale-105 transition-all duration-300 w-full sm:w-auto shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)] flex items-center justify-center gap-2">
-                Agendar Reunião
+              <a href="https://wa.me/5592981112101?text=Oi, Samara! Quero agendar meu diagnóstico gratuito. Tenho interesse em estruturar meu processo comercial com vocês." target="_blank" rel="noreferrer" className="bg-[#C9A84C] text-[#0A0A0A] font-bold px-10 py-5 rounded-full hover:scale-105 transition-all duration-300 w-full sm:w-auto shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)] flex items-center justify-center gap-2">
+                Agendar Meu Diagnóstico Gratuito
               </a>
               <a href="https://wa.me/5592981112101" target="_blank" rel="noreferrer" className="bg-transparent border-2 border-[#25D366] text-[#25D366] font-bold px-10 py-5 rounded-full hover:bg-[#25D366]/10 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3">
                 <MessageCircle size={20} />
-                Falar pelo WhatsApp
+                Falar Agora pelo WhatsApp
               </a>
             </div>
             <p className="text-[0.9rem] text-white/60 font-medium tracking-wide">
@@ -300,7 +300,7 @@ export default function AboutSection() {
                 <h4 className="text-white font-bold mb-6 lg:mb-8 uppercase tracking-[0.2em] text-[11px] lg:text-xs">Contato</h4>
                 <ul className="space-y-4 lg:space-y-5 text-[#888888] text-[14px] lg:text-[15px] flex flex-col items-center lg:items-start w-full">
                   <li>
-                    <a href="https://wa.me/5592981112101" target="_blank" rel="noreferrer" className="flex items-center justify-center lg:justify-start gap-3 lg:gap-4 hover:text-[#C9A84C] transition-colors group">
+                    <a href="https://wa.me/5592981112101?text=Oi, Samara! Quero saber mais sobre como a SB Vendas pode ajudar meu negócio." target="_blank" rel="noreferrer" className="flex items-center justify-center lg:justify-start gap-3 lg:gap-4 hover:text-[#C9A84C] transition-colors group">
                       <span className="w-10 h-10 shrink-0 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-[#C9A84C] group-hover:border-[#C9A84C]/30 group-hover:bg-[#C9A84C]/5 transition-all">
                         <MessageCircle size={18} />
                       </span>
