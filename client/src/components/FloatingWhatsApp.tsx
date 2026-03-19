@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export default function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/5592981112101?text=Olá! Gostaria de saber mais sobre os serviços da SB Vendas."
+      href="https://wa.me/5592981112101?text=Olá! Gostaria de agendar uma reunião."
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-6 right-6 z-50 w-[60px] h-[60px] bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] cursor-pointer transition-transform duration-300 hover:scale-110 group"
