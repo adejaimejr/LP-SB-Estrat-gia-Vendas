@@ -285,49 +285,49 @@ export default function AboutSection() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0A0A0A] border-t border-[#C9A84C]/20 pt-20 pb-8 relative z-20">
+      <footer className="bg-[#0A0A0A] border-t border-[#C9A84C]/20 pt-16 lg:pt-20 pb-24 lg:pb-8 relative z-20">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-20 mb-20">
-            <div className="max-w-md">
-              <div className="text-[#C9A84C] font-serif font-bold text-6xl lg:text-[4.5rem] leading-none mb-6 tracking-tighter">SB</div>
-              <p className="text-[#888888] text-[15px] leading-relaxed max-w-[320px]">
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-20 mb-16 lg:mb-20">
+            <div className="max-w-md w-full">
+              <div className="text-[#C9A84C] font-serif font-bold text-6xl lg:text-[4.5rem] leading-none mb-4 lg:mb-6 tracking-tighter">SB</div>
+              <p className="text-[#888888] text-[14px] lg:text-[15px] leading-relaxed max-w-[320px]">
                 Metodologia comprovada para transformar seu atendimento em uma máquina de vendas previsível e lucrativa.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-16 lg:gap-32 w-full lg:w-auto pt-2">
-              <div>
-                <h4 className="text-white font-bold mb-8 uppercase tracking-[0.2em] text-xs">Contato</h4>
-                <ul className="space-y-5 text-[#888888] text-[15px]">
+            <div className="flex flex-col sm:flex-row gap-12 lg:gap-32 w-full lg:w-auto pt-2">
+              <div className="w-full">
+                <h4 className="text-white font-bold mb-6 lg:mb-8 uppercase tracking-[0.2em] text-[11px] lg:text-xs">Contato</h4>
+                <ul className="space-y-4 lg:space-y-5 text-[#888888] text-[14px] lg:text-[15px]">
                   <li>
                     <a href="https://wa.me/5592981112101" target="_blank" rel="noreferrer" className="flex items-center gap-4 hover:text-[#C9A84C] transition-colors group">
-                      <span className="w-10 h-10 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-[#C9A84C] group-hover:border-[#C9A84C]/30 group-hover:bg-[#C9A84C]/5 transition-all">
+                      <span className="w-10 h-10 shrink-0 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-[#C9A84C] group-hover:border-[#C9A84C]/30 group-hover:bg-[#C9A84C]/5 transition-all">
                         <MessageCircle size={18} />
                       </span>
-                      (92) 98111-2101
+                      <span>(92) 98111-2101</span>
                     </a>
                   </li>
                   <li>
                     <a href="mailto:atendimento@sbestrategiaevendas.com.br" className="flex items-center gap-4 hover:text-[#C9A84C] transition-colors group">
-                      <span className="w-10 h-10 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-[#C9A84C] group-hover:border-[#C9A84C]/30 group-hover:bg-[#C9A84C]/5 transition-all">
+                      <span className="w-10 h-10 shrink-0 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-[#C9A84C] group-hover:border-[#C9A84C]/30 group-hover:bg-[#C9A84C]/5 transition-all">
                         <span className="font-serif text-lg">@</span>
                       </span>
-                      atendimento@sbestrategiaevendas.com.br
+                      <span className="break-all sm:break-normal text-[14px] lg:text-[15px]">atendimento@sbestrategiaevendas.com.br</span>
                     </a>
                   </li>
                   <li>
                     <a href="https://sbestrategiaevendas.com.br" className="flex items-center gap-4 hover:text-[#C9A84C] transition-colors group">
-                      <span className="w-10 h-10 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-[#C9A84C] group-hover:border-[#C9A84C]/30 group-hover:bg-[#C9A84C]/5 transition-all">
+                      <span className="w-10 h-10 shrink-0 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-[#C9A84C] group-hover:border-[#C9A84C]/30 group-hover:bg-[#C9A84C]/5 transition-all">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                       </span>
-                      www.sbestrategiaevendas.com.br
+                      <span className="break-all sm:break-normal text-[14px] lg:text-[15px]">www.sbestrategiaevendas.com.br</span>
                     </a>
                   </li>
                 </ul>
               </div>
 
-              <div>
-                <h4 className="text-white font-bold mb-8 uppercase tracking-[0.2em] text-xs">Redes Sociais</h4>
+              <div className="w-full">
+                <h4 className="text-white font-bold mb-6 lg:mb-8 uppercase tracking-[0.2em] text-[11px] lg:text-xs">Redes Sociais</h4>
                 <div className="flex gap-4">
                   <a href="https://www.instagram.com/samarabeneviides" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-[#888888] hover:bg-[#C9A84C] hover:text-[#0A0A0A] hover:border-[#C9A84C] transition-all shadow-lg hover:shadow-[0_0_15px_rgba(201,168,76,0.3)]">
                     <Instagram size={22} />
@@ -337,12 +337,12 @@ export default function AboutSection() {
             </div>
           </div>
           
-          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-[#666666] text-[13px]">
+          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-5 lg:gap-4">
+            <p className="text-[#666666] text-[12px] lg:text-[13px] text-center md:text-left">
               &copy; 2026 SB Estratégia & Vendas.
             </p>
-            <p className="text-[#666666] text-[13px] flex items-center gap-1.5">
-              Criado com <span className="text-[#994747] text-xs">❤</span> por <span className="text-white font-semibold ml-0.5 tracking-wide">i92Tech</span>
+            <p className="text-[#666666] text-[12px] lg:text-[13px] flex items-center justify-center md:justify-end gap-1.5">
+              Criado com <span className="text-[#994747] text-[10px] lg:text-xs">❤</span> por <span className="text-white font-semibold ml-0.5 tracking-wide">i92Tech</span>
             </p>
           </div>
         </div>
