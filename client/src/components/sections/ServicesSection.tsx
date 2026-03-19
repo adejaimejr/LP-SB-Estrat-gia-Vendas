@@ -80,22 +80,19 @@ export default function ServicesSection() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          <div className="max-w-[720px] mx-auto flex flex-col">
             {problems.map((prob, idx) => (
               <motion.div 
                 key={idx}
                 initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
                 variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.1 } } }}
-                className="pain-card p-8 rounded-2xl"
+                className={`py-8 ${idx !== 0 ? 'border-t border-white/10' : ''}`}
               >
-                <div className="absolute top-4 right-6 text-[4rem] font-serif font-black text-[#C9A84C] opacity-[0.04] leading-none pointer-events-none select-none">
+                <div className="text-[#C9A84C] text-[13px] font-bold uppercase tracking-[0.15em] mb-4 text-left">
                   {prob.num}
                 </div>
-                <div className="w-14 h-14 rounded-full bg-[#EF4444]/10 border border-[#EF4444]/20 flex items-center justify-center mb-6 icon-container relative z-10">
-                  {prob.icon}
-                </div>
-                <h3 className="text-xl font-serif font-bold mb-3 relative z-10">{prob.title}</h3>
-                <p className="text-[#888888] leading-relaxed relative z-10">{prob.desc}</p>
+                <h3 className="text-[24px] font-semibold text-white mb-3 leading-tight">{prob.title}</h3>
+                <p className="text-[#B8B8B8] text-[16px] leading-relaxed max-w-2xl">{prob.desc}</p>
               </motion.div>
             ))}
           </div>
