@@ -100,10 +100,10 @@ export default function AboutSection() {
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-[#C9A84C]/[0.03] blur-[120px] rounded-full pointer-events-none"></div>
 
         <div className="container mx-auto px-6 max-w-[1280px] relative z-10">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start lg:items-start">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center lg:items-center">
             
             {/* Left Side: Text and Simple Flow */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-[35%] flex flex-col pt-2">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-[35%] flex flex-col">
               <div className="inline-block border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-4 py-1.5 rounded-full mb-8 self-start">
                 <span className="text-[#C9A84C] uppercase text-[0.65rem] font-bold tracking-[0.2em]">Nossa Infraestrutura</span>
               </div>
