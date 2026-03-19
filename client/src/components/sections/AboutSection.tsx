@@ -316,23 +316,14 @@ export default function AboutSection() {
                     </a>
                   </li>
                   <li>
-                    <a href="https://sbestrategiaevendas.com.br" className="flex items-center justify-center lg:justify-start gap-3 lg:gap-4 hover:text-[#C9A84C] transition-colors group">
+                    <a href="https://www.instagram.com/samarabeneviides" target="_blank" rel="noreferrer" className="flex items-center justify-center lg:justify-start gap-3 lg:gap-4 hover:text-[#C9A84C] transition-colors group">
                       <span className="w-10 h-10 shrink-0 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-[#C9A84C] group-hover:border-[#C9A84C]/30 group-hover:bg-[#C9A84C]/5 transition-all">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        <Instagram size={18} />
                       </span>
-                      <span className="break-all sm:break-normal text-[14px] lg:text-[15px]">www.sbestrategiaevendas.com.br</span>
+                      <span className="break-all sm:break-normal text-[14px] lg:text-[15px]">@samarabeneviides</span>
                     </a>
                   </li>
                 </ul>
-              </div>
-
-              <div className="w-full flex flex-col items-center lg:items-start">
-                <h4 className="text-white font-bold mb-6 lg:mb-8 uppercase tracking-[0.2em] text-[11px] lg:text-xs">Redes Sociais</h4>
-                <div className="flex justify-center lg:justify-start gap-4">
-                  <a href="https://www.instagram.com/samarabeneviides" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center text-[#888888] hover:bg-[#C9A84C] hover:text-[#0A0A0A] hover:border-[#C9A84C] transition-all shadow-lg hover:shadow-[0_0_15px_rgba(201,168,76,0.3)]">
-                    <Instagram size={22} />
-                  </a>
-                </div>
               </div>
             </div>
           </div>
