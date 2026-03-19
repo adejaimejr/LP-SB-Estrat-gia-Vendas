@@ -409,32 +409,41 @@ export default function ServicesSection() {
             </h2>
           </motion.div>
 
-          <div className="relative">
-            {/* Animated connecting line */}
+          <div className="relative max-w-lg mx-auto lg:max-w-none">
+            {/* Desktop Horizontal Line */}
             <motion.div 
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true }}
               transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="hidden lg:block absolute top-[40px] left-0 right-0 timeline-line z-0 origin-left"
+              className="hidden lg:block absolute top-[40px] left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-[#C9A84C]/0 via-[#C9A84C]/30 to-[#C9A84C]/0 z-0 origin-left"
+            ></motion.div>
+
+            {/* Mobile Vertical Line */}
+            <motion.div 
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="lg:hidden absolute top-[40px] bottom-[40px] left-[35px] w-[1px] bg-gradient-to-b from-[#C9A84C]/0 via-[#C9A84C]/30 to-[#C9A84C]/0 z-0 origin-top"
             ></motion.div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 relative z-10">
+            <div className="flex flex-col lg:grid lg:grid-cols-4 gap-0 lg:gap-8 relative z-10">
               {steps.map((step, idx) => (
                 <motion.div 
                   key={idx}
                   initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
-                  variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: idx * 0.2 + 0.3 } } }}
-                  className="relative"
+                  variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: idx * 0.2 } } }}
+                  className="relative flex flex-row lg:flex-col items-start gap-6 lg:gap-0 pb-12 lg:pb-0 last:pb-0"
                 >
-                  <div className="w-20 h-20 bg-[#1A1A1A] border-2 border-[#C9A84C]/40 rounded-full flex items-center justify-center text-3xl font-serif font-bold text-[#C9A84C] mb-4 lg:mx-auto shadow-[0_0_25px_rgba(201,168,76,0.15)] relative">
+                  <div className="flex-shrink-0 w-[70px] h-[70px] bg-[#141414] border border-[#C9A84C]/30 rounded-full flex items-center justify-center text-2xl font-serif font-bold text-[#C9A84C] lg:mb-6 lg:mx-auto shadow-[0_0_20px_rgba(201,168,76,0.1)] relative z-10">
                     <div className="absolute inset-0 rounded-full bg-[#C9A84C]/5"></div>
                     {step.num}
                   </div>
-                  <div className="lg:text-center">
-                    <div className="text-[#C9A84C] text-[0.75rem] font-semibold uppercase tracking-wider mb-1">{step.period}</div>
-                    <h3 className="text-xl font-serif font-bold mb-3 text-white">{step.title}</h3>
-                    <p className="text-[#888888] leading-relaxed text-sm md:text-base">{step.desc}</p>
+                  <div className="text-left lg:text-center w-full pt-1 lg:pt-0">
+                    <div className="text-[#C9A84C] text-[0.7rem] lg:text-[0.75rem] font-bold uppercase tracking-[0.15em] mb-2">{step.period}</div>
+                    <h3 className="text-xl md:text-2xl lg:text-[1.75rem] font-serif font-bold mb-2 md:mb-3 text-white leading-snug">{step.title}</h3>
+                    <p className="text-[#9CA3AF] leading-relaxed text-[15px] md:text-base font-light">{step.desc}</p>
                   </div>
                 </motion.div>
               ))}
