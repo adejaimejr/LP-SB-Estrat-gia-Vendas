@@ -272,7 +272,7 @@ export default function AboutSection() {
               <a href="https://wa.me/5592981112101?text=Oi, Samara! Quero agendar meu diagnóstico gratuito. Tenho interesse em estruturar meu processo comercial com vocês." target="_blank" rel="noreferrer" className="bg-[#C9A84C] text-[#0A0A0A] font-bold px-10 py-5 rounded-full hover:scale-105 transition-all duration-300 w-full sm:w-auto shadow-[0_4px_20px_rgba(201,168,76,0.3)] hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)] flex items-center justify-center gap-2">
                 Agendar Meu Diagnóstico Gratuito
               </a>
-              <a href="https://wa.me/5592981112101?text=Oi, Samara! Gostaria de conversar com você." target="_blank" rel="noreferrer" className="bg-transparent border-2 border-[#25D366] text-[#25D366] font-bold px-10 py-5 rounded-full hover:bg-[#25D366]/10 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3">
+              <a href="https://wa.me/5592981112101?text=Oi, Samara! estou vindo do seu site e gostaria de conversar com você." target="_blank" rel="noreferrer" className="bg-transparent border-2 border-[#25D366] text-[#25D366] font-bold px-10 py-5 rounded-full hover:bg-[#25D366]/10 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3">
                 <MessageCircle size={20} />
                 Falar Agora pelo WhatsApp
               </a>
