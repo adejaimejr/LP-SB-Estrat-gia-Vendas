@@ -285,9 +285,9 @@ export default function AboutSection() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0A0A0A] border-t border-[#C9A84C]/20 pt-16 lg:pt-20 pb-24 lg:pb-8 relative z-20">
+      <footer className="bg-[#0A0A0A] border-t border-[#C9A84C]/20 pt-8 lg:pt-20 pb-24 lg:pb-8 relative z-20">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 lg:gap-20 mb-16 lg:mb-20 text-center lg:text-left">
+          <div className="hidden lg:flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 lg:gap-20 mb-16 lg:mb-20 text-center lg:text-left">
             <div className="max-w-md w-full flex flex-col items-center lg:items-start">
               <div className="text-[#C9A84C] font-serif font-bold text-6xl lg:text-[4.5rem] leading-none mb-4 lg:mb-6 tracking-tighter">SB</div>
               <p className="text-[#888888] text-[14px] lg:text-[15px] leading-relaxed max-w-[320px]">
