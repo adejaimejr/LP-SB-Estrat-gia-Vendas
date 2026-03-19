@@ -111,12 +111,11 @@ export default function AboutSection() {
                 Implantamos o ecossistema tecnológico que sua empresa precisa para rastrear, nutrir e converter com previsibilidade.
               </p>
 
-              {/* Simple Vertical Flow */}
-              <div className="relative pl-3 mb-8">
-                {/* Thin vertical line connecting circles */}
-                <div className="absolute left-[15px] top-2 bottom-2 w-[1px] bg-[#C9A84C]/30"></div>
+              {/* Connected Flow - Desktop */}
+              <div className="hidden lg:block relative pl-3 mb-8 w-full max-w-sm">
+                <div className="absolute left-[15px] top-4 bottom-4 w-[1px] bg-[#C9A84C]/30 z-0"></div>
 
-                <div className="space-y-4 relative">
+                <div className="flex flex-col space-y-0 relative z-10">
                   {[
                     "Origem",
                     "Captura",
@@ -124,19 +123,84 @@ export default function AboutSection() {
                     "Atendimento",
                     "Conversão",
                     "Análise"
-                  ].map((label, idx) => (
+                  ].map((label, idx, arr) => (
                     <motion.div 
                       key={idx}
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: idx * 0.1 }}
-                      className="flex items-center gap-4 relative z-10"
+                      className="relative"
                     >
-                      <div className="w-2.5 h-2.5 rounded-full border-2 border-[#C9A84C] bg-[#141414] shadow-[0_0_8px_rgba(201,168,76,0.3)]"></div>
-                      <span className="text-white font-medium text-sm tracking-wide">{label}</span>
+                      <div className="flex items-center gap-4 relative z-10 py-3">
+                        <div className="w-[18px] h-[18px] rounded-full border-2 border-[#C9A84C] bg-[#141414] shadow-[0_0_8px_rgba(201,168,76,0.3)] flex-shrink-0 flex items-center justify-center">
+                          <div className="w-1.5 h-1.5 bg-[#C9A84C] rounded-full opacity-50"></div>
+                        </div>
+                        <span className="text-white font-medium text-[15px] tracking-wide">{label}</span>
+                      </div>
                     </motion.div>
                   ))}
+                </div>
+              </div>
+
+              {/* Connected Flow - Mobile (Curved Journey Path) */}
+              <div className="lg:hidden relative w-full max-w-[300px] mx-auto mt-8 mb-12">
+                <div className="flex flex-col relative z-10">
+                  {[
+                    "Origem",
+                    "Captura",
+                    "Automação",
+                    "Atendimento",
+                    "Conversão",
+                    "Análise"
+                  ].map((label, idx) => {
+                    const isRight = idx % 2 !== 0;
+                    const isLast = idx === 5;
+                    return (
+                      <motion.div 
+                        key={idx}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: idx * 0.1 }}
+                        className={`relative w-full h-[96px] flex items-center ${isRight ? 'justify-end' : 'justify-start'}`}
+                      >
+                        {/* Curved Connecting Line to Next Item */}
+                        {!isLast && (
+                          <div className="absolute top-[50%] left-[20px] right-[20px] h-[96px] z-0 pointer-events-none">
+                            <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 100 100">
+                              <path 
+                                d={isRight ? "M 100,0 C 100,50 0,50 0,100" : "M 0,0 C 0,50 100,50 100,100"} 
+                                fill="none" 
+                                stroke={`url(#pathGradient-${idx})`} 
+                                strokeWidth="2" 
+                                strokeDasharray="6 4"
+                                vectorEffect="non-scaling-stroke"
+                              />
+                              <defs>
+                                <linearGradient id={`pathGradient-${idx}`} x1="0%" y1="0%" x2="0%" y2="100%">
+                                  <stop offset="0%" stopColor="rgba(201,168,76,0.6)" />
+                                  <stop offset="50%" stopColor="rgba(201,168,76,0.2)" />
+                                  <stop offset="100%" stopColor="rgba(201,168,76,0.6)" />
+                                </linearGradient>
+                              </defs>
+                            </svg>
+                          </div>
+                        )}
+
+                        {/* Dot and Label */}
+                        <div className={`relative z-10 flex items-center ${isRight ? 'flex-row-reverse' : 'flex-row'} gap-4`}>
+                          <div className="w-10 h-10 rounded-full border border-[#C9A84C]/50 bg-[#0A0A0A] flex flex-shrink-0 items-center justify-center shadow-[0_0_15px_rgba(201,168,76,0.4)]">
+                            <div className="w-2.5 h-2.5 bg-[#C9A84C] rounded-full"></div>
+                          </div>
+
+                          <div className="bg-[#1A1A1A] border border-[#C9A84C]/20 px-5 py-2.5 rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.3)] backdrop-blur-sm">
+                            <span className="text-white font-medium text-[14px] tracking-wide">{label}</span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
                 </div>
               </div>
 
