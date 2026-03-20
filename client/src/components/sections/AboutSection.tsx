@@ -328,12 +328,12 @@ export default function AboutSection() {
             </div>
           </div>
           
-          <div className="pt-6 pb-6 md:pb-0 border-t border-white/5 flex flex-row items-center justify-between w-full relative z-10 pr-[65px] md:pr-0">
-            <p className="text-[#666666] text-[10px] sm:text-[12px] lg:text-[13px] whitespace-nowrap">
-              &copy; 2026 SB Vendas.
+          <div className="pt-8 pb-10 md:pb-0 border-t border-white/5 flex flex-col md:flex-row items-center justify-center md:justify-between w-full relative z-10 gap-3 md:gap-0">
+            <p className="text-[#666666] text-[12px] lg:text-[13px] text-center md:text-left">
+              &copy; 2026 SB Estratégia & Vendas.
             </p>
-            <p className="text-[#666666] text-[10px] sm:text-[12px] lg:text-[13px] flex items-center gap-1 whitespace-nowrap ml-2">
-              Criado com <span className="text-[#994747] text-[9px] lg:text-xs">❤</span> por <a href="https://i92tecnologia.com.br" target="_blank" rel="noreferrer" className="text-white font-semibold hover:text-[#C9A84C] transition-colors">i92Tech</a>
+            <p className="text-[#666666] text-[12px] lg:text-[13px] flex items-center justify-center md:justify-end gap-1.5">
+              Criado com <span className="text-[#994747] text-[10px] lg:text-xs">❤</span> por <a href="https://i92tecnologia.com.br" target="_blank" rel="noreferrer" className="text-[#B8B8B8] font-medium hover:text-[#C9A84C] transition-colors">i92Tech</a>
             </p>
           </div>
         </div>
