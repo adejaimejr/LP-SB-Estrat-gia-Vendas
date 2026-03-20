@@ -333,7 +333,7 @@ export default function AboutSection() {
               &copy; 2026 SB Estratégia & Vendas.
             </p>
             <p className="text-[#666666] text-[12px] lg:text-[13px] flex items-center justify-center md:justify-end gap-1.5">
-              Criado com <span className="text-[#994747] text-[10px] lg:text-xs">❤</span> por <span className="text-white font-semibold ml-0.5 tracking-wide">i92Tech</span>
+              Criado com <span className="text-[#994747] text-[10px] lg:text-xs">❤</span> por <a href="https://i92tecnologia.com.br" target="_blank" rel="noreferrer" className="text-white font-semibold ml-0.5 tracking-wide hover:text-[#C9A84C] transition-colors">i92Tech</a>
             </p>
           </div>
         </div>
