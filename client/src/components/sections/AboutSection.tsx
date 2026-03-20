@@ -328,7 +328,7 @@ export default function AboutSection() {
             </div>
           </div>
           
-          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-5 lg:gap-4">
+          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-5 lg:gap-4 md:pr-24 relative z-10 pb-[100px] md:pb-0">
             <p className="text-[#666666] text-[12px] lg:text-[13px] text-center md:text-left">
               &copy; 2026 SB Estratégia & Vendas.
             </p>
